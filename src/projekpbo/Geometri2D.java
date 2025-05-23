@@ -12,6 +12,8 @@ package projekpbo;
 public abstract class Geometri2D implements BendaGeometri {
     // Atribut yang umum untuk benda geometri 2D
     // Dapat diubah sesuai dengan kebutuhan
+    
+    public double pi = 3.14;
 
     // Implementasi metode hitungVolume() untuk geometri 2D
     @Override

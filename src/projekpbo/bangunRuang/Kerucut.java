@@ -1,7 +1,7 @@
 package projekpbo.bangunRuang;
 
 import projekpbo.bangunDatar.Lingkaran;
-// ini cobabbbaaaaaa
+
 public class Kerucut extends Lingkaran {
   // Atribut khusus untuk Kerucut
   private double tinggiKerucut;
