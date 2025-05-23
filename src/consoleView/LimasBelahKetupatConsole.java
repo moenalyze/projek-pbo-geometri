@@ -1,0 +1,79 @@
+package consoleView;
+
+import java.util.Scanner;
+import projekpbo.bangunRuang.LimasBelahKetupat;
+
+public class LimasBelahKetupatConsole {
+    public static void show() {
+        Scanner input = new Scanner(System.in);
+        double diagonal1 = 0;
+        double diagonal2 = 0;
+        double tinggiLimas = 0;
+        double tinggiSisiTegak = 0;
+
+        System.out.println("*** Limas Belah Ketupat ***");
+        while (true) {
+            try {
+                System.out.print("Masukkan diagonal 1 (cm) : ");
+                diagonal1 = Double.parseDouble(input.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("!! Input diagonal harus berupa angka. Silakan coba lagi.");
+            } catch (Exception e) {
+                System.out.println("!! Terjadi kesalahan: " + e.getMessage());
+            }
+        }
+        
+        while (true) {
+            try {
+                System.out.print("Masukkan diagonal 2 (cm) : ");
+                diagonal2 = Double.parseDouble(input.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("!! Input diagonal harus berupa angka. Silakan coba lagi.");
+            } catch (Exception e) {
+                System.out.println("!! Terjadi kesalahan: " + e.getMessage());
+            }
+        }
+        
+        while (true) {
+            try {
+                System.out.print("Masukkan tinggi limas (cm) : ");
+                tinggiLimas = Double.parseDouble(input.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("!! Input jari-jari harus berupa angka. Silakan coba lagi.");
+            } catch (Exception e) {
+                System.out.println("!! Terjadi kesalahan: " + e.getMessage());
+            }
+        }
+
+        while (true) {
+            try {
+                System.out.print("Masukkan tinggi sisi tegak (cm) : ");
+                tinggiSisiTegak = Double.parseDouble(input.nextLine());
+                double s = Math.sqrt(Math.pow(diagonal1 / 2.0, 2) + Math.pow(diagonal2 / 2.0, 2)); // sisi belah ketupat
+                double tinggiMinimal = Math.sqrt(Math.pow(s / 2.0, 2) + Math.pow(tinggiLimas, 2));
+
+                if (tinggiSisiTegak < tinggiMinimal) {
+                    throw new IllegalArgumentException("Tinggi sisi tegak terlalu pendek (harus >= " + tinggiMinimal + ")");
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("!! Input jari-jari harus berupa angka. Silakan coba lagi.");
+            } catch (IllegalArgumentException e) {
+                System.out.println("!! Error: " + e.getMessage());
+            }
+        }
+
+        LimasBelahKetupat limasBelahKetupat = new LimasBelahKetupat(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak);
+        double volume = limasBelahKetupat.hitungVolume();
+        double luasPermukaan = limasBelahKetupat.hitungLuasPermukaan();
+
+        System.out.println();
+        System.out.println("---Hasil Perhitungan---");
+
+        System.out.println("Volume : " + volume);
+        System.out.println("Luas Permukaan : " + luasPermukaan);
+    }
+}
