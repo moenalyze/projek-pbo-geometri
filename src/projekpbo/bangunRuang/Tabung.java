@@ -34,7 +34,7 @@ public class Tabung extends Lingkaran {
   public double hitungLuasPermukaan() {
     // Luas Permukaan Silinder = 2 * luas Lingkaran + keliling Lingkaran * tinggi
     // Silinder
-    luasPermukaanSilinder = 2 * hitungLuas() + hitungKeliling() * tinggiSilinder;
+    luasPermukaanSilinder = 2 * super.hitungLuas() + super.hitungKeliling() * tinggiSilinder;
     return luasPermukaanSilinder;
   }
 
