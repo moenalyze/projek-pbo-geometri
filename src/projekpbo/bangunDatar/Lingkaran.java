@@ -19,7 +19,7 @@ public class Lingkaran extends Geometri2D {
     @Override
     public double hitungLuas() {
         // Rumus luas lingkaran: pi * jari-jari^2
-        luasLingkaran = super.pi * jariJari * jariJari;
+        luasLingkaran = Math.PI * jariJari * jariJari;
         return luasLingkaran;
     }
 
