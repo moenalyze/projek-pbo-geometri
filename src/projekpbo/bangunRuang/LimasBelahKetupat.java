@@ -1,7 +1,7 @@
 package projekpbo.bangunRuang;
 
 import projekpbo.bangunDatar.BelahKetupat;
-
+// Halo aku NARA
 public class LimasBelahKetupat extends BelahKetupat {
     protected double tinggiLimas;
     protected double tinggiSisiTegak;
