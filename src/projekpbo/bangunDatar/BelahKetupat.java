@@ -6,7 +6,6 @@ public class BelahKetupat extends Geometri2D {
     // Atribut khusus untuk belah ketupat
     protected double diagonal1;
     protected double diagonal2;
-    protected double sisi;
 
     // Constructor untuk BelahKetupat
     public BelahKetupat(double diagonal1, double diagonal2) {
@@ -26,7 +25,7 @@ public class BelahKetupat extends Geometri2D {
     public double hitungKeliling() {
         // Rumus keliling belah ketupat: 4 × sisi miring
         // Sisi miring dihitung dari √((d1/2)² + (d2/2)²)
-        sisi = Math.sqrt(Math.pow((1.0/2.0 * diagonal1), 2) + Math.pow(1.0/2.0 * diagonal2, 2));
+        double sisi = Math.sqrt(Math.pow((1.0/2.0 * diagonal1), 2) + Math.pow(1.0/2.0 * diagonal2, 2));
         return 4 * sisi;
     }
 }
