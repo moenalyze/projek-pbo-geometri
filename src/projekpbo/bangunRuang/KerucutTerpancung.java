@@ -16,14 +16,14 @@
         }
 
         public double hitungVolume() {
-            volumeKerucutTerpancung = (1.0 / 3.0) * Math.PI * tinggi * (super.jariJari * super.jariJari + jariJariAtas * jariJariAtas + super.jariJari * jariJariAtas);
+            volumeKerucutTerpancung = (1.0 / 3.0) * super.pi * tinggi * (super.jariJari * super.jariJari + jariJariAtas * jariJariAtas + super.jariJari * jariJariAtas);
             return volumeKerucutTerpancung;
         }
 
         public double hitungLuasPermukaan() {
             double garisPelukis = Math.sqrt(Math.pow(tinggi, 2) + Math.pow((super.jariJari - jariJariAtas), 2));
 
-            luasPermukaanKerucutTerpancung = (Math.PI * (jariJariAtas + super.jariJari) * garisPelukis) + (Math.PI * (Math.pow(super.jariJari, 2) + Math.pow(jariJariAtas, 2)));
+            luasPermukaanKerucutTerpancung = (super.pi * (jariJariAtas + super.jariJari) * garisPelukis) + (super.pi * (Math.pow(super.jariJari, 2) + Math.pow(jariJariAtas, 2)));
             return luasPermukaanKerucutTerpancung;
         }
     }

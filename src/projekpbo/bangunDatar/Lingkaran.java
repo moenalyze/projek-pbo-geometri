@@ -4,7 +4,8 @@ import projekpbo.Geometri2D;
 
 public class Lingkaran extends Geometri2D {
     // Atribut khusus untuk lingkaran
-    public double jariJari;
+    protected double jariJari;
+    protected double pi = 3.14;
     private double luasLingkaran;
     private double kelilingLingkaran;
 
@@ -19,7 +20,7 @@ public class Lingkaran extends Geometri2D {
     @Override
     public double hitungLuas() {
         // Rumus luas lingkaran: pi * jari-jari^2
-        luasLingkaran = super.pi * jariJari * jariJari;
+        luasLingkaran = pi * jariJari * jariJari;
         return luasLingkaran;
     }
 
