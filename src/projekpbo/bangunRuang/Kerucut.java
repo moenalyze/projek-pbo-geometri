@@ -37,7 +37,7 @@ public class Kerucut extends Lingkaran {
   @Override
   public double hitungLuasPermukaan() {
     // Luas Permukaan Kerucut = luas alas + luas selimut
-    luasPermukaanKerucut =  super.hitungLuas() + (Math.PI * jariJari * Math.sqrt(Math.pow(tinggiKerucut, 2) + Math.pow(jariJari, 2)));
+    luasPermukaanKerucut =  super.hitungLuas() + (super.pi * jariJari * Math.sqrt(Math.pow(tinggiKerucut, 2) + Math.pow(jariJari, 2)));
     return luasPermukaanKerucut;
   }
   
