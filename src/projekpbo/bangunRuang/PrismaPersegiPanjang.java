@@ -20,7 +20,7 @@ public class PrismaPersegiPanjang extends PersegiPanjang {
   @Override
   public double hitungVolume() {
     // Volume Balok = luas Persegi Panjang * tinggi Balok
-    volumeBalok = hitungLuas() * tinggiBalok;
+    volumeBalok = super.hitungLuas() * tinggiBalok;
     return volumeBalok;
   }
 

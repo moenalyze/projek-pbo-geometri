@@ -37,7 +37,7 @@ public class LimasPersegiPanjang extends PersegiPanjang {
             double luasSisiTegak1 = (1.0/2.0) * panjang * tinggiSisiTegak1;
             double luasSisiTegak2 = (1.0/2.0) * lebar * tinggiSisiTegak2;
             
-        luasPermukaanPrismaPersegiPanjang = hitungLuas() + (2 * (luasSisiTegak1 + luasSisiTegak2));
+        luasPermukaanPrismaPersegiPanjang = super.hitungLuas() + (2 * (luasSisiTegak1 + luasSisiTegak2));
         
         return luasPermukaanPrismaPersegiPanjang;
     }

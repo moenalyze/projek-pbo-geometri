@@ -24,7 +24,7 @@ public class Kerucut extends Lingkaran {
   @Override
   public double hitungVolume() {
     // Volume Kerucut = 1/3 * luas Lingkaran * tinggi Kerucut
-    volumeKerucut = (1.0 / 3.0) * hitungLuas() * tinggiKerucut;
+    volumeKerucut = (1.0 / 3.0) * super.hitungLuas() * tinggiKerucut;
     return volumeKerucut;
   }
 
@@ -37,7 +37,7 @@ public class Kerucut extends Lingkaran {
   @Override
   public double hitungLuasPermukaan() {
     // Luas Permukaan Kerucut = luas alas + luas selimut
-    luasPermukaanKerucut =  hitungLuas() + (Math.PI * jariJari * Math.sqrt(Math.pow(tinggiKerucut, 2) + Math.pow(jariJari, 2)));
+    luasPermukaanKerucut =  super.hitungLuas() + (Math.PI * jariJari * Math.sqrt(Math.pow(tinggiKerucut, 2) + Math.pow(jariJari, 2)));
     return luasPermukaanKerucut;
   }
   
