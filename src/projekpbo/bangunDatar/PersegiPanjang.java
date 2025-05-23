@@ -13,8 +13,8 @@ import projekpbo.Geometri2D;
  */
 public class PersegiPanjang extends Geometri2D {
     // Atribut khusus untuk persegi panjang
-    public double panjang;
-    public double lebar;
+    protected double panjang;
+    protected double lebar;
     private double luasPersegiPanjang;
     private double kelilingPersegiPanjang;
 
