@@ -31,7 +31,7 @@ public class Lingkaran extends Geometri2D {
 
     @Override
     public double hitungKeliling() {
-        kelilingLingkaran = 2 * super.pi * jariJari;
+        kelilingLingkaran = 2 * pi * jariJari;
         return kelilingLingkaran;
     }
 
