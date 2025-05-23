@@ -6,7 +6,8 @@ public class Lingkaran extends Geometri2D {
     // Atribut khusus untuk lingkaran
     protected double jariJari;
     protected double pi = 3.14;
-
+    private double luasLingkaran;
+    private double kelilingLingkaran;
 
     // Constructor untuk Lingkaran
     public Lingkaran(double jariJari) {
@@ -18,12 +19,23 @@ public class Lingkaran extends Geometri2D {
     @Override
     public double hitungLuas() {
         // Rumus luas lingkaran: pi * jari-jari^2
-        return pi * jariJari * jariJari;
+        luasLingkaran = pi * jariJari * jariJari;
+        return luasLingkaran;
+    }
+
+    // getter
+    public double getLuasLingkaran() {
+        return luasLingkaran;
     }
 
     @Override
     public double hitungKeliling() {
-        return 2 * pi * jariJari;
+        kelilingLingkaran = 2 * pi * jariJari;
+        return kelilingLingkaran;
+    }
+
+    public double getKelilingLingkaran() {
+        return kelilingLingkaran;
     }
 
 }
