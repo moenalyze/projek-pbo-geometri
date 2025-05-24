@@ -4,7 +4,7 @@ import projekpbo.bangunDatar.JajarGenjang;
 
 public class PrismaJajarGenjang extends JajarGenjang {
   // Atribut khusus untuk PrismaJajarGenjang
-  private double tinggiPrismaJajarGenjang;
+  protected double tinggiPrismaJajarGenjang;
   private double volumePrismaJajarGenjang;
   private double luasPermukaanPrismaJajarGenjang;
 
@@ -12,20 +12,15 @@ public class PrismaJajarGenjang extends JajarGenjang {
   public PrismaJajarGenjang(double alas, double tinggi, double sudutlancip, double tinggiPrismaJajarGenjang) {
     super(alas, tinggi, sudutlancip);
     this.tinggiPrismaJajarGenjang = tinggiPrismaJajarGenjang;
-    volumePrismaJajarGenjang = hitungVolume();
-    luasPermukaanPrismaJajarGenjang = hitungLuasPermukaan();
+    volumePrismaJajarGenjang = super.hitungVolume();
+    luasPermukaanPrismaJajarGenjang = super.hitungLuasPermukaan();
   }
 
   // Implementasi metode hitungVolume() untuk PrismaJajarGenjang
   @Override
   public double hitungVolume() {
     // Volume PrismaJajarGenjang = luas Jajar Genjang * tinggi PrismaJajarGenjang
-    volumePrismaJajarGenjang = getLuasJajarGenjang() * tinggiPrismaJajarGenjang;
-    return volumePrismaJajarGenjang;
-  }
-
-  // Getter untuk Volume PrismaJajarGenjang
-  public double getVolumePrismaJajarGenjang() {
+    volumePrismaJajarGenjang = super.getLuasJajarGenjang() * tinggiPrismaJajarGenjang;
     return volumePrismaJajarGenjang;
   }
   
@@ -33,11 +28,7 @@ public class PrismaJajarGenjang extends JajarGenjang {
     @Override
     public double hitungLuasPermukaan() {
         // Luas Permukaan Prisma Jajar Genjang = (2 * luas alas) + (kelilingjajargenjang * tinggi)
-        luasPermukaanPrismaJajarGenjang = (2 * getLuasJajarGenjang()) + (getKelilingJajarGenjang() * tinggiPrismaJajarGenjang);
-        return luasPermukaanPrismaJajarGenjang;
-    }
-    
-    public double getLuasPermukaanPrismaJajarGenjang(){ 
+        luasPermukaanPrismaJajarGenjang = (2 * super.getLuasJajarGenjang()) + (super.getKelilingJajarGenjang() * tinggiPrismaJajarGenjang);
         return luasPermukaanPrismaJajarGenjang;
     }
 }
