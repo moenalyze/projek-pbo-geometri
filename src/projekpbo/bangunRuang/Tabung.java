@@ -4,7 +4,7 @@ import projekpbo.bangunDatar.Lingkaran;
 
 public class Tabung extends Lingkaran {
   // Atribut khusus untuk Silinder
-  private double tinggiSilinder;
+  protected double tinggiSilinder;
   private double volumeSilinder;
   private double luasPermukaanSilinder;
 
@@ -12,8 +12,8 @@ public class Tabung extends Lingkaran {
   public Tabung(double jariJari, double tinggiSilinder) {
     super(jariJari);
     this.tinggiSilinder = tinggiSilinder;
-    volumeSilinder = hitungVolume();
-    luasPermukaanSilinder = hitungLuasPermukaan();
+    volumeSilinder = super.hitungVolume();
+    luasPermukaanSilinder = super.hitungLuasPermukaan();
   }
 
   // Implementasi metode hitungVolume() untuk Silinder
@@ -24,21 +24,12 @@ public class Tabung extends Lingkaran {
     return volumeSilinder;
   }
 
-  // Getter untuk Volume Silinder
-  public double getVolumeSilinder() {
-    return volumeSilinder;
-  }
-
   // Implementasi metode hitungLuasPermukaan() untuk Silinder
   @Override
   public double hitungLuasPermukaan() {
     // Luas Permukaan Silinder = 2 * luas Lingkaran + keliling Lingkaran * tinggi
     // Silinder
     luasPermukaanSilinder = 2 * super.hitungLuas() + super.hitungKeliling() * tinggiSilinder;
-    return luasPermukaanSilinder;
-  }
-
-  public double getLuasPermukaanSilinder() {
     return luasPermukaanSilinder;
   }
 }

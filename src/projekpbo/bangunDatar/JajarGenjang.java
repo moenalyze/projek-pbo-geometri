@@ -13,18 +13,22 @@ import projekpbo.Geometri2D;
  */
 public class JajarGenjang extends Geometri2D {
     // Atribut khusus untuk jajar genjang
-    public double alas;
-    public double tinggi;
-    public double sudutLancip;
+    protected double alas;
+    protected double tinggi;
+    protected double sudutLancip;
+    protected double sisiMiringJajarGenjang;
     private double luasJajarGenjang;
     private double kelilingJajarGenjang;
-    private double sisiMiringJajarGenjang;
 
     // Constructor untuk JajarGenjang
     public JajarGenjang(double alas, double tinggi, double sudutLancip) {
         this.alas = alas;
         this.tinggi = tinggi;
         this.sudutLancip = sudutLancip;
+        // Karena dalam segitiga yang terbentuk:
+        // sin(sudutLancip) = tinggi / sisiMiring
+        // Maka sisiMiring = tinggi / sin(sudutLancip)
+        // Perlu dikonversi dari derajat ke radian karena Math.sin() menggunakan radian 
         // sudut harus dalam bentuk radian, tidak bisa dalam derajat
         sisiMiringJajarGenjang = tinggi / Math.sin(Math.toRadians(sudutLancip));
         luasJajarGenjang = hitungLuas();
@@ -47,17 +51,12 @@ public class JajarGenjang extends Geometri2D {
     @Override
     public double hitungKeliling() {
         // kelilingJajarGenjang = 2 * (alas + sisiMiring); 
-        
         kelilingJajarGenjang = 2 * (alas + sisiMiringJajarGenjang);
         return kelilingJajarGenjang;
     }
     
-    public double getSisiMiringJajarGenjang() {
-        return sisiMiringJajarGenjang;
-    }
-
+    // Getter untuk keliling Jajar Genjang
     public double getKelilingJajarGenjang() {
         return kelilingJajarGenjang;
     }
-
 }
