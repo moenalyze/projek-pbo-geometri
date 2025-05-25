@@ -5,6 +5,8 @@ import projekpbo.bangunDatar.BelahKetupat;
 public class PrismaBelahKetupat extends BelahKetupat {
     // Atribut khusus untuk PrismaJajarGenjang
     protected double tinggiPrisma;
+    private double volume;
+    private double luasPermukaan;
 
     // Constructor untuk PrismaJajarGenjang
     public PrismaBelahKetupat(double diagonal1, double diagonal2, double tinggiPrisma) {
@@ -14,11 +16,13 @@ public class PrismaBelahKetupat extends BelahKetupat {
 
     @Override
     public double hitungVolume() {
-        return hitungLuas() * tinggiPrisma;
+        volume = hitungLuas() * tinggiPrisma;
+        return volume;
     }
 
     @Override
     public double hitungLuasPermukaan() {
-        return (2 * hitungLuas()) + (super.hitungKeliling() * tinggiPrisma);
+        luasPermukaan = (2 * super.hitungLuas()) + (super.hitungKeliling() * tinggiPrisma);
+        return luasPermukaan;
     }
 }
