@@ -1,10 +1,12 @@
 package projekpbo.bangunRuang;
 
 import projekpbo.bangunDatar.BelahKetupat;
-// Halo aku NARA
+
 public class LimasBelahKetupat extends BelahKetupat {
     protected double tinggiLimas;
     protected double tinggiSisiTegak;
+    private double volume;
+    private double luasPermukaan;
 
     public LimasBelahKetupat(double diagonal1, double diagonal2, double tinggiLimas, double tinggiSisiTegak) {
         super(diagonal1, diagonal2);
@@ -14,12 +16,14 @@ public class LimasBelahKetupat extends BelahKetupat {
 
     @Override
     public double hitungVolume() {
-        return 1.0 / 3.0 * (hitungLuas()* tinggiLimas);
+        volume = 1.0 / 3.0 * (super.hitungLuas()* tinggiLimas);
+        return volume;
     }
 
     @Override
     public double hitungLuasPermukaan(){
         double luasSisiTegak = (1.0 / 2.0) * sisi * tinggiSisiTegak;
-        return hitungLuas() + (4 * (luasSisiTegak));
+        luasPermukaan = super.hitungLuas() + (4 * (luasSisiTegak));
+        return luasPermukaan;
     }
 }
