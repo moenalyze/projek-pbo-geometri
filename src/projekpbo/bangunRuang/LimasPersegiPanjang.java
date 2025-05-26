@@ -4,7 +4,7 @@ import projekpbo.bangunDatar.PersegiPanjang;
 
 public class LimasPersegiPanjang extends PersegiPanjang {
 
-    private double tinggiPersegiPanjang;
+    // private double tinggiPersegiPanjang;
 
     private double volumeLimasPersegiPanjang;
     

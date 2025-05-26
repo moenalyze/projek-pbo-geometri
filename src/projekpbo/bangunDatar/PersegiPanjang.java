@@ -22,8 +22,8 @@ public class PersegiPanjang extends Geometri2D {
     public PersegiPanjang(double panjang, double lebar) {
         this.panjang = panjang;
         this.lebar = lebar;
-        luasPersegiPanjang = hitungLuas();
-        kelilingPersegiPanjang = hitungKeliling();
+        // luasPersegiPanjang = hitungLuas();
+        // kelilingPersegiPanjang = hitungKeliling();
     }
 
     // Implementasi metode hitungLuas() untuk persegi panjang
