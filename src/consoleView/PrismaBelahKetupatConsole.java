@@ -1,6 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
+import projekpbo.bangunDatar.BelahKetupat;
 import projekpbo.bangunRuang.PrismaBelahKetupat;
 
 public class PrismaBelahKetupatConsole {
@@ -47,7 +48,7 @@ public class PrismaBelahKetupatConsole {
             }
         }
 
-        PrismaBelahKetupat prismaBelahKetupat = new PrismaBelahKetupat(diagonal1, diagonal2, tinggiPrisma);
+        BelahKetupat prismaBelahKetupat = new PrismaBelahKetupat(diagonal1, diagonal2, tinggiPrisma);
         double volume = prismaBelahKetupat.hitungVolume();
         double luasPermukaan = prismaBelahKetupat.hitungLuasPermukaan();
 

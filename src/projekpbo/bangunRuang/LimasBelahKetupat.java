@@ -22,7 +22,7 @@ public class LimasBelahKetupat extends BelahKetupat {
 
     @Override
     public double hitungLuasPermukaan(){
-        double luasSisiTegak = (1.0 / 2.0) * sisi * tinggiSisiTegak;
+        double luasSisiTegak = (1.0 / 2.0) * super.hitungSisi() * tinggiSisiTegak;
         luasPermukaan = super.hitungLuas() + (4 * (luasSisiTegak));
         return luasPermukaan;
     }

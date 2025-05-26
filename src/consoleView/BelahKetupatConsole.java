@@ -5,7 +5,7 @@ import projekpbo.bangunDatar.BelahKetupat;
 
 public class BelahKetupatConsole {
     public static void show() {
-        Scanner input = new Scanner(System.in);
+        Scanner inputBelahKetupat = new Scanner(System.in); // ******
         double diagonal1 = 0;
         double diagonal2 = 0;
 
@@ -13,7 +13,7 @@ public class BelahKetupatConsole {
         while (true) {
             try {
                 System.out.print("Masukkan diagonal 1 (cm) : ");
-                diagonal1 = Double.parseDouble(input.nextLine());
+                diagonal1 = Double.parseDouble(inputBelahKetupat.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("!! Input diagonal harus berupa angka. Silakan coba lagi.");
@@ -25,7 +25,7 @@ public class BelahKetupatConsole {
         while (true) {
             try {
                 System.out.print("Masukkan diagonal 2 (cm) : ");
-                diagonal2 = Double.parseDouble(input.nextLine());
+                diagonal2 = Double.parseDouble(inputBelahKetupat.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("!! Input diagonal harus berupa angka. Silakan coba lagi.");
