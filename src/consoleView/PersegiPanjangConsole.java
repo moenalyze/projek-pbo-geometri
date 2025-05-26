@@ -5,7 +5,7 @@ import projekpbo.bangunDatar.PersegiPanjang;
 public class PersegiPanjangConsole {
 
     public static void show() {
-        Scanner input = new Scanner(System.in);
+        Scanner inputPersegiPanjang = new Scanner(System.in);
         double panjang = 0;
         double lebar = 0;
 
@@ -13,7 +13,7 @@ public class PersegiPanjangConsole {
         while (true) {
             try {
                 System.out.print("Masukkan panjang : ");
-                panjang = Double.parseDouble(input.nextLine());
+                panjang = Double.parseDouble(inputPersegiPanjang.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("⚠  Input panjang harus berupa angka. Silakan coba lagi.");
@@ -26,7 +26,7 @@ public class PersegiPanjangConsole {
         while (true) {
             try {
                 System.out.print("Masukkan lebar: ");
-                lebar = Double.parseDouble(input.nextLine());
+                lebar = Double.parseDouble(inputPersegiPanjang.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("!! Input lebar harus berupa angka. Silakan coba lagi.");

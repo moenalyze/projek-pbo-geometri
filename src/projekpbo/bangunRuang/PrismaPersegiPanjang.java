@@ -2,25 +2,33 @@ package projekpbo.bangunRuang;
 
 import projekpbo.bangunDatar.PersegiPanjang;
 
+// ukuran persegi panjang diubah, input dari keyboard
 public class PrismaPersegiPanjang extends PersegiPanjang {
   // Atribut khusus untuk Balok
   protected double tinggiBalok;
   private double volumeBalok;
   private double luasPermukaanBalok;
+  boolean hitungUlang = true;
 
   // Constructor untuk Balok
   public PrismaPersegiPanjang(double panjang, double lebar, double tinggiBalok) {
     super(panjang, lebar);
     this.tinggiBalok = tinggiBalok;
-    volumeBalok = super.hitungVolume();
-    luasPermukaanBalok = hitungLuasPermukaan();
+//    volumeBalok = super.hitungVolume();
+//    luasPermukaanBalok = hitungLuasPermukaan();
+    
   }
 
   // Implementasi metode hitungVolume() untuk Balok
   @Override
   public double hitungVolume() {
     // Volume Balok = luas Persegi Panjang * tinggi Balok
-    volumeBalok = super.hitungLuas() * tinggiBalok;
+    if (hitungUlang){
+        volumeBalok = super.hitungLuas() * tinggiBalok;
+    }
+    else {
+        volumeBalok = super.luasPersegiPanjang * tinggiBalok;
+    }
     return volumeBalok;
   }
 

@@ -9,13 +9,13 @@ import projekpbo.Geometri2D;
 
 /**
  *
- * @author User
+ * @author Kelompok 2 IF-A
  */
 public class PersegiPanjang extends Geometri2D {
     // Atribut khusus untuk persegi panjang
     protected double panjang;
     protected double lebar;
-    private double luasPersegiPanjang;
+    protected double luasPersegiPanjang;
     private double kelilingPersegiPanjang;
 
     // Constructor untuk PersegiPanjang
