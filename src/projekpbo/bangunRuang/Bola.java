@@ -10,8 +10,8 @@ public class Bola extends Lingkaran {
   // Constructor untuk Bola
   public Bola(double jariJari) {
     super(jariJari);
-    volumeBola = hitungVolume();
-    luasPermukaanBola = hitungLuasPermukaan();
+    volumeBola = super.hitungVolume();
+    luasPermukaanBola = super.hitungLuasPermukaan();
   }
 
   // Implementasi metode hitungVolume() untuk Bola
@@ -21,22 +21,12 @@ public class Bola extends Lingkaran {
     volumeBola = (4.0 / 3.0) * Math.PI * Math.pow(jariJari, 3); // Menggunakan jari-jari dari kelas Lingkaran
     return volumeBola;
   }
-
-  // Getter untuk Volume Bola
-  public double getVolumeBola() {
-    return volumeBola;
-  }
   
   // Implementasi metode hitungLuasPermukaan() untuk Bola
   @Override
   public double hitungLuasPermukaan() {
     // Luas Permukaan Bola = 4 * Phi * r^2
-    luasPermukaanBola = 4 * Math.PI * Math.pow(jariJari, 2);
+    luasPermukaanBola = 4 * super.pi * Math.pow(jariJari, 2);
     return luasPermukaanBola;
   }
-  
-  public double getLuasPermukaanBola(){
-    return luasPermukaanBola;
-  }
-
 }

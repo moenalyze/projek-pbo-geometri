@@ -4,7 +4,7 @@ import projekpbo.bangunDatar.Lingkaran;
 
 public class Kerucut extends Lingkaran {
   // Atribut khusus untuk Kerucut
-  private double tinggiKerucut;
+  protected double tinggiKerucut;
   private double volumeKerucut;
   private double luasPermukaanKerucut;
 
@@ -12,7 +12,7 @@ public class Kerucut extends Lingkaran {
   public Kerucut(double jariJari, double tinggiKerucut) {
     super(jariJari);
     this.tinggiKerucut = tinggiKerucut;
-    volumeKerucut = hitungVolume();
+    volumeKerucut = super.hitungVolume();
     luasPermukaanKerucut = hitungLuasPermukaan();
   }
   
@@ -28,10 +28,6 @@ public class Kerucut extends Lingkaran {
     return volumeKerucut;
   }
 
-  // Getter untuk Volume Kerucut
-  public double getVolumeKerucut() {
-    return volumeKerucut;
-  }
   
   // Implementasi metode hitungLuasPermukaan() untuk Kerucut
   @Override

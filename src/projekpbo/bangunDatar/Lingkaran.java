@@ -12,8 +12,7 @@ public class Lingkaran extends Geometri2D {
     // Constructor untuk Lingkaran
     public Lingkaran(double jariJari) {
         this.jariJari = jariJari;
-        luasLingkaran = hitungLuas();
-        kelilingLingkaran = hitungKeliling();
+       
     }
 
     // Implementasi metode hitungLuas() untuk lingkaran
@@ -24,7 +23,7 @@ public class Lingkaran extends Geometri2D {
         return luasLingkaran;
     }
 
-    // Getter untuk Luas Lingkaran
+    // getter
     public double getLuasLingkaran() {
         return luasLingkaran;
     }

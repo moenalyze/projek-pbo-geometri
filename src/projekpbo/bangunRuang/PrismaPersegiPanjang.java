@@ -4,7 +4,7 @@ import projekpbo.bangunDatar.PersegiPanjang;
 
 public class PrismaPersegiPanjang extends PersegiPanjang {
   // Atribut khusus untuk Balok
-  private double tinggiBalok;
+  protected double tinggiBalok;
   private double volumeBalok;
   private double luasPermukaanBalok;
 
@@ -12,7 +12,7 @@ public class PrismaPersegiPanjang extends PersegiPanjang {
   public PrismaPersegiPanjang(double panjang, double lebar, double tinggiBalok) {
     super(panjang, lebar);
     this.tinggiBalok = tinggiBalok;
-    volumeBalok = hitungVolume();
+    volumeBalok = super.hitungVolume();
     luasPermukaanBalok = hitungLuasPermukaan();
   }
 
@@ -24,10 +24,7 @@ public class PrismaPersegiPanjang extends PersegiPanjang {
     return volumeBalok;
   }
 
-  // Getter untuk volume Balok
-  public double getVolumeBalok() {
-    return volumeBalok;
-  }
+
   
   // Implementasi metode untuk menghitung luas permukaan Balok
     public double hitungLuasPermukaan() {
@@ -36,8 +33,5 @@ public class PrismaPersegiPanjang extends PersegiPanjang {
       return luasPermukaanBalok;
     }
     
-   public double getLuasPermukaanBalok(){
-       return luasPermukaanBalok;
-   }
 
 }

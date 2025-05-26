@@ -8,7 +8,7 @@ public class LimasPersegiPanjang extends PersegiPanjang {
 
     private double volumeLimasPersegiPanjang;
     
-    private  double tinggiLimasPersegiPanjang;
+    protected  double tinggiLimasPersegiPanjang;
 
     private double luasPermukaanPrismaPersegiPanjang;
 
@@ -18,17 +18,11 @@ public class LimasPersegiPanjang extends PersegiPanjang {
     }
 
     public double hitungVolume() {
-          volumeLimasPersegiPanjang = 1.0 / 3.0 * (hitungLuas() * tinggiLimasPersegiPanjang);
+          volumeLimasPersegiPanjang = 1.0 / 3.0 * (super.hitungLuas() * tinggiLimasPersegiPanjang);
           return volumeLimasPersegiPanjang;
     }
 
-    public double getVolumeLimasPersegiPanjang() {
-        
-        
-        
-        
-      return volumeLimasPersegiPanjang;
-    }
+
 
     public double hitungLuasPermukaan() {
         
@@ -42,7 +36,5 @@ public class LimasPersegiPanjang extends PersegiPanjang {
         return luasPermukaanPrismaPersegiPanjang;
     }
 
-    public double getLuasPermukaanLimasPersegiPanjang() {
-        return luasPermukaanPrismaPersegiPanjang;
-    }
+
 }
