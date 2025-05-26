@@ -13,8 +13,8 @@ public class Segitiga extends Geometri2D {
     public Segitiga(double alas, double tinggi) {
         this.alas = alas;
         this.tinggi = tinggi;
-        luasSegitiga = hitungLuas();
-        kelilingSegitiga = hitungKeliling();
+//        luasSegitiga = hitungLuas();
+//        kelilingSegitiga = hitungKeliling();
     }
 
     // Implementasi metode hitungLuas() untuk segitiga
