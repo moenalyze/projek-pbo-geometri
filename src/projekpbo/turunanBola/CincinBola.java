@@ -1,27 +1,27 @@
 package projekpbo.turunanBola;
 
 import projekpbo.bangunRuang.Bola;
+import projekpbo.bangunDatar.Lingkaran;
 
 public class CincinBola extends Bola {
   // Atribut khusus untuk Juring
-  private double jariJariDalam; // dari Lingkaran Jarijari Dalam
-  private double jarakDuaBidang; // jarak jari jari luat dan jari jari dalam
+  // private double jariJariMinor; // dari Lingkaran Jarijari Dalam
+  private double jariJariMajor; // jarak jari jari luat dan jari jari dalam
   private double volumeCincinBola;
   private double luasPermukaanCincinBola;
 
   // Constructor untuk Juring
-  public CincinBola(double jariJari, double jariJariDalam, double jarakDuaBidang) {
+  public CincinBola(double jariJari, double jariJariMajor) {
     super(jariJari);
-    this.jariJariDalam = jariJariDalam;
-    this.jarakDuaBidang = jarakDuaBidang;
+    this.jariJariMajor = jariJariMajor;
     volumeCincinBola = hitungVolume();
     luasPermukaanCincinBola = hitungLuasPermukaan();
   }
 
   @Override
   public double hitungVolume() {
-    volumeCincinBola = Math.PI * jarakDuaBidang
-        * (jariJariDalam * jariJariDalam + jariJari * jariJari + jariJariDalam * jariJari);
+    
+    volumeCincinBola = 2 * Math.pow(super.pi, 2) * jariJariMajor * Math.pow(jariJari, 2);
     return volumeCincinBola;
   }
 
@@ -31,7 +31,7 @@ public class CincinBola extends Bola {
 
   @Override
   public double hitungLuasPermukaan() {
-    luasPermukaanCincinBola = 2 * Math.PI * jariJari * jarakDuaBidang;
+    luasPermukaanCincinBola = 4 * Math.pow(super.pi, 2) * jariJariMajor * jariJari;
     return luasPermukaanCincinBola;
   }
 

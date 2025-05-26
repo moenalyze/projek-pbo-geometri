@@ -1,22 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projekpbo.bangunDatar;
 
 import projekpbo.Geometri2D;
 
-/**
- *
- * @author User
- */
 public class Trapesium extends Geometri2D {
     // Atribut khusus untuk trapesium
-    public double sisiSejajar1;
-    public double sisiSejajar2;
-    public double tinggi;
-    public double sisiMiring;
+    protected double sisiSejajar1;
+    protected double sisiSejajar2;
+    protected double tinggi;
+    protected double sisiMiring;
     private double luasTrapesium;
     private double kelilingTrapesium;
 

@@ -18,7 +18,7 @@ public class Bola extends Lingkaran {
   @Override
   public double hitungVolume() {
     // Volume Bola = 4/3 * Phi * r ^ 3
-    volumeBola = (4.0 / 3.0) * Math.PI * Math.pow(jariJari, 3); // Menggunakan jari-jari dari kelas Lingkaran
+    volumeBola = (4.0 / 3.0) * super.pi * Math.pow(jariJari, 3); // Menggunakan jari-jari dari kelas Lingkaran
     return volumeBola;
   }
   

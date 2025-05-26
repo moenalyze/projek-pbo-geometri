@@ -20,7 +20,7 @@
         public double hitungLuasPermukaan() {
             double garisPelukis = Math.sqrt(Math.pow(tinggi, 2) + Math.pow((super.jariJari - jariJariAtas), 2));
 
-            luasPermukaan = (super.pi * (jariJariAtas + super.jariJari) * garisPelukis) + (super.pi * (Math.pow(super.jariJari, 2) + Math.pow(jariJariAtas, 2)));
+            luasPermukaan = (super.pi * super.jariJari * garisPelukis) + (super.pi * (Math.pow(super.jariJari, 2)));
             return luasPermukaan;
         }
     }
