@@ -13,12 +13,12 @@ import projekpbo.Geometri2D;
  */
 public class LayangLayang extends Geometri2D {
     // Atribut khusus untuk layang-layang
-    public double diagonal1;
-    public double diagonal2;
-    public double sisi1;
-    public double sisi2;
-    public double luasLayangLayang;
-    public double kelilingLayangLayang;
+    protected  double diagonal1;
+    protected double diagonal2;
+    protected double sisi1;
+    protected double sisi2;
+    private double luasLayangLayang;
+    private double kelilingLayangLayang;
 
     // Constructor untuk LayangLayang
     public LayangLayang(double diagonal1, double diagonal2, double sisi1, double sisi2) {
