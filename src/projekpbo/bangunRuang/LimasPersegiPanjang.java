@@ -8,7 +8,7 @@ public class LimasPersegiPanjang extends PersegiPanjang {
 
     private double volumeLimasPersegiPanjang;
     
-    private  double tinggiLimasPersegiPanjang;
+    protected  double tinggiLimasPersegiPanjang;
 
     private double luasPermukaanPrismaPersegiPanjang;
 

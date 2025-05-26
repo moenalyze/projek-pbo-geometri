@@ -10,7 +10,7 @@ import projekpbo.Geometri2D;
 public class Persegi extends Geometri2D {
 
     // Atribut khusus untuk persegi
-    public double sisi;
+    protected double sisi;
     private double luasPersegi;
     private double kelilingPersegi;
 

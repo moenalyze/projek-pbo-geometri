@@ -4,9 +4,9 @@ import projekpbo.bangunDatar.LayangLayang;
 
 public class PrismaLayangLayang extends LayangLayang {
   // Atribut khusus untuk PrismaJajarGenjang
-  public double tinggiPrismaLayangLayang;
-  public double volumePrismaLayangLayang;
-  public double luasPermukaanPrismaLayangLayang;
+  protected double tinggiPrismaLayangLayang;
+  private double volumePrismaLayangLayang;
+  private double luasPermukaanPrismaLayangLayang;
 
   // Constructor untuk PrismaJajarGenjang
   public PrismaLayangLayang(double diagonal1, double diagonal2, double sisi1, double sisi2, double tinggiPrismaLayangLayang) {
@@ -33,9 +33,9 @@ public class PrismaLayangLayang extends LayangLayang {
     @Override
     public double hitungLuasPermukaan() {
         // Luas Permukaan Prisma Jajar Genjang = (2 * luas alas) + (kelilingjajargenjang * tinggi)
-        luasPermukaanPrismaLayangLayang = (2 * hitungLuas()) + (hitungKeliling() * tinggiPrismaLayangLayang);
+        luasPermukaanPrismaLayangLayang = (2 * super.hitungLuas()) + (super.hitungKeliling() * tinggiPrismaLayangLayang);
         return luasPermukaanPrismaLayangLayang;
-    }
+    } 
     
     public double getLuasPermukaanPrismaLayangLayang(){ 
         return luasPermukaanPrismaLayangLayang;

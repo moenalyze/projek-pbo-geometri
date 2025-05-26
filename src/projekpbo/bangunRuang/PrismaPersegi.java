@@ -31,7 +31,7 @@ public class PrismaPersegi extends Persegi {
     @Override
     public double hitungLuasPermukaan() {
         // Luas Permukaan PrismaPersegi = 6 * (luas persegi)
-        luasPermukaanKubus =  6 * hitungLuas();
+        luasPermukaanKubus =  6 * super.hitungLuas();
         return luasPermukaanKubus;
     }
     
