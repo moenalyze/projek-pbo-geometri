@@ -5,7 +5,7 @@ import projekpbo.Geometri2D;
 public class Lingkaran extends Geometri2D {
     // Atribut khusus untuk lingkaran
     protected double jariJari;
-    protected double pi = 3.14;
+    public static final double pi = 3.14;
     private double luasLingkaran;
     private double kelilingLingkaran;
 
