@@ -1,6 +1,6 @@
-package consoleView;
+ package consoleView;
 
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class BangunDatarConsole {
     public static void show() {
@@ -77,3 +77,4 @@ public class BangunDatarConsole {
         }
     }
 }
+

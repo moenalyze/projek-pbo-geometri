@@ -2,6 +2,7 @@ package projekpbo.bangunRuang;
 
 import projekpbo.bangunDatar.Persegi;
 
+
 public class PrismaPersegi extends Persegi {
     // Atribut khusus untuk PrismaPersegi
     private double volumeKubus;

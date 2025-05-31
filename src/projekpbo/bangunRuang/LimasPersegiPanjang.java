@@ -23,7 +23,6 @@ public class LimasPersegiPanjang extends PersegiPanjang {
     }
 
 
-
     public double hitungLuasPermukaan() {
         
             double tinggiSisiTegak1 = Math.sqrt(Math.pow((1.0/2.0 * lebar), 2) + Math.pow(tinggiLimasPersegiPanjang, 2));

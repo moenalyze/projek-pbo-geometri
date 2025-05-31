@@ -34,6 +34,10 @@ public class PersegiPanjang extends Geometri2D {
         return luasPersegiPanjang;
     }
 
+    public void tagPersegiPanjang(){
+        System.out.println("Menghitung persegi pnjang");
+    }
+
     // Getter untuk luas Persegi Panjang
     public double getLuasPersegiPanjang() {
         return luasPersegiPanjang;

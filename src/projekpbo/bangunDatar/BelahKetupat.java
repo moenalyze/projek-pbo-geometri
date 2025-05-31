@@ -14,6 +14,7 @@ public class BelahKetupat extends Geometri2D {
     public BelahKetupat(double diagonal1, double diagonal2) {
         this.diagonal1 = diagonal1;
         this.diagonal2 = diagonal2;
+        sisi = Math.sqrt((Math.pow((1.0/2.0 * diagonal1), 2) + Math.pow(1.0/2.0 * diagonal2, 2)));
     }
     
     // overloading untuk parameter bilangan bulat
@@ -21,11 +22,11 @@ public class BelahKetupat extends Geometri2D {
         this.diagonal1 = diagonal1;
         this.diagonal2 = diagonal2;
         // Sisi miring dihitung dari √((d1/2)² + (d2/2)²)
-        sisi = Math.sqrt(Math.pow((1.0/2.0 * diagonal1), 2) + Math.pow(1.0/2.0 * diagonal2, 2));
+        sisi = Math.sqrt((Math.pow((1.0/2.0 * diagonal1), 2) + Math.pow(1.0/2.0 * diagonal2, 2)));
     }
     
     public double hitungSisi() {
-        sisi = Math.sqrt(Math.pow((1.0/2.0 * diagonal1), 2) + Math.pow(1.0/2.0 * diagonal2, 2));
+        sisi = Math.sqrt((Math.pow((1.0/2.0 * diagonal1), 2) + Math.pow(1.0/2.0 * diagonal2, 2)));
         return sisi;
     }
    

@@ -19,6 +19,10 @@ public class PrismaPersegiPanjang extends PersegiPanjang {
     
   }
 
+  public void tagPersegiPanjang(){
+    System.out.println("Menghitung Prisma Persegi panjang");
+  }
+
   // Implementasi metode hitungVolume() untuk Balok
   @Override
   public double hitungVolume() {

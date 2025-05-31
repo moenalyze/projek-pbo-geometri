@@ -67,6 +67,7 @@ public class LimasBelahKetupatConsole {
             }
         }
 
+        // ikutin ini polymorphism
         BelahKetupat limasBelahKetupat = new LimasBelahKetupat(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak); //**** polymorphism
         //parent bangun3d = new bangun3d ()
         double volume = limasBelahKetupat.hitungVolume();
