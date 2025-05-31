@@ -15,6 +15,13 @@ public class Tabung extends Lingkaran {
     volumeSilinder = super.hitungVolume();
     luasPermukaanSilinder = super.hitungLuasPermukaan();
   }
+  
+  public Tabung(int jariJari, int tinggiSilinder) {
+    super(jariJari);
+    this.tinggiSilinder = tinggiSilinder;
+    volumeSilinder = super.hitungVolume();
+    luasPermukaanSilinder = super.hitungLuasPermukaan();
+  }
 
   // Implementasi metode hitungVolume() untuk Silinder
   @Override

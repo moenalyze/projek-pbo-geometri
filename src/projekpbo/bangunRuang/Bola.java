@@ -13,7 +13,12 @@ public class Bola extends Lingkaran {
     volumeBola = super.hitungVolume();
     luasPermukaanBola = super.hitungLuasPermukaan();
   }
-
+  
+  public Bola(int jariJari) {
+    super(jariJari);
+    volumeBola = super.hitungVolume();
+    luasPermukaanBola = super.hitungLuasPermukaan();
+  }
   // Implementasi metode hitungVolume() untuk Bola
   @Override
   public double hitungVolume() {

@@ -15,6 +15,14 @@ public class PrismaJajarGenjang extends JajarGenjang {
     volumePrismaJajarGenjang = super.hitungVolume();
     luasPermukaanPrismaJajarGenjang = super.hitungLuasPermukaan();
   }
+  
+  // Constructor untuk PrismaJajarGenjang
+  public PrismaJajarGenjang(int alas, int tinggi, int sudutlancip, int tinggiPrismaJajarGenjang) {
+    super(alas, tinggi, sudutlancip);
+    this.tinggiPrismaJajarGenjang = tinggiPrismaJajarGenjang;
+    volumePrismaJajarGenjang = super.hitungVolume();
+    luasPermukaanPrismaJajarGenjang = super.hitungLuasPermukaan();
+  }
 
   // Implementasi metode hitungVolume() untuk PrismaJajarGenjang
   @Override

@@ -34,6 +34,22 @@ public class JajarGenjang extends Geometri2D {
         luasJajarGenjang = hitungLuas();
         kelilingJajarGenjang = hitungKeliling();
     }
+    
+    // Constructor Overloading
+    // Constructor untuk JajarGenjang
+    public JajarGenjang(int alas, int tinggi, int sisiMiringJajarGenjang) {
+        this.alas = alas;
+        this.tinggi = tinggi;
+        this.sisiMiringJajarGenjang = sisiMiringJajarGenjang;
+        // Karena dalam segitiga yang terbentuk:
+        // sin(sisiMiringJajarGenjang) = tinggi / sisiMiring
+        // Maka sisiMiring = tinggi / sin(sisiMiringJajarGenjang)
+        // Perlu dikonversi dari derajat ke radian karena Math.sin() menggunakan radian 
+        // sudut harus dalam bentuk radian, tidak bisa dalam derajat
+        // sisiMiringJajarGenjang = tinggi / Math.sin(Math.toRadians(sisiMiringJajarGenjang));
+        luasJajarGenjang = hitungLuas();
+        kelilingJajarGenjang = hitungKeliling();
+    }
 
     // Implementasi metode hitungLuas() untuk jajar genjang
     @Override

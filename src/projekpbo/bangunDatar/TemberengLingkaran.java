@@ -16,6 +16,15 @@ public class TemberengLingkaran extends Lingkaran {
         this.busur = busur;
     }
     
+    
+    // Overloading Constructor
+    public TemberengLingkaran(int jariJari, int taliBusur, int sudut, int busur) {
+        super(jariJari);
+        this.taliBusur = taliBusur;
+        this.sudut = sudut;
+        this.busur = busur;
+    }
+    
      /**
      * Menghitung luas tembereng lingkaran.
      * Tembereng adalah bagian dari juring dikurangi segitiga yang dibentuk oleh tali busur dan jari-jari.
