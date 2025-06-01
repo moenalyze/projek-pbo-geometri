@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.TemberengLingkaran;
+import bendageometri.TemberengLingkaran;
 
 
 // ubah di class Tembereng lingkaran jadi, sebelumnya jariJari tidak dipanggil dari super  double luasJuring = (sudut / 360.0) * Math.PI * super.jariJari * super.jariJari;

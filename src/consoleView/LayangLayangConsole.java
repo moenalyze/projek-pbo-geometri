@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.LayangLayang;
+import bendageometri.LayangLayang;
 
 public class LayangLayangConsole {
     public static void show() {

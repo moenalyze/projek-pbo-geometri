@@ -5,7 +5,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunRuang.Bola;
+import bendageometri.Bola;
 
 /**
  *

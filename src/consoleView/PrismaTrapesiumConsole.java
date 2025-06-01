@@ -1,7 +1,7 @@
 package ConsoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunRuang.PrismaTrapesium;
+import bendageometri.PrismaTrapesium;
 
 public class PrismaTrapesiumConsole {
     public static void show() {

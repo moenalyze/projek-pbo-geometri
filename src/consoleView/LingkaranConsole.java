@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.Lingkaran;
+import bendageometri.Lingkaran;
 
 public class LingkaranConsole {
     public static void show() {

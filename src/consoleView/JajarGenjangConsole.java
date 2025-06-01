@@ -4,7 +4,7 @@
  */
 package consoleView;
 
-import projekpbo.bangunDatar.JajarGenjang;
+import bendageometri.JajarGenjang;
 import java.util.Scanner;
 
 /**

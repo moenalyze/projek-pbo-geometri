@@ -5,7 +5,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunRuang.LimasPersegi;
+import bendageometri.LimasPersegi;
 
 /**
  * Nara Ganteng

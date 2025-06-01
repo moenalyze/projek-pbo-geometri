@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.Persegi;
+import bendageometri.Persegi;
 
 /**
  * Nara Ganteng

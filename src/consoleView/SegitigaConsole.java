@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.Segitiga;
+import bendageometri.Segitiga;
 
 public class SegitigaConsole {
     public static void show() {

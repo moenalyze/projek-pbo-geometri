@@ -1,6 +1,6 @@
 package consoleView;
 import java.util.Scanner;
-import projekpbo.bangunDatar.PersegiPanjang;
+import bendageometri.PersegiPanjang;
 
 public class PersegiPanjangConsole {
 

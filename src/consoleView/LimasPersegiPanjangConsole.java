@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunRuang.LimasPersegiPanjang;
+import bendageometri.LimasPersegiPanjang;
 
 public class LimasPersegiPanjangConsole {
     public static void show() {

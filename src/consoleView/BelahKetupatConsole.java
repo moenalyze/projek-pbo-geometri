@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.BelahKetupat;
+import bendageometri.BelahKetupat;
 
 public class BelahKetupatConsole {
     public static void show() {

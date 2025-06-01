@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.JuringLingkaran;
+import bendageometri.JuringLingkaran;
 
 public class JuringLingkaranConsole {
     public static void show() {

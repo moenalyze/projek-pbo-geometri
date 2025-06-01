@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunRuang.PrismaPersegiPanjang;
+import bendageometri.PrismaPersegiPanjang;
 
 public class PrismaPersegiPanjangConsole {
     public static void show() {

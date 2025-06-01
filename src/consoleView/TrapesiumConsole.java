@@ -1,7 +1,7 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.Trapesium;
+import bendageometri.Trapesium;
 
 public class TrapesiumConsole {
     public static void show() {

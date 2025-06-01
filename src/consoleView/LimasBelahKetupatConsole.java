@@ -1,8 +1,8 @@
 package consoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunDatar.BelahKetupat;
-import projekpbo.bangunRuang.LimasBelahKetupat;
+import bendageometri.BelahKetupat;
+import bendageometri.LimasBelahKetupat;
 
 public class LimasBelahKetupatConsole {
     public static void show() {

@@ -1,7 +1,7 @@
 package ConsoleView;
 
 import java.util.Scanner;
-import projekpbo.bangunRuang.LimasSegitiga;
+import bendageometri.LimasSegitiga;
 
 public class LimasSegitigaConsole {
     public static void show() {
