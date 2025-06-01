@@ -1,5 +1,24 @@
-package bendageometri;
+package Main;
 
+import bendageometri.LimasBelahKetupat;
+import bendageometri.KerucutTerpancung;
+import bendageometri.BelahKetupat;
+import bendageometri.PersegiPanjang;
+import bendageometri.Lingkaran;
+import bendageometri.JuringLingkaran;
+import bendageometri.Kerucut;
+import bendageometri.PrismaBelahKetupat;
+import bendageometri.JajarGenjang;
+import bendageometri.BendaGeometri;
+//import BendaGeometri.BendaGeometri;
+//import BendaGeometri.JajarGenjang;
+//import BendaGeometri.JuringLingkaran;
+//import BendaGeometri.Kerucut;
+//import BendaGeometri.KerucutTerpancung;
+//import BendaGeometri.LimasBelahKetupat;
+//import BendaGeometri.Lingkaran;
+//import BendaGeometri.PersegiPanjang;
+//import BendaGeometri.PrismaBelahKetupat;
 import consoleView.*;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
