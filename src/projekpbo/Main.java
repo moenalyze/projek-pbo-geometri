@@ -209,13 +209,51 @@ public class Main {
                         loop = false;
                         break;
                 case 4:
-                    LayangLayangConsole.show();
-                    loop = false;
-                    break;
+                    System.out.println("*** Layang-Layang (Multi-threaded) ***");
+                            while (true) {
+                                try {
+                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                    jumlahLooping = inputUser.nextInt();
+                                    if (jumlahLooping <= 0) {
+                                        System.out.println("Jumlah looping harus lebih dari 0.");
+                                        continue;
+                                    }
+                                    break;
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                                } catch (Exception e) {
+                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
+                                }
+                            }
+
+                            // Menjalankan thread sebanyak jumlahLooping
+                            for (int i = 1; i <= jumlahLooping; i++) {
+                                Thread t = new Thread(new thread.LayangLayangThread(i));  // kirim nomor urut i
+                                t.start();
+                            }
                 case 5:
-                    PersegiConsole.show();
-                    loop = false;
-                    break;
+                    System.out.println("*** Persegi (Multi-threaded) ***");
+                            while (true) {
+                                try {
+                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                    jumlahLooping = inputUser.nextInt();
+                                    if (jumlahLooping <= 0) {
+                                        System.out.println("Jumlah looping harus lebih dari 0.");
+                                        continue;
+                                    }
+                                    break;
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                                } catch (Exception e) {
+                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
+                                }
+                            }
+
+                            // Menjalankan thread sebanyak jumlahLooping
+                            for (int i = 1; i <= jumlahLooping; i++) {
+                                Thread t = new Thread(new thread.LimasPersegiThread(i));  // kirim nomor urut i
+                                t.start();
+                            }
                 case 6:
                      System.out.println("Jalankan secara multi-thread (1) atau secara single-thread(0)? (1/0)");
                         multithread = inputUser.nextInt();
@@ -442,6 +480,31 @@ public class Main {
                         }
                         loop = false;
                         break;
+                
+                case 17:
+                    System.out.println("*** Limas Persegi  (Multi-threaded) ***");
+                            while (true) {
+                                try {
+                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                    jumlahLooping = inputUser.nextInt();
+                                    if (jumlahLooping <= 0) {
+                                        System.out.println("Jumlah looping harus lebih dari 0.");
+                                        continue;
+                                    }
+                                    break;
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                                } catch (Exception e) {
+                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
+                                }
+                            }
+
+                            // Menjalankan thread sebanyak jumlahLooping
+                            for (int i = 1; i <= jumlahLooping; i++) {
+                                Thread t = new Thread(new thread.LimasPersegiThread(i));  // kirim nomor urut i
+                                t.start();
+                            }
+                            
                 case 18:
                     System.out.println("*** Limas Persegi Panjang (Multi-threaded) ***");
                             while (true) {
@@ -468,27 +531,27 @@ public class Main {
                     
                 case 25:
                     System.out.println("*** Prisma Persegi Panjang (Multi-threaded) ***");
-                            while (true) {
-                                try {
-                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
-                                    jumlahLooping = inputUser.nextInt();
-                                    if (jumlahLooping <= 0) {
-                                        System.out.println("Jumlah looping harus lebih dari 0.");
-                                        continue;
-                                    }
-                                    break;
-                                } catch (NumberFormatException e) {
-                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
-                                } catch (Exception e) {
-                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
-                                }
-                            }
-
-                            // Menjalankan thread sebanyak jumlahLooping
-                            for (int i = 1; i <= jumlahLooping; i++) {
-                                Thread t = new Thread(new thread.PrismaPersegiPanjangThread(i));  // kirim nomor urut i
-                                t.start();
-                            }
+//                            while (true) {
+//                                try {
+//                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+//                                    jumlahLooping = inputUser.nextInt();
+//                                    if (jumlahLooping <= 0) {
+//                                        System.out.println("Jumlah looping harus lebih dari 0.");
+//                                        continue;
+//                                    }
+//                                    break;
+//                                } catch (NumberFormatException e) {
+//                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+//                                } catch (Exception e) {
+//                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
+//                                }
+//                            }
+//
+//                            // Menjalankan thread sebanyak jumlahLooping
+//                            for (int i = 1; i <= jumlahLooping; i++) {
+//                                Thread t = new Thread(new thread.PrismaPersegiPanjangThread(i));  // kirim nomor urut i
+//                                t.start();
+//                            }
                     
                 case 22:
                     System.out.println("*** Prisma Jajar Genjang ***");
@@ -515,10 +578,56 @@ public class Main {
                     }   
                     loop = false;
                     break;
+                case 23:
+                    System.out.println("*** Prisma Layang-Layang (Multi-threaded) ***");
+                            while (true) {
+                                try {
+                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                    jumlahLooping = inputUser.nextInt();
+                                    if (jumlahLooping <= 0) {
+                                        System.out.println("Jumlah looping harus lebih dari 0.");
+                                        continue;
+                                    }
+                                    break;
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                                } catch (Exception e) {
+                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
+                                }
+                            }
+
+                            // Menjalankan thread sebanyak jumlahLooping
+                            for (int i = 1; i <= jumlahLooping; i++) {
+                                Thread t = new Thread(new thread.PrismaLayangLayangThread(i));  // kirim nomor urut i
+                                t.start();
+                            }
+                case 24:
+                    System.out.println("*** Prisma Persegi (Multi-threaded) ***");
+                            while (true) {
+                                try {
+                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                    jumlahLooping = inputUser.nextInt();
+                                    if (jumlahLooping <= 0) {
+                                        System.out.println("Jumlah looping harus lebih dari 0.");
+                                        continue;
+                                    }
+                                    break;
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                                } catch (Exception e) {
+                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
+                                }
+                            }
+
+                            // Menjalankan thread sebanyak jumlahLooping
+                            for (int i = 1; i <= jumlahLooping; i++) {
+                                Thread t = new Thread(new thread.PrismaPersegiThread(i));  // kirim nomor urut i
+                                t.start();
+                            }
                 case 32:
-                    MenuUtamaConsole.show();
-                    loop = false;
-                    break;
+//                    MenuUtamaConsole.show();
+//                    loop = false;
+//                    break;
                 default:
                     System.out.println("Menu tidak tersedia!");
 //                    input.nextLine();
