@@ -22,8 +22,12 @@ public class PersegiPanjang extends Geometri2D {
     public PersegiPanjang(double panjang, double lebar) {
         this.panjang = panjang;
         this.lebar = lebar;
-        // luasPersegiPanjang = hitungLuas();
-        // kelilingPersegiPanjang = hitungKeliling();
+    }
+
+     // Constructor overload untuk PersegiPanjang
+    public PersegiPanjang(int panjang, double lebar) {
+        this.panjang = panjang;
+        this.lebar = lebar;
     }
 
     // Implementasi metode hitungLuas() untuk persegi panjang

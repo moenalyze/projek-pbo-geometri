@@ -5,7 +5,7 @@ import projekpbo.bangunRuang.LimasPersegiPanjang;
 
 public class LimasPersegiPanjangConsole {
     public static void show() {
-        Scanner input = new Scanner(System.in);
+        Scanner inputLimasPP = new Scanner(System.in);
         double panjang = 0;
         double lebar = 0;
         double tinggi = 0;
@@ -14,23 +14,23 @@ public class LimasPersegiPanjangConsole {
         while (true) {
             try {
                 System.out.print("Masukkan panjang (cm) : ");
-                panjang = Double.parseDouble(input.nextLine());
+                panjang = Double.parseDouble(inputLimasPP.nextLine());
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("⚠  Input panjang harus berupa angka. Silakan coba lagi.");
+                System.out.println("⚠  inputLimasPP panjang harus berupa angka. Silakan coba lagi.");
             } catch (Exception e) {
                 System.out.println("❌ Terjadi kesalahan: " + e.getMessage());
             }
         }
 
-        // Input sudut dengan validasi
+        // inputLimasPP sudut dengan validasi
         while (true) {
             try {
                 System.out.print("Masukkan lebar (cm): ");
-                lebar = Double.parseDouble(input.nextLine());
+                lebar = Double.parseDouble(inputLimasPP.nextLine());
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("!! Input lebar harus berupa angka. Silakan coba lagi.");
+                System.out.println("!! input lebar harus berupa angka. Silakan coba lagi.");
             } catch (Exception e) {
                 System.out.println("!! Terjadi kesalahan: " + e.getMessage());
             }
@@ -39,7 +39,7 @@ public class LimasPersegiPanjangConsole {
         while (true) {
             try {
                 System.out.print("Masukkan tinggi (cm): ");
-                tinggi = Double.parseDouble(input.nextLine());
+                tinggi = Double.parseDouble(inputLimasPP.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("!! Input tinggi harus berupa angka. Silakan coba lagi.");

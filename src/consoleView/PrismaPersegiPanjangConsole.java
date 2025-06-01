@@ -5,7 +5,7 @@ import projekpbo.bangunRuang.PrismaPersegiPanjang;
 
 public class PrismaPersegiPanjangConsole {
     public static void show() {
-        Scanner input = new Scanner(System.in);
+        Scanner inputPrismaPP = new Scanner(System.in);
         double panjang = 0;
         double lebar = 0;
         double tinggi = 0;
@@ -14,23 +14,23 @@ public class PrismaPersegiPanjangConsole {
         while (true) {
             try {
                 System.out.print("Masukkan panjang (cm) : ");
-                panjang = Double.parseDouble(input.nextLine());
+                panjang = Double.parseDouble(inputPrismaPP.nextLine());
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("⚠  Input panjang harus berupa angka. Silakan coba lagi.");
+                System.out.println("⚠  input Prisma Persegi Panjang panjang harus berupa angka. Silakan coba lagi.");
             } catch (Exception e) {
                 System.out.println("❌ Terjadi kesalahan: " + e.getMessage());
             }
         }
 
-        // Input sudut dengan validasi
+        // inputPrismaPP sudut dengan validasi
         while (true) {
             try {
                 System.out.print("Masukkan lebar (cm): ");
-                lebar = Double.parseDouble(input.nextLine());
+                lebar = Double.parseDouble(inputPrismaPP.nextLine());
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("!! Input lebar harus berupa angka. Silakan coba lagi.");
+                System.out.println("!! input Prisma Persegi Panjang panjang lebar harus berupa angka. Silakan coba lagi.");
             } catch (Exception e) {
                 System.out.println("!! Terjadi kesalahan: " + e.getMessage());
             }
@@ -39,10 +39,10 @@ public class PrismaPersegiPanjangConsole {
         while (true) {
             try {
                 System.out.print("Masukkan tinggi (cm): ");
-                tinggi = Double.parseDouble(input.nextLine());
+                tinggi = Double.parseDouble(inputPrismaPP.nextLine());
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("!! Input tinggi harus berupa angka. Silakan coba lagi.");
+                System.out.println("!! input Prisma Persegi Panjang panjang tinggi harus berupa angka. Silakan coba lagi.");
             } catch (Exception e) {
                 System.out.println("!! Terjadi kesalahan: " + e.getMessage());
             }

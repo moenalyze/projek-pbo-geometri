@@ -4,7 +4,7 @@ import projekpbo.bangunRuang.Kerucut;
 
 public class KerucutConsole {
     public static void show() {
-        Scanner input = new Scanner(System.in);
+        Scanner inputKerucut = new Scanner(System.in);
         double jariJari = 0;
         double tinggi = 0;
         
@@ -13,10 +13,10 @@ public class KerucutConsole {
         while (true) {
             try {
                 System.out.print("Masukkan jari-jari Alas kerucut (cm) : ");
-                jariJari = Double.parseDouble(input.nextLine());
+                jariJari = Double.parseDouble(inputKerucut.nextLine());
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("⚠  Input jari-jari harus berupa angka. Silakan coba lagi.");
+                System.out.println("⚠  input jari-jari harus berupa angka. Silakan coba lagi.");
             } catch (Exception e) {
                 System.out.println("❌ Terjadi kesalahan: " + e.getMessage());
             }
@@ -25,7 +25,7 @@ public class KerucutConsole {
         while (true) {
             try {
                 System.out.print("Masukkan tinggi kerucut (cm): ");
-                tinggi = Double.parseDouble(input.nextLine());
+                tinggi = Double.parseDouble(inputKerucut.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("!! Input tinggi harus berupa angka. Silakan coba lagi.");

@@ -5,7 +5,7 @@ import projekpbo.bangunDatar.Lingkaran;
 
 public class LingkaranConsole {
     public static void show() {
-        Scanner input = new Scanner(System.in);
+        Scanner inputLingkaran = new Scanner(System.in);
         double jariJari = 0;
         
 
@@ -13,7 +13,7 @@ public class LingkaranConsole {
         while (true) {
             try {
                 System.out.print("Masukkan jari-jari lingkaran : ");
-                jariJari = Double.parseDouble(input.nextLine());
+                jariJari = Double.parseDouble(inputLingkaran.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("⚠  Input jari-jari harus berupa angka. Silakan coba lagi.");
