@@ -10,10 +10,10 @@ import projekpbo.bangunRuang.PrismaBelahKetupat;
  *
  * @author Khatama
  */
-public class PrimasBelahKetupatThread implements Runnable {
+public class PrismaBelahKetupatThread implements Runnable {
     private int nomor;
     
-    public PrimasBelahKetupatThread(int nomor) {
+    public PrismaBelahKetupatThread(int nomor) {
         this.nomor = nomor;
     }
 
