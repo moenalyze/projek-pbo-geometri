@@ -2,6 +2,9 @@ package projekpbo;
 
 import consoleView.*;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import projekpbo.bangunDatar.*;
 import projekpbo.bangunRuang.*;
 //import gui.BangunDatar;
@@ -316,29 +319,65 @@ public class Main {
                     loop = false;
                     break;
                 case 11:
-                    System.out.println("*** Bola (Multi-threaded) ***");
+//                    System.out.println("*** Bola (Multi-threaded) ***");
+//                    while (true) {
+//                        try {
+//                            System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+//                            jumlahLooping = inputUser.nextInt();
+//                            System.out.flush(); 
+//                            if (jumlahLooping <= 0) {
+//                                System.out.println("Jumlah looping harus lebih dari 0.");
+//                                continue;
+//                            }
+//                            break;
+//                        } catch (NumberFormatException e) {
+//                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+//                        } catch (Exception e) {
+//                            System.out.println("Terjadi kesalahan: " + e.getMessage());
+//                        }
+//                    }
+//
+//                    // Menjalankan thread sebanyak jumlahLooping
+//                    for (int i = 1; i <= jumlahLooping; i++) {
+//                        Thread t = new Thread(new thread.BolaThread(i));  // kirim nomor urut i
+//                        t.start();
+//                    }
+                    
+                    System.out.println("*** Bola (Multi-threaded dengan Thread Pool) ***");
+
                     while (true) {
                         try {
                             System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
                             jumlahLooping = inputUser.nextInt();
-                            System.out.flush(); 
+                            System.out.flush();
+
                             if (jumlahLooping <= 0) {
                                 System.out.println("Jumlah looping harus lebih dari 0.");
                                 continue;
                             }
                             break;
-                        } catch (NumberFormatException e) {
-                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
                         } catch (Exception e) {
-                            System.out.println("Terjadi kesalahan: " + e.getMessage());
+                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                            inputUser.nextLine(); // clear buffer
                         }
                     }
 
-                    // Menjalankan thread sebanyak jumlahLooping
+                    // Buat thread pool dengan jumlah thread tetap (misal 4 thread)
+//                    int jumlahThread = 100; // atau bisa disesuaikan
+                    ExecutorService executor = Executors.newFixedThreadPool(100);
+//                    ExecutorService executor = Executors.newCachedThreadPool();
+
+                    // Submit task (BolaThread) ke executor
                     for (int i = 1; i <= jumlahLooping; i++) {
-                        Thread t = new Thread(new thread.BolaThread(i));  // kirim nomor urut i
-                        t.start();
+                        executor.execute(new thread.BolaThread(i));
+                        executor.execute(new thread.JajarGenjangThread(i));
+                        executor.execute(new thread.TabungThread(i));
                     }
+
+                    // Setelah submit semua, shutdown executor agar program bisa selesai
+                    executor.shutdown();
+                    
+                   
                     loop = false;
                     break;
                 case 12:

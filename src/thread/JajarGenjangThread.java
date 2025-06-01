@@ -27,6 +27,9 @@ public class JajarGenjangThread implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        
+        // Ambil nama thread yang menjalankan task ini
+        String threadName = Thread.currentThread().getName();
 
         double alas = 5 + Math.random() * 20;     // 5 - 25
         double tinggi = 5 + Math.random() * 20;   // 5 - 25
@@ -35,9 +38,9 @@ public class JajarGenjangThread implements Runnable {
         JajarGenjang jg = new JajarGenjang(alas, tinggi, sudut);
         double luas = jg.hitungLuas();
         double keliling = jg.hitungKeliling();
-
-        System.out.printf("Thread JajarGenjang #%d | Alas: %.2f | Tinggi: %.2f | Sudut: %.2f | Luas: %.2f | Keliling: %.2f%n",
-                          nomor, alas, tinggi, sudut, luas, keliling);
+                
+        System.out.printf("Thread JajarGenjang #%d (%s) | Jari-jari: %.2f cm | Luas Permukaan: %.2f cm | Volume: %.2f cm%n",
+                nomor, threadName, alas, tinggi, sudut, luas, keliling);
     }
 }
 

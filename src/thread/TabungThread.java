@@ -17,6 +17,8 @@ public class TabungThread implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        
+        String threadName = Thread.currentThread().getName();
 
         // Generate nilai acak untuk jari-jari dan tinggi tabung
         double jariJari = 3 + Math.random() * 10;  // 3 - 13 cm
@@ -26,7 +28,10 @@ public class TabungThread implements Runnable {
         double volume = tabung.hitungVolume();
         double luasPermukaan = tabung.hitungLuasPermukaan();
 
-        System.out.printf("Thread Tabung #%d | Jari-jari: %.2f cm | Tinggi: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
-                nomor, jariJari, tinggi, volume, luasPermukaan);
+//        System.out.printf("Thread Tabung #%d | Jari-jari: %.2f cm | Tinggi: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
+//                nomor, jariJari, tinggi, volume, luasPermukaan);
+        
+        System.out.printf("Thread Tabung #%d (%s) | Jari-jari: %.2f cm | Luas Permukaan: %.2f cm | Volume: %.2f cm%n",
+                nomor, threadName, jariJari, tinggi, volume, luasPermukaan);
     }
 }

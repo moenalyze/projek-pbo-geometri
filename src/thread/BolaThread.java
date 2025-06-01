@@ -11,12 +11,12 @@ public class BolaThread implements Runnable {
 
     @Override
     public void run() {
-        try {
-            // Delay random agar output tidak selalu berurutan rapi
-            Thread.sleep((long)(Math.random() * 300));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            // Delay random agar output tidak selalu berurutan rapi
+//            Thread.sleep((long)(Math.random() * 300));
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         // Generate nilai jari-jari random antara 3 sampai 15 cm
         double jariJari = 3 + Math.random() * 12;
@@ -25,7 +25,10 @@ public class BolaThread implements Runnable {
         double luasPermukaan = bola.hitungLuasPermukaan();
         double volume = bola.hitungVolume();
 
-        System.out.printf("Thread Bola #%d | Jari-jari: %.2f cm | Luas Permukaan: %.2f cm² | Volume: %.2f cm³%n",
-                nomor, jariJari, luasPermukaan, volume);
+        // Ambil nama thread yang menjalankan task ini
+        String threadName = Thread.currentThread().getName();
+
+        System.out.printf("Thread Bola #%d (%s) | Jari-jari: %.2f cm | Luas Permukaan: %.2f cm | Volume: %.2f cm%n",
+                nomor, threadName, jariJari, luasPermukaan, volume);
     }
 }
