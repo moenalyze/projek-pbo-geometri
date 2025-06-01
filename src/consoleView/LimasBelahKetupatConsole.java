@@ -53,12 +53,12 @@ public class LimasBelahKetupatConsole {
             try {
                 System.out.print("Masukkan tinggi sisi tegak (cm) : ");
                 tinggiSisiTegak = Double.parseDouble(inputLimasBelahKetupat.nextLine());
-                double s = Math.sqrt(Math.pow(diagonal1 / 2.0, 2) + Math.pow(diagonal2 / 2.0, 2)); // sisi belah ketupat
-                double tinggiMinimal = Math.sqrt(Math.pow(s / 2.0, 2) + Math.pow(tinggiLimas, 2));
-
-                if (tinggiSisiTegak < tinggiMinimal) {
-                    throw new IllegalArgumentException("Tinggi sisi tegak terlalu pendek (harus >= " + tinggiMinimal + ")");
-                }
+//                double s = Math.sqrt(Math.pow(diagonal1 / 2.0, 2) + Math.pow(diagonal2 / 2.0, 2)); // sisi belah ketupat
+//                double tinggiMinimal = Math.sqrt(Math.pow(s / 2.0, 2) + Math.pow(tinggiLimas, 2));
+//
+//                if (tinggiSisiTegak < tinggiMinimal) {
+//                    throw new IllegalArgumentException("Tinggi sisi tegak terlalu pendek (harus >= " + tinggiMinimal + ")");
+//                }
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("!! Input jari-jari harus berupa angka. Silakan coba lagi.");
