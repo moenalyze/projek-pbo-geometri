@@ -74,10 +74,74 @@ public class Main {
 
             switch(pilihMenu) {
                 case 1:
-                    BelahKetupatConsole.show();
+                    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread(0)? (1/0)");
+                    multithread = inputUser.nextInt();
+                    jumlahLooping = 0;
+                    
+                    if(multithread == 1) {
+                        System.out.println("*** Belah Ketupat (Multi-threaded) ***");
+                        while (true) {
+                        try {
+                            System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                            jumlahLooping = inputUser.nextInt();
+                            System.out.flush(); 
+                            if (jumlahLooping <= 0) {
+                                System.out.println("Jumlah looping harus lebih dari 0.");
+                                continue;
+                            }
+                            break;
+                        } catch (NumberFormatException e) {
+                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                        } catch (Exception e) {
+                            System.out.println("Terjadi kesalahan: " + e.getMessage());
+                        }
+                    }
+
+                        // Menjalankan thread sebanyak jumlahLooping
+                        for (int i = 1; i <= jumlahLooping; i++) {
+                            Thread t = new Thread(new thread.BelahKetupatThread(i));  // kirim nomor urut i
+                            t.start();
+                        }
+
+                    // polymorphism di single thread
+                    } else if (multithread == 0) {
+                         System.out.println("*** Belah Ketupat (Single-threaded) ***");
+//
+//                        int jumlahLooping = 0;
+                        while (true) {
+                            try {
+                                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                jumlahLooping = inputUser.nextInt();
+                                if (jumlahLooping <= 0) {
+                                    System.out.println("Jumlah looping harus lebih dari 0.");
+                                    continue;
+                                }
+                                break;
+                            } catch (NumberFormatException e) {
+                                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                            } catch (Exception e) {
+                                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                            }
+                        }
+                        
+                        BendaGeometri[] belahKetupat = new BendaGeometri[jumlahLooping];
+                        // Menjalankan perhitungan belah ketupat sebanyak jumlahLooping kali (tanpa thread)
+                        for (int i = 0; i < jumlahLooping; i++) {
+                            double diagonal1 = 5 + Math.random() * 20; // 5 - 25
+                            double diagonal2 = 5 + Math.random() * 20; // 5 - 25
+
+                            belahKetupat[i] = new BelahKetupat(diagonal1, diagonal2);
+                            double luas = belahKetupat[i].hitungLuas();
+                            double keliling = belahKetupat[i].hitungKeliling();
+                            
+                            System.out.printf(
+                                "Thread Belah Ketupat #%d | Diagonal1: %.2f cm | Diagonal2: %.2f cm | Luas: %.2f cm² | Keliling: %.2f cm%n",
+                                (i + 1), diagonal1, diagonal2, luas, keliling
+                            );
+                        }
+                    }
                     loop = false;
                     break;
-                        
                 case 2:
                     System.out.println("Jalankan secara multi-thread (1) atau secara single-thread(0)? (1/0)");
                     multithread = inputUser.nextInt();
@@ -326,7 +390,72 @@ public class Main {
                     loop = false;
                     break;
                 case 9:
-                    JuringLingkaranConsole.show();
+                    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread(0)? (1/0)");
+                    multithread = inputUser.nextInt();
+                    jumlahLooping = 0;
+                    
+                    if(multithread == 1) {
+                        System.out.println("*** Juring Lingkaran (Multi-threaded) ***");
+                        while (true) {
+                        try {
+                            System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                            jumlahLooping = inputUser.nextInt();
+                            System.out.flush(); 
+                            if (jumlahLooping <= 0) {
+                                System.out.println("Jumlah looping harus lebih dari 0.");
+                                continue;
+                            }
+                            break;
+                        } catch (NumberFormatException e) {
+                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                        } catch (Exception e) {
+                            System.out.println("Terjadi kesalahan: " + e.getMessage());
+                        }
+                    }
+
+                        // Menjalankan thread sebanyak jumlahLooping
+                        for (int i = 1; i <= jumlahLooping; i++) {
+                            Thread t = new Thread(new thread.JuringLingkaranThread(i));  // kirim nomor urut i
+                            t.start();
+                        }
+
+                    // polymorphism di single thread
+                    } else if (multithread == 0) {
+                         System.out.println("*** Juring Lingkaran (Single-threaded) ***");
+//
+//                        int jumlahLooping = 0;
+                        while (true) {
+                            try {
+                                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                jumlahLooping = inputUser.nextInt();
+                                if (jumlahLooping <= 0) {
+                                    System.out.println("Jumlah looping harus lebih dari 0.");
+                                    continue;
+                                }
+                                break;
+                            } catch (NumberFormatException e) {
+                                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                            } catch (Exception e) {
+                                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                            }
+                        }
+                        
+                        BendaGeometri[] juringLingkaran = new BendaGeometri[jumlahLooping];
+                        // Menjalankan perhitungan belah ketupat sebanyak jumlahLooping kali (tanpa thread)
+                        for (int i = 0; i < jumlahLooping; i++) {
+                            double jariJari = 5 + Math.random() * 15; // 5 - 20 cm
+                            double sudut = Math.random() * 360;       // 0 - 360 derajat
+
+                            juringLingkaran[i] = new JuringLingkaran(jariJari, sudut);
+                            double luas = juringLingkaran[i].hitungLuas();
+                            double keliling = juringLingkaran[i].hitungKeliling();
+                            
+                            System.out.printf(
+                               "Thread Juring Lingkaran #%d | Jari-jari: %.2f cm | Sudut: %.2f derajat | Luas: %.2f cm² | Keliling: %.2f cm%n",
+                               (i + 1), jariJari, sudut, luas, keliling
+                            );
+                        }
+                    }
                     loop = false;
                     break;
                 case 10:
@@ -480,7 +609,147 @@ public class Main {
                         }
                         loop = false;
                         break;
-                
+                case 13:
+                    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread(0)? (1/0)");
+                    multithread = inputUser.nextInt();
+                    jumlahLooping = 0;
+                    
+                    if(multithread == 1) {
+                        System.out.println("*** Kerucut Terpancung (Multi-threaded) ***");
+                        while (true) {
+                        try {
+                            System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                            jumlahLooping = inputUser.nextInt();
+                            System.out.flush(); 
+                            if (jumlahLooping <= 0) {
+                                System.out.println("Jumlah looping harus lebih dari 0.");
+                                continue;
+                            }
+                            break;
+                        } catch (NumberFormatException e) {
+                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                        } catch (Exception e) {
+                            System.out.println("Terjadi kesalahan: " + e.getMessage());
+                        }
+                    }
+
+                        // Menjalankan thread sebanyak jumlahLooping
+                        for (int i = 1; i <= jumlahLooping; i++) {
+                            Thread t = new Thread(new thread.KerucutTerpancungThread(i));  // kirim nomor urut i
+                            t.start();
+                        }
+
+                    // polymorphism di single thread
+                    } else if (multithread == 0) {
+                         System.out.println("*** Kerucut Terpancung (Single-threaded) ***");
+//
+//                        int jumlahLooping = 0;
+                        while (true) {
+                            try {
+                                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                jumlahLooping = inputUser.nextInt();
+                                if (jumlahLooping <= 0) {
+                                    System.out.println("Jumlah looping harus lebih dari 0.");
+                                    continue;
+                                }
+                                break;
+                            } catch (NumberFormatException e) {
+                                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                            } catch (Exception e) {
+                                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                            }
+                        }
+                        
+                        BendaGeometri[] kerucutTerpancung = new BendaGeometri[jumlahLooping];
+                        // Menjalankan perhitungan jajar genjang sebanyak jumlahLooping kali (tanpa thread)
+                        for (int i = 0; i < jumlahLooping; i++) {
+                            double tinggi = 5 + Math.random() * 15;             // 5 - 20 cm
+                            double jariJariAtas = 5 + Math.random() * 15;             // 5 - 20 cm
+                            double jariJariBawah = 5 + Math.random() * 15;             // 5 - 20 cm
+
+                            kerucutTerpancung[i] = new KerucutTerpancung(tinggi, jariJariAtas, jariJariBawah);
+                            double volume = kerucutTerpancung[i].hitungVolume();
+                            double luasPermukaan = kerucutTerpancung[i].hitungLuasPermukaan();
+
+                            System.out.printf(
+                                "Thread Kerucut Terpancung #%d | Tinggi: %.2f cm | Jari-jari atas: %.2f cm | Jari-jari bawah: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
+                                (i + 1), tinggi, jariJariAtas, jariJariBawah, volume, luasPermukaan
+                            );
+                        }
+                    }
+                    loop = false;
+                    break;
+                case 14:
+                    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread(0)? (1/0)");
+                    multithread = inputUser.nextInt();
+                    jumlahLooping = 0;
+                    
+                    if(multithread == 1) {
+                        System.out.println("*** Limas Belah Ketupat (Multi-threaded) ***");
+                        while (true) {
+                        try {
+                            System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                            jumlahLooping = inputUser.nextInt();
+                            System.out.flush(); 
+                            if (jumlahLooping <= 0) {
+                                System.out.println("Jumlah looping harus lebih dari 0.");
+                                continue;
+                            }
+                            break;
+                        } catch (NumberFormatException e) {
+                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                        } catch (Exception e) {
+                            System.out.println("Terjadi kesalahan: " + e.getMessage());
+                        }
+                    }
+
+                        // Menjalankan thread sebanyak jumlahLooping
+                        for (int i = 1; i <= jumlahLooping; i++) {
+                            Thread t = new Thread(new thread.LimasBelahKetupatThread(i));  // kirim nomor urut i
+                            t.start();
+                        }
+
+                    // polymorphism di single thread
+                    } else if (multithread == 0) {
+                         System.out.println("*** Limas Belah Ketupat (Single-threaded) ***");
+//
+//                        int jumlahLooping = 0;
+                        while (true) {
+                            try {
+                                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                jumlahLooping = inputUser.nextInt();
+                                if (jumlahLooping <= 0) {
+                                    System.out.println("Jumlah looping harus lebih dari 0.");
+                                    continue;
+                                }
+                                break;
+                            } catch (NumberFormatException e) {
+                                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                            } catch (Exception e) {
+                                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                            }
+                        }
+                        
+                        BendaGeometri[] limasBelahKetupat = new BendaGeometri[jumlahLooping];
+                        // Menjalankan perhitungan jajar genjang sebanyak jumlahLooping kali (tanpa thread)
+                        for (int i = 0; i < jumlahLooping; i++) {
+                            double diagonal1 = 5 + Math.random() * 20; // 5 - 25
+                            double diagonal2 = 5 + Math.random() * 20; // 5 - 25
+                            double tinggiLimas = 5 + Math.random() * 20; // 5 - 25
+                            double tinggiSisiTegak = 5 + Math.random() * 20; // 5 - 25
+
+                            limasBelahKetupat[i] = new LimasBelahKetupat(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak);
+                            double volume = limasBelahKetupat[i].hitungVolume();
+                            double luasPermukaan = limasBelahKetupat[i].hitungLuasPermukaan();
+
+                            System.out.printf(
+                                "Thread Limas Belah Ketupat #%d | Diagonal 1: %.2f cm | Diagonal 2: %.2f cm | Tinggi Limas: %.2f cm | Tinggi Sisi Tegak: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
+                                (i + 1), diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak, volume, luasPermukaan
+                            );
+                        }
+                    }
+                    loop = false;
+                    break;
                 case 17:
                     System.out.println("*** Limas Persegi  (Multi-threaded) ***");
                             while (true) {
@@ -528,7 +797,77 @@ public class Main {
                                 Thread t = new Thread(new thread.LimasPersegiPanjangThread(i));  // kirim nomor urut i
                                 t.start();
                             }
+                            
+                case 21:
+                    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread(0)? (1/0)");
+                    multithread = inputUser.nextInt();
+                    jumlahLooping = 0;
                     
+                    if(multithread == 1) {
+                        System.out.println("*** Prisma Belah Ketupat (Multi-threaded) ***");
+                        while (true) {
+                        try {
+                            System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                            jumlahLooping = inputUser.nextInt();
+                            System.out.flush(); 
+                            if (jumlahLooping <= 0) {
+                                System.out.println("Jumlah looping harus lebih dari 0.");
+                                continue;
+                            }
+                            break;
+                        } catch (NumberFormatException e) {
+                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                        } catch (Exception e) {
+                            System.out.println("Terjadi kesalahan: " + e.getMessage());
+                        }
+                    }
+
+                        // Menjalankan thread sebanyak jumlahLooping
+                        for (int i = 1; i <= jumlahLooping; i++) {
+                            Thread t = new Thread(new thread.PrismaBelahKetupatThread(i));  // kirim nomor urut i
+                            t.start();
+                        }
+
+                    // polymorphism di single thread
+                    } else if (multithread == 0) {
+                         System.out.println("*** Prisma Belah Ketupat (Single-threaded) ***");
+//
+//                        int jumlahLooping = 0;
+                        while (true) {
+                            try {
+                                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                jumlahLooping = inputUser.nextInt();
+                                if (jumlahLooping <= 0) {
+                                    System.out.println("Jumlah looping harus lebih dari 0.");
+                                    continue;
+                                }
+                                break;
+                            } catch (NumberFormatException e) {
+                                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                            } catch (Exception e) {
+                                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                            }
+                        }
+                        
+                        BendaGeometri[] prismaBelahKetupat = new BendaGeometri[jumlahLooping];
+                        // Menjalankan perhitungan jajar genjang sebanyak jumlahLooping kali (tanpa thread)
+                        for (int i = 0; i < jumlahLooping; i++) {
+                            double diagonal1 = 5 + Math.random() * 20; // 5 - 25
+                            double diagonal2 = 5 + Math.random() * 20; // 5 - 25
+                            double tinggiPrisma = 5 + Math.random() * 20; // 5 - 25
+
+                            prismaBelahKetupat[i] = new PrismaBelahKetupat(diagonal1, diagonal2, tinggiPrisma);
+                            double volume = prismaBelahKetupat[i].hitungVolume();
+                            double luasPermukaan = prismaBelahKetupat[i].hitungLuasPermukaan();
+
+                             System.out.printf(
+                                "Thread Prisma Belah Ketupat #%d | Diagonal 1: %.2f cm | Diagonal 2: %.2f cm | Tinggi Prisma: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
+                                (i + 1), diagonal1, diagonal2, tinggiPrisma, volume, luasPermukaan
+                            );
+                        }
+                    }
+                    loop = false;
+                    break;
                 case 25:
                     System.out.println("*** Prisma Persegi Panjang (Multi-threaded) ***");
 //                            while (true) {
