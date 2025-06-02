@@ -1,30 +1,9 @@
-package Main;
-
-import bendageometri.LimasBelahKetupat;
-import bendageometri.KerucutTerpancung;
-import bendageometri.BelahKetupat;
-import bendageometri.PersegiPanjang;
-import bendageometri.Lingkaran;
-import bendageometri.JuringLingkaran;
-import bendageometri.Kerucut;
-import bendageometri.PrismaBelahKetupat;
-import bendageometri.JajarGenjang;
-import bendageometri.BendaGeometri;
-//import BendaGeometri.BendaGeometri;
-//import BendaGeometri.JajarGenjang;
-//import BendaGeometri.JuringLingkaran;
-//import BendaGeometri.Kerucut;
-//import BendaGeometri.KerucutTerpancung;
-//import BendaGeometri.LimasBelahKetupat;
-//import BendaGeometri.Lingkaran;
-//import BendaGeometri.PersegiPanjang;
-//import BendaGeometri.PrismaBelahKetupat;
+import bendageometri.*;
 import consoleView.*;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-//import gui.BangunDatar;
 
 public class Main {
     public static void main(String[] args) {
@@ -957,6 +936,8 @@ public class Main {
                                 Thread t = new Thread(new bendageometri.PrismaLayangLayangThread(i));  // kirim nomor urut i
                                 t.start();
                             }
+                            loop = false;
+                            break;
                 case 24:
                     System.out.println("*** Prisma Persegi (Multi-threaded) ***");
                             while (true) {
@@ -980,6 +961,8 @@ public class Main {
                                 Thread t = new Thread(new bendageometri.PrismaPersegiThread(i));  // kirim nomor urut i
                                 t.start();
                             }
+                            loop = false;
+                            break;
                 case 32:
 //                    MenuUtamaConsole.show();
 //                    loop = false;
