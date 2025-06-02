@@ -25,25 +25,71 @@ public class PrismaPersegiPanjang extends PersegiPanjang {
 
   // Implementasi metode hitungVolume() untuk Balok
   @Override
-  public double hitungVolume() {
-    // Volume Balok = luas Persegi Panjang * tinggi Balok
-    if (hitungUlang){
-        volumeBalok = super.hitungLuas() * tinggiBalok;
+  public double hitungVolume() throws IllegalArgumentException {
+        try {
+            if (tinggiBalok <= 0) {
+                throw new IllegalArgumentException("Tinggi balok harus lebih besar dari 0");
+            }
+            // Volume Balok = luas Persegi Panjang * tinggi Balok
+            if (hitungUlang) {
+                volumeBalok = super.hitungLuas() * tinggiBalok; // Memanggil hitungLuas() dari PersegiPanjang
+            } else {
+                volumeBalok = super.luasPersegiPanjang * tinggiBalok;
+            }
+            return volumeBalok;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error saat menghitung volume: " + e.getMessage());
+            throw e; // Melempar ulang exception untuk ditangani oleh pemanggil
+        }
     }
-    else {
-        volumeBalok = super.luasPersegiPanjang * tinggiBalok;
+
+    // Overloading
+    public double hitungVolume(int tinggiBalok) throws IllegalArgumentException {
+        try {
+            if (tinggiBalok <= 0) {
+                throw new IllegalArgumentException("Tinggi balok harus lebih besar dari 0");
+            }
+            // Volume Balok = luas Persegi Panjang * tinggi Balok
+            if (hitungUlang) {
+                volumeBalok = super.hitungLuas() * tinggiBalok; // Memanggil hitungLuas() dari PersegiPanjang
+            } else {
+                volumeBalok = super.luasPersegiPanjang * tinggiBalok;
+            }
+            return volumeBalok;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error saat menghitung volume (overloaded): " + e.getMessage());
+            throw e; // Melempar ulang exception untuk ditangani oleh pemanggil
+        }
     }
-    return volumeBalok;
-  }
 
+    // Implementasi metode untuk menghitung luas permukaan Balok
+    public double hitungLuasPermukaan() throws IllegalArgumentException {
+        try {
+            if (tinggiBalok <= 0) {
+                throw new IllegalArgumentException("Tinggi balok harus lebih besar dari 0");
+            }
+            // Luas Permukaan Balok = 2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi))
+            luasPermukaanBalok = 2 * ((panjang * lebar) + (panjang * tinggiBalok) + (lebar * tinggiBalok));
+            return luasPermukaanBalok;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error saat menghitung luas permukaan: " + e.getMessage());
+            throw e; // Melempar ulang exception untuk ditangani oleh pemanggil
+        }
+    }
 
-  
-  // Implementasi metode untuk menghitung luas permukaan Balok
-    public double hitungLuasPermukaan() {
-        // Luas Permukaan Balok = 2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi))
-        luasPermukaanBalok = 2 * ((panjang * lebar) + (panjang * tinggiBalok) + (lebar * tinggiBalok)); 
-      return luasPermukaanBalok;
+    // Overloading
+    public double hitungLuasPermukaan(int tinggiBalok) throws IllegalArgumentException {
+        try {
+            if (tinggiBalok <= 0) {
+                throw new IllegalArgumentException("Tinggi balok harus lebih besar dari 0");
+            }
+            // Luas Permukaan Balok = 2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi))
+            luasPermukaanBalok = 2 * ((panjang * lebar) + (panjang * tinggiBalok) + (lebar * tinggiBalok));
+            return luasPermukaanBalok;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error saat menghitung luas permukaan (overloaded): " + e.getMessage());
+            throw e; // Melempar ulang exception untuk ditangani oleh pemanggil
+        }
     }
     
-
 }

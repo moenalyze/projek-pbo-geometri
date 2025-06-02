@@ -32,7 +32,19 @@ public class PersegiPanjang extends Geometri2D {
 
     // Implementasi metode hitungLuas() untuk persegi panjang
     @Override
-    public double hitungLuas() {
+    public double hitungLuas() throws IllegalArgumentException {
+        if (panjang <= 0 || lebar <= 0) {
+            throw new IllegalArgumentException("Panjang dan lebar harus lebih besar dari 0");
+        }
+        // Rumus luas persegi panjang: panjang * lebar
+        luasPersegiPanjang = panjang * lebar;
+        return luasPersegiPanjang;
+    }
+
+    public double hitungLuas(int panjang, int lebar) throws IllegalArgumentException {
+        if (panjang <= 0 || lebar <= 0) {
+            throw new IllegalArgumentException("Panjang dan lebar harus lebih besar dari 0");
+        }
         // Rumus luas persegi panjang: panjang * lebar
         luasPersegiPanjang = panjang * lebar;
         return luasPersegiPanjang;
@@ -48,7 +60,20 @@ public class PersegiPanjang extends Geometri2D {
     }
 
     @Override
-    public double hitungKeliling() {
+    public double hitungKeliling() throws IllegalArgumentException {
+        if (panjang <= 0 || lebar <= 0) {
+            throw new IllegalArgumentException("Panjang dan lebar harus lebih besar dari 0");
+        }
+        // Keliling Persegi Panjang = 2 * (panjang + lebar)
+        kelilingPersegiPanjang = 2 * (panjang + lebar);
+        return kelilingPersegiPanjang;
+    }
+
+    // Overloading perhitungan
+    public double hitungKeliling(int panjang, int lebar) throws IllegalArgumentException {
+        if (panjang <= 0 || lebar <= 0) {
+            throw new IllegalArgumentException("Panjang dan lebar harus lebih besar dari 0");
+        }
         // Keliling Persegi Panjang = 2 * (panjang + lebar)
         kelilingPersegiPanjang = 2 * (panjang + lebar);
         return kelilingPersegiPanjang;

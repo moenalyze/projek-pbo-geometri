@@ -1,6 +1,6 @@
 package bendageometri;
 
-import bendageometri.Kerucut;
+//import bendageometri.Kerucut;
 
 public class KerucutThread implements Runnable {
     private int nomor;
