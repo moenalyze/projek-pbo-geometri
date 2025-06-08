@@ -10,26 +10,47 @@ public class PrismaJajarGenjangThread implements Runnable {
     }
 
     @Override
-    public void run() {
-        try {
-            // Delay random agar output tidak selalu berurutan rapi
-            Thread.sleep((long)(Math.random() * 300));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        // Generate nilai random untuk alas, tinggi jajar genjang, sudut lancip, dan tinggi prisma
-        double alas = 5 + Math.random() * 15;             // 5 - 20 cm
-        double tinggiJajarGenjang = 3 + Math.random() * 10;  // 3 - 13 cm
-        double sudutLancip = 20 + Math.random() * 60;     // 20 - 80 derajat
-        double tinggiPrisma = 10 + Math.random() * 20;    // 10 - 30 cm
-
-        PrismaJajarGenjang prisma = new PrismaJajarGenjang(alas, tinggiJajarGenjang, sudutLancip, tinggiPrisma);
-
-        double volume = prisma.hitungVolume();
-        double luasPermukaan = prisma.hitungLuasPermukaan();
-
-        System.out.printf("Thread PrismaJajarGenjang #%d | Alas: %.2f cm | Tinggi Jajar: %.2f cm | Sudut Lancip: %.2f° | Tinggi Prisma: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
-            nomor, alas, tinggiJajarGenjang, sudutLancip, tinggiPrisma, volume, luasPermukaan);
+public void run() {
+    try {
+        // Tambahkan delay acak agar output antar-thread tidak urut rapi
+        Thread.sleep((long)(Math.random() * 300));
+    } catch (InterruptedException e) {
+        e.printStackTrace();
     }
+
+    String threadName = Thread.currentThread().getName();
+
+    // Generate nilai acak
+    double alas = 5 + Math.random() * 20;               // 5 - 25
+    double tinggiAlas = 5 + Math.random() * 20;         // 5 - 25
+    double sisiMiring = 5 + Math.random() * 20;         // 5 - 25
+    double sudutDerajat = 30 + Math.random() * 60;      // 30 - 90
+    double tinggiPrisma = 5 + Math.random() * 20;       // 5 - 25
+
+    PrismaJajarGenjang prisma = new PrismaJajarGenjang(alas, tinggiAlas, sisiMiring, tinggiPrisma);
+
+    // === Panggil semua versi overload ===
+    double volumeDefault = prisma.hitungVolume();
+    double volume1 = prisma.hitungVolume(alas, tinggiAlas, tinggiPrisma);
+    double volume2 = prisma.hitungVolume(alas, sisiMiring, sudutDerajat, tinggiPrisma);
+
+    double luasPermukaanDefault = prisma.hitungLuasPermukaan();
+    double luasPermukaan1 = prisma.hitungLuasPermukaan(alas, tinggiAlas, sisiMiring, tinggiPrisma);
+//    double luasPermukaan2 = prisma.hitungLuasPermukaan(alas, sisiMiring, sudutDerajat, tinggiPrisma);
+
+    // === Cetak hasil ===
+    System.out.printf("Thread Prisma Jajar Genjanag #%d (%s)%n", nomor, threadName);
+    System.out.printf("Alas: %.2f cm | Tinggi Alas: %.2f cm | Sisi Miring: %.2f cm | Sudut: %.2f° | Tinggi Prisma: %.2f cm%n",
+            alas, tinggiAlas, sisiMiring, sudutDerajat, tinggiPrisma);
+
+    System.out.printf("Volume (default): %.2f cm³%n", volumeDefault);
+    System.out.printf("Volume (alas, tinggiAlas, tinggiPrisma): %.2f cm³%n", volume1);
+    System.out.printf("Volume (alas, sisiMiring, sudut, tinggiPrisma): %.2f cm³%n", volume2);
+
+    System.out.printf("Luas Permukaan (default): %.2f cm²%n", luasPermukaanDefault);
+    System.out.printf("Luas Permukaan (alas, tinggiAlas, sisiMiring, tinggiPrisma): %.2f cm²%n", luasPermukaan1);
+//    System.out.printf("Luas Permukaan (alas, sisiMiring, sudut, tinggiPrisma): %.2f cm²%n", luasPermukaan2);
+//    System.out.println("=====================================================================");
+}
+
 }

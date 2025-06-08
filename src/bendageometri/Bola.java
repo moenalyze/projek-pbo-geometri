@@ -34,4 +34,33 @@ public class Bola extends Lingkaran {
     luasPermukaanBola = 4 * super.pi * Math.pow(jariJari, 2);
     return luasPermukaanBola;
   }
+  
+  // Overload hitungVolume dengan parameter jari-jari
+public double hitungVolume(double jariJari) {
+    try {
+        if (jariJari <= 0) {
+            throw new IllegalArgumentException("Jari-jari harus lebih dari 0.");
+        }
+        volumeBola = (4.0 / 3.0) * super.pi * Math.pow(jariJari, 3);
+        return volumeBola;
+    } catch (IllegalArgumentException e) {
+        System.err.println("Error menghitung volume bola: " + e.getMessage());
+        return 0;
+    }
+}
+
+// Overload hitungLuasPermukaan dengan parameter jari-jari
+public double hitungLuasPermukaan(double jariJari) {
+    try {
+        if (jariJari <= 0) {
+            throw new IllegalArgumentException("Jari-jari harus lebih dari 0.");
+        }
+        luasPermukaanBola = 4 * super.pi * Math.pow(jariJari, 2);
+        return luasPermukaanBola;
+    } catch (IllegalArgumentException e) {
+        System.err.println("Error menghitung luas permukaan bola: " + e.getMessage());
+        return 0;
+    }
+}
+
 }

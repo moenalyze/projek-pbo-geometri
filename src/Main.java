@@ -62,7 +62,8 @@ public class Main {
             System.out.println("[29] Cincin Bola");
             System.out.println("[30] Juring Bola");
             System.out.println("[31] Tembereng");
-            System.out.println("[32] Kembali");
+            System.out.println("[32] Banyak Geometri");
+            System.out.println("[33] Kembali");
             System.out.print("Pilih: ");
             int pilihMenu = inputUser.nextInt();
             int multithread;
@@ -525,20 +526,13 @@ public class Main {
                         }
                     }
 
-                    // Buat thread pool dengan jumlah thread tetap (misal 4 thread)
-//                    int jumlahThread = 100; // atau bisa disesuaikan
-                    ExecutorService executor = Executors.newFixedThreadPool(100);
-//                    ExecutorService executor = Executors.newCachedThreadPool();
-
                     // Submit task (BolaThread) ke executor
+                    
                     for (int i = 1; i <= jumlahLooping; i++) {
-                        executor.execute(new bendageometri.BolaThread(i));
-                        executor.execute(new bendageometri.JajarGenjangThread(i));
-                        executor.execute(new bendageometri.TabungThread(i));
-                    }
-
-                    // Setelah submit semua, shutdown executor agar program bisa selesai
-                    executor.shutdown();
+                                Thread t = new Thread(new BolaThread(i));  // kirim nomor urut i
+                                t.start();
+                            }
+                    
                     
                    
                     loop = false;
@@ -963,7 +957,97 @@ public class Main {
                             }
                             loop = false;
                             break;
+                case 28:
+                    System.out.println("*** Tabung (Multi-threaded) ***");
+                            while (true) {
+                                try {
+                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                    jumlahLooping = inputUser.nextInt();
+                                    if (jumlahLooping <= 0) {
+                                        System.out.println("Jumlah looping harus lebih dari 0.");
+                                        continue;
+                                    }
+                                    break;
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                                } catch (Exception e) {
+                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
+                                }
+                            }
+
+                            // Menjalankan thread sebanyak jumlahLooping
+                            for (int i = 1; i <= jumlahLooping; i++) {
+                                Thread t = new Thread(new bendageometri.TabungThread(i));  // kirim nomor urut i
+                                t.start();
+                            }
+                            loop = false;
+                            break;
+                case 31:
+                    System.out.println("*** Tembereng (Multi-threaded) ***");
+                            while (true) {
+                                try {
+                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                                    jumlahLooping = inputUser.nextInt();
+                                    if (jumlahLooping <= 0) {
+                                        System.out.println("Jumlah looping harus lebih dari 0.");
+                                        continue;
+                                    }
+                                    break;
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                                } catch (Exception e) {
+                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
+                                }
+                            }
+
+                            // Menjalankan thread sebanyak jumlahLooping
+                            for (int i = 1; i <= jumlahLooping; i++) {
+                                Thread t = new Thread(new bendageometri.TemberengLingkaranThread(i));  // kirim nomor urut i
+                                t.start();
+                            }
+                            loop = false;
+                            break;
                 case 32:
+                    System.out.println("*** Banyak Geometri (Multi-threaded dengan Thread Pool) ***");
+
+                    while (true) {
+                        try {
+                            System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                            jumlahLooping = inputUser.nextInt();
+                            System.out.flush();
+
+                            if (jumlahLooping <= 0) {
+                                System.out.println("Jumlah looping harus lebih dari 0.");
+                                continue;
+                            }
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                            inputUser.nextLine(); // clear buffer
+                        }
+                    }
+
+                    // Buat thread pool dengan jumlah thread tetap (misal 4 thread)
+//                    int jumlahThread = 100; // atau bisa disesuaikan
+                    ExecutorService executor = Executors.newFixedThreadPool(100);
+//                    ExecutorService executor = Executors.newCachedThreadPool();
+
+                    // Submit task (BolaThread) ke executor
+                    for (int i = 1; i <= jumlahLooping; i++) {
+                        executor.execute(new bendageometri.BolaThread(i));
+                        executor.execute(new bendageometri.JajarGenjangThread(i));
+                        executor.execute(new bendageometri.TabungThread(i));
+                        executor.execute(new bendageometri.PrismaJajarGenjangThread(i));
+                        executor.execute(new bendageometri.TemberengLingkaranThread(i));
+                    }
+
+                    // Setelah submit semua, shutdown executor agar program bisa selesai
+                    executor.shutdown();
+                    
+                   
+                    loop = false;
+                    break;
+                case 33:
 //                    MenuUtamaConsole.show();
 //                    loop = false;
 //                    break;

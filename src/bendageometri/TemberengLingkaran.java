@@ -36,23 +36,62 @@ public class TemberengLingkaran extends Lingkaran {
      * - Luas Tembereng = Luas Juring - Luas Segitiga
      */
 
-    public double hitungLuas() {
-         // Menghitung luas juring: bagian dari lingkaran yang dibatasi oleh 2 jari-jari dan busu
-        double luasJuring = (sudut / 360.0) * pi * super.jariJari * super.jariJari;
-        // Menghitung tinggi segitiga yang terbentuk dari dua jari-jari dan tali busur
-        double tinggiSegitiga = Math.sqrt(Math.pow(super.jariJari, 2) - Math.pow(taliBusur / 2, 2));
-         // Menghitung luas segitiga yang dibentuk oleh dua jari-jari dan tali busur
-        double luasSegitiga = 0.5 * tinggiSegitiga * taliBusur;
-        luasTemberengLingkaran = luasJuring - luasSegitiga;
-        return luasTemberengLingkaran;
+    // Versi default tanpa parameter, menggunakan atribut kelas
+    public double hitungLuas() throws IllegalArgumentException {
+        try {
+            if (sudut <= 0 || sudut > 360) {
+                throw new IllegalArgumentException("Sudut harus antara 0 hingga 360 derajat");
+            }
+            if (super.jariJari <= 0) {
+                throw new IllegalArgumentException("Jari-jari harus lebih besar dari 0");
+            }
+            if (taliBusur <= 0 || taliBusur > 2 * super.jariJari) {
+                throw new IllegalArgumentException("Tali busur tidak valid");
+            }
+
+            double luasJuring = (sudut / 360.0) * pi * super.jariJari * super.jariJari;
+            double tinggiSegitiga = Math.sqrt(Math.pow(super.jariJari, 2) - Math.pow(taliBusur / 2, 2));
+            double luasSegitiga = 0.5 * tinggiSegitiga * taliBusur;
+
+            luasTemberengLingkaran = luasJuring - luasSegitiga;
+            return luasTemberengLingkaran;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error saat menghitung luas tembereng lingkaran: " + e.getMessage());
+            throw e;
+        }
     }
-    
-    public double getLuasTembereng() {
-        return luasTemberengLingkaran;
+
+    // Versi overloaded dengan parameter eksplisit
+    public double hitungLuas(double sudut, double jariJari, double taliBusur) throws IllegalArgumentException {
+        try {
+            if (sudut <= 0 || sudut > 360) {
+                throw new IllegalArgumentException("Sudut harus antara 0 hingga 360 derajat");
+            }
+            if (jariJari <= 0) {
+                throw new IllegalArgumentException("Jari-jari harus lebih besar dari 0");
+            }
+            if (taliBusur <= 0 || taliBusur > 2 * jariJari) {
+                throw new IllegalArgumentException("Tali busur tidak valid");
+            }
+
+            double luasJuring = (sudut / 360.0) * pi * jariJari * jariJari;
+            double tinggiSegitiga = Math.sqrt(Math.pow(jariJari, 2) - Math.pow(taliBusur / 2, 2));
+            double luasSegitiga = 0.5 * tinggiSegitiga * taliBusur;
+
+            luasTemberengLingkaran = luasJuring - luasSegitiga;
+            return luasTemberengLingkaran;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error saat menghitung luas tembereng lingkaran (overloaded): " + e.getMessage());
+            throw e;
+        }
     }
 
     public double hitungKeliling() {
         KelilingTemberengLingkaran = busur + taliBusur;
         return KelilingTemberengLingkaran;
+    }
+    
+    public double getLuasTembereng() {
+        return luasTemberengLingkaran;
     }
 }
