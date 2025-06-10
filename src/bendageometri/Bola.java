@@ -10,14 +10,14 @@ public class Bola extends Lingkaran {
   // Constructor untuk Bola
   public Bola(double jariJari) {
     super(jariJari);
-    volumeBola = super.hitungVolume();
-    luasPermukaanBola = super.hitungLuasPermukaan();
+//    volumeBola = super.hitungVolume();
+//    luasPermukaanBola = super.hitungLuasPermukaan();
   }
   
   public Bola(int jariJari) {
     super(jariJari);
-    volumeBola = super.hitungVolume();
-    luasPermukaanBola = super.hitungLuasPermukaan();
+//    volumeBola = super.hitungVolume();
+//    luasPermukaanBola = super.hitungLuasPermukaan();
   }
   // Implementasi metode hitungVolume() untuk Bola
   @Override

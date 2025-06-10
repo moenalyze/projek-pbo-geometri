@@ -91,6 +91,25 @@ public class TemberengLingkaran extends Lingkaran {
         return KelilingTemberengLingkaran;
     }
     
+    // Versi overloaded dengan parameter eksplisit
+public double hitungKeliling(double busur, double taliBusur) throws IllegalArgumentException {
+    try {
+        if (busur <= 0) {
+            throw new IllegalArgumentException("Panjang busur harus lebih besar dari 0");
+        }
+        if (taliBusur <= 0) {
+            throw new IllegalArgumentException("Panjang tali busur harus lebih besar dari 0");
+        }
+
+        KelilingTemberengLingkaran = busur + taliBusur;
+        return KelilingTemberengLingkaran;
+    } catch (IllegalArgumentException e) {
+        System.err.println("Error saat menghitung keliling tembereng lingkaran (overloaded): " + e.getMessage());
+        throw e;
+    }
+}
+
+    
     public double getLuasTembereng() {
         return luasTemberengLingkaran;
     }
