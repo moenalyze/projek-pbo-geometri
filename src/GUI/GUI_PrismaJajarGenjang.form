@@ -59,8 +59,8 @@
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jAlasKelilingJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jSisiMiringJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jAlasVolumeJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jTinggiVolumeJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                   </Group>
@@ -84,10 +84,21 @@
                                   </Group>
                                   <Component id="jButtonHitungLuasPermukaan" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="149" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButtonHitungVolume" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelHasilVolume" min="-2" pref="290" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace pref="149" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jButtonHitungVolume" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelHasilVolume" min="-2" pref="290" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="jLabelTinggi2" min="-2" pref="105" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="jTinggiPrismaVolumeJajarGenjangField" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -134,13 +145,13 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jAlasKelilingJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jAlasVolumeJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAlasKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelTinggi1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSisiMiringJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTinggiVolumeJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -148,6 +159,10 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jSisiMiringLuasPermukaanJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelSisiA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                      <Component id="jLabelTinggi2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTinggiPrismaVolumeJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -266,12 +281,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelTinggi1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sisi Miring (cm) : "/>
+        <Property name="text" type="java.lang.String" value="Tinggi Alas (cm) : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jAlasKelilingJajarGenjangField">
+    <Component class="javax.swing.JTextField" name="jAlasVolumeJajarGenjangField">
     </Component>
-    <Component class="javax.swing.JTextField" name="jSisiMiringJajarGenjangField">
+    <Component class="javax.swing.JTextField" name="jTinggiVolumeJajarGenjangField">
     </Component>
     <Component class="javax.swing.JButton" name="jButtonHitungLuasPermukaan">
       <Properties>
@@ -295,6 +310,13 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Volume Jajar Genjang : "/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelTinggi2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tinggi Prisma (cm) : "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTinggiPrismaVolumeJajarGenjangField">
     </Component>
   </SubComponents>
 </Form>

@@ -23,6 +23,13 @@ public class PrismaJajarGenjang extends JajarGenjang {
 //    volumePrismaJajarGenjang = super.hitungVolume();
 //    luasPermukaanPrismaJajarGenjang = super.hitungLuasPermukaan();
   }
+  
+  public PrismaJajarGenjang(double alas, double tinggiAlas, double tinggiPrisma) {
+    super(alas, tinggiAlas);
+    this.tinggiPrismaJajarGenjang = tinggiPrismaJajarGenjang;
+//    volumePrismaJajarGenjang = super.hitungVolume();
+//    luasPermukaanPrismaJajarGenjang = super.hitungLuasPermukaan();
+  }
 
   // Implementasi metode hitungVolume() untuk PrismaJajarGenjang
   @Override
@@ -50,7 +57,7 @@ public double hitungVolume(double alas, double tinggiAlas, double tinggiPrisma) 
         return luasAlas * tinggiPrisma;
     } catch (IllegalArgumentException e) {
         System.err.println("Error hitungVolume(alas, tinggiAlas, tinggiPrisma): " + e.getMessage());
-        return -1;
+        throw new IllegalArgumentException("Nilai alas, tinggi alas, dan tinggi prisma harus lebih dari 0.");
     }
 }
 
