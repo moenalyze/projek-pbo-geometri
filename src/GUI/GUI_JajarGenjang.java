@@ -380,6 +380,9 @@ System.out.println("Sisi Miring: [" + jSisiMiringJajarGenjangField.getText() + "
             java.util.logging.Logger.getLogger(GUI_JajarGenjang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
