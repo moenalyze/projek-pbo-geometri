@@ -50,6 +50,11 @@ public class GUIPage extends javax.swing.JFrame {
         });
 
         jButton3.setText("Prisma Jajar Genjang");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Tabung");
 
@@ -102,6 +107,13 @@ public class GUIPage extends javax.swing.JFrame {
         jajarGenjangPage.setVisible(true);
         jajarGenjangPage.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonJajarGenjangActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        GUI_PrismaJajarGenjang prismJajarGenjangPage = new GUI_PrismaJajarGenjang();
+        prismJajarGenjangPage.setVisible(true);
+        prismJajarGenjangPage.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
