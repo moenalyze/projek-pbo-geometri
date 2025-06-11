@@ -30,7 +30,7 @@ public class JajarGenjang extends Geometri2D {
     public JajarGenjang(double alas, double tinggi) {
         this.alas = alas;
         this.tinggi = tinggi;
-        this.sisiMiringJajarGenjang = 0;
+//        this.sisiMiringJajarGenjang = 0;
     }
     
     // Constructor Overloading

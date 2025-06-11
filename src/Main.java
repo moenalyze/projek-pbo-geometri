@@ -1,3 +1,4 @@
+import GUI.GUIPage;
 import bendageometri.*;
 import consoleView.*;
 import java.util.Scanner;
@@ -20,7 +21,11 @@ public class Main {
 //        TemberengLingkaranConsole.show();
         
 //        new BangunDatar();
-
+// GUI
+        GUIPage guiPage = new GUIPage();
+        guiPage.setVisible(true);
+        guiPage.setLocationRelativeTo(null);
+        
         Scanner inputUser = new Scanner(System.in);
         boolean loop = true;
 //        
