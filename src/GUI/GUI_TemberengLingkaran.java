@@ -59,7 +59,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
 
         jLabel1.setText("Tembereng Lingkaran");
 
-        jLabel2.setText("Hitung Luas Permukaan");
+        jLabel2.setText("Hitung Luas");
 
         jLabel3.setText("Hitung Volume");
 

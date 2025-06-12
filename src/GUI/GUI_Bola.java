@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import bendageometri.Bola;
 import bendageometri.JajarGenjang;
 import bendageometri.Lingkaran;
 import bendageometri.PrismaJajarGenjang;
@@ -40,16 +41,12 @@ public class GUI_Bola extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jJariJariLuasPermukaanField = new javax.swing.JTextField();
         jLabelAlas = new javax.swing.JLabel();
-        jLabelTinggi = new javax.swing.JLabel();
-        jTinggiiLuasPermukaanField = new javax.swing.JTextField();
         jButtonHitungVolume = new javax.swing.JButton();
         jLabelHasilLuas = new javax.swing.JLabel();
         jRadioButtonAlasDanTinggi = new javax.swing.JRadioButton();
         jRadioButtonSisiDanSudut = new javax.swing.JRadioButton();
         jLabelAlasKeliling = new javax.swing.JLabel();
-        jLabelTinggi1 = new javax.swing.JLabel();
-        jJariJariVolumeJajarGenjangField = new javax.swing.JTextField();
-        jTinggiVolumeJajarGenjangField = new javax.swing.JTextField();
+        jJariJariVolumeField = new javax.swing.JTextField();
         jButtonHitungLuasPermukaan = new javax.swing.JButton();
         jLabelHasilKeliling = new javax.swing.JLabel();
         jLabelHasilLuasPermukaan = new javax.swing.JLabel();
@@ -65,8 +62,6 @@ public class GUI_Bola extends javax.swing.JFrame {
 
         jLabelAlas.setText("Jari-Jari (cm) :");
 
-        jLabelTinggi.setText("Tinggi Tabung (cm) : ");
-
         jButtonHitungVolume.setText("Hitung");
         jButtonHitungVolume.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +69,7 @@ public class GUI_Bola extends javax.swing.JFrame {
             }
         });
 
-        jLabelHasilLuas.setText("Luas Lingkaran : ");
+        jLabelHasilLuas.setText("Luas Bola : ");
 
         buttonGroupMethod.add(jRadioButtonAlasDanTinggi);
         jRadioButtonAlasDanTinggi.setSelected(true);
@@ -95,8 +90,6 @@ public class GUI_Bola extends javax.swing.JFrame {
 
         jLabelAlasKeliling.setText("Jari-Jari (cm) :");
 
-        jLabelTinggi1.setText("Tinggi Tabung (cm) : ");
-
         jButtonHitungLuasPermukaan.setText("Hitung");
         jButtonHitungLuasPermukaan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,11 +97,11 @@ public class GUI_Bola extends javax.swing.JFrame {
             }
         });
 
-        jLabelHasilKeliling.setText("Keliling Lingkaran : ");
+        jLabelHasilKeliling.setText("Keliling Bola : ");
 
-        jLabelHasilLuasPermukaan.setText("Luas Permukaan Tabung : ");
+        jLabelHasilLuasPermukaan.setText("Luas Permukaan Bola : ");
 
-        jLabelHasilVolume.setText("Volume Tabung : ");
+        jLabelHasilVolume.setText("Volume Bola : ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,21 +121,13 @@ public class GUI_Bola extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(122, 122, 122))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelAlas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTinggiiLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jJariJariLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabelAlas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56)
+                        .addComponent(jJariJariLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelAlasKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelTinggi1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTinggiVolumeJajarGenjangField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jJariJariVolumeJajarGenjangField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabelAlasKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(jJariJariVolumeField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(76, 76, 76))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,18 +168,12 @@ public class GUI_Bola extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jJariJariLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelAlas))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelTinggi)
-                            .addComponent(jTinggiiLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(38, 38, 38))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jJariJariVolumeJajarGenjangField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jJariJariVolumeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelAlasKeliling))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelTinggi1)
-                            .addComponent(jTinggiVolumeJajarGenjangField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(38, 38, 38)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(121, 121, 121)
@@ -233,19 +212,19 @@ public class GUI_Bola extends javax.swing.JFrame {
 //                jLabelHasilLuas.setText("Luas Jajar Genjang: " + luas + " cm²");
 //            } else if (jRadioButtonSisiDanSudut.isSelected()) {
                 // Ambil nilai alas dan tinggi
-                double jariJari = Double.parseDouble(jJariJariVolumeJajarGenjangField.getText());
-                double tinggiTabung = Double.parseDouble(jTinggiVolumeJajarGenjangField.getText());
+                double jariJari = Double.parseDouble(jJariJariVolumeField.getText());
+//                double tinggiTabung = Double.parseDouble(jTinggiVolumeJajarGenjangField.getText());
 //                double tinggiPrisma = Double.parseDouble(jTinggiPrismaVolumeJajarGenjangField.getText());
 //                double sudut = Double.parseDouble(jSudutJajarGenjangField.getText());
 
                 // Buat objek dan hitung luas
-                Lingkaran tabung = new Tabung(jariJari, tinggiTabung);
-                double volume = tabung.hitungVolume();
-                double keliling = tabung.hitungKeliling();
-                double luas = tabung.hitungLuas();
+                Lingkaran bola = new Bola(jariJari);
+                double volume = bola.hitungVolume();
+                double keliling = bola.hitungKeliling();
+                double luas = bola.hitungLuas();
 
                 // Tampilkan hasil
-                jLabelHasilVolume.setText("Volume Tabung : " + volume + " cm²");
+                jLabelHasilVolume.setText("Volume Bola : " + volume + " cm²");
                 jLabelHasilKeliling.setText("Keliling Lingkaran: " + keliling + " cm");
                 jLabelHasilLuas.setText("Luas Lingkaran: " + luas + " cm");
 //            } else {
@@ -257,7 +236,7 @@ public class GUI_Bola extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, 
                 "Masukkan angka yang valid", 
                 "Input Error", JOptionPane.ERROR_MESSAGE);
-            System.out.println("Alas: [" + jJariJariVolumeJajarGenjangField.getText() + "]");
+            System.out.println("Alas: [" + jJariJariVolumeField.getText() + "]");
 //System.out.println("Sisi Miring: [" + jTinggiVolumeJajarGenjangField.getText() + "]");
 //System.out.println("tinggiPrisma: [" + jTinggiPrismaJajarGenjangField.getText() + "]");
         } catch (IllegalArgumentException e) {
@@ -281,13 +260,13 @@ public class GUI_Bola extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             double jariJari = Double.parseDouble(jJariJariLuasPermukaanField.getText());
-            double tinggiTabung = Double.parseDouble(jTinggiiLuasPermukaanField.getText());
+//            double tinggiTabung = Double.parseDouble(jTinggiiLuasPermukaanField.getText());
 
             // Buat objek dan hitung keliling. Validasi dilakukan di dalam class
-            Lingkaran tabung = new Tabung(jariJari, tinggiTabung);
-            double luasPermukaan = tabung.hitungLuasPermukaan();
-            double keliling = tabung.hitungKeliling();
-            double luas = tabung.hitungLuas();
+            Lingkaran bola = new Bola(jariJari);
+            double luasPermukaan = bola.hitungLuasPermukaan();
+            double keliling = bola.hitungKeliling();
+            double luas = bola.hitungLuas();
 
             jLabelHasilLuasPermukaan.setText("Luas Permukaan Tabung : " + luasPermukaan + " cm");
             jLabelHasilKeliling.setText("Keliling Lingkaran : " + keliling + " cm");
@@ -2437,7 +2416,7 @@ public class GUI_Bola extends javax.swing.JFrame {
     private javax.swing.JButton jButtonHitungLuasPermukaan;
     private javax.swing.JButton jButtonHitungVolume;
     private javax.swing.JTextField jJariJariLuasPermukaanField;
-    private javax.swing.JTextField jJariJariVolumeJajarGenjangField;
+    private javax.swing.JTextField jJariJariVolumeField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -2447,11 +2426,7 @@ public class GUI_Bola extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelHasilLuas;
     private javax.swing.JLabel jLabelHasilLuasPermukaan;
     private javax.swing.JLabel jLabelHasilVolume;
-    private javax.swing.JLabel jLabelTinggi;
-    private javax.swing.JLabel jLabelTinggi1;
     private javax.swing.JRadioButton jRadioButtonAlasDanTinggi;
     private javax.swing.JRadioButton jRadioButtonSisiDanSudut;
-    private javax.swing.JTextField jTinggiVolumeJajarGenjangField;
-    private javax.swing.JTextField jTinggiiLuasPermukaanField;
     // End of variables declaration//GEN-END:variables
 }
