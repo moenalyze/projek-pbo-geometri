@@ -28,11 +28,11 @@ public class GUIPage extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButtonTembereng = new javax.swing.JButton();
         jButtonJajarGenjang = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButtonTabung = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButtonBola = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,7 +40,12 @@ public class GUIPage extends javax.swing.JFrame {
 
         jLabel2.setText("*** BANGUN RUANG (3D) ***");
 
-        jButton1.setText("Tembereng");
+        jButtonTembereng.setText("Tembereng");
+        jButtonTembereng.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTemberengActionPerformed(evt);
+            }
+        });
 
         jButtonJajarGenjang.setText("Jajar Genjang");
         jButtonJajarGenjang.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +68,12 @@ public class GUIPage extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("Bola");
+        jButtonBola.setText("Bola");
+        jButtonBola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBolaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,10 +84,10 @@ public class GUIPage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonJajarGenjang)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonTembereng, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
+                    .addComponent(jButtonBola)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3)
                     .addComponent(jButtonTabung))
@@ -96,10 +106,10 @@ public class GUIPage extends javax.swing.JFrame {
                     .addComponent(jButton3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(jButtonTembereng)
                     .addComponent(jButtonTabung))
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(jButtonBola)
                 .addContainerGap(431, Short.MAX_VALUE))
         );
 
@@ -126,6 +136,20 @@ public class GUIPage extends javax.swing.JFrame {
         tabungPage.setVisible(true);
         tabungPage.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonTabungActionPerformed
+
+    private void jButtonBolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBolaActionPerformed
+        // TODO add your handling code here:
+        GUI_Bola bolaPage = new GUI_Bola();
+        bolaPage.setVisible(true);
+        bolaPage.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButtonBolaActionPerformed
+
+    private void jButtonTemberengActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTemberengActionPerformed
+        // TODO add your handling code here:
+        GUI_TemberengLingkaran temberengPage = new GUI_TemberengLingkaran();
+        temberengPage.setVisible(true);
+        temberengPage.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButtonTemberengActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,11 +188,11 @@ public class GUIPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButtonBola;
     private javax.swing.JButton jButtonJajarGenjang;
     private javax.swing.JButton jButtonTabung;
+    private javax.swing.JButton jButtonTembereng;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

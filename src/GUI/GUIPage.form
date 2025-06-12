@@ -28,11 +28,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" pref="203" max="-2" attributes="0"/>
                   <Component id="jButtonJajarGenjang" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                  <Component id="jButtonTembereng" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="319" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonBola" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" pref="203" max="-2" attributes="0"/>
                   <Component id="jButton3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtonTabung" min="-2" max="-2" attributes="0"/>
@@ -56,11 +56,11 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonTembereng" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtonTabung" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+              <Component id="jButtonBola" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="431" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -77,10 +77,13 @@
         <Property name="text" type="java.lang.String" value="*** BANGUN RUANG (3D) ***"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="jButtonTembereng">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tembereng"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonTemberengActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonJajarGenjang">
       <Properties>
@@ -106,10 +109,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonTabungActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="jButtonBola">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bola"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBolaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
