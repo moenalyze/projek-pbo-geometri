@@ -31,7 +31,7 @@ public class GUIPage extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButtonJajarGenjang = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButtonTabung = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,7 +56,12 @@ public class GUIPage extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Tabung");
+        jButtonTabung.setText("Tabung");
+        jButtonTabung.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTabungActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Bola");
 
@@ -75,7 +80,7 @@ public class GUIPage extends javax.swing.JFrame {
                     .addComponent(jButton5)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(jButtonTabung))
                 .addGap(187, 187, 187))
         );
         layout.setVerticalGroup(
@@ -92,7 +97,7 @@ public class GUIPage extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton4))
+                    .addComponent(jButtonTabung))
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
                 .addContainerGap(431, Short.MAX_VALUE))
@@ -114,6 +119,13 @@ public class GUIPage extends javax.swing.JFrame {
         prismJajarGenjangPage.setVisible(true);
         prismJajarGenjangPage.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButtonTabungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTabungActionPerformed
+        // TODO add your handling code here:
+        GUI_Tabung tabungPage = new GUI_Tabung();
+        tabungPage.setVisible(true);
+        tabungPage.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButtonTabungActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,9 +166,9 @@ public class GUIPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButtonJajarGenjang;
+    private javax.swing.JButton jButtonTabung;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
