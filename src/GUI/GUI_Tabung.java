@@ -54,6 +54,7 @@ public class GUI_Tabung extends javax.swing.JFrame {
         jLabelHasilKeliling = new javax.swing.JLabel();
         jLabelHasilLuasPermukaan = new javax.swing.JLabel();
         jLabelHasilVolume = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -110,12 +111,16 @@ public class GUI_Tabung extends javax.swing.JFrame {
 
         jLabelHasilVolume.setText("Volume Tabung : ");
 
+        jButton1.setText("Kembali");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(277, 277, 277))
             .addGroup(layout.createSequentialGroup()
@@ -168,8 +173,10 @@ public class GUI_Tabung extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jLabel1)
-                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1))
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
@@ -1410,6 +1417,7 @@ public class GUI_Tabung extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupMethod;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonHitungLuasPermukaan;
     private javax.swing.JButton jButtonHitungVolume;
     private javax.swing.JTextField jJariJariLuasPermukaanField;

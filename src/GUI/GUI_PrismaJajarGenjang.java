@@ -58,6 +58,7 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
         jLabelHasilVolume = new javax.swing.JLabel();
         jLabelTinggi2 = new javax.swing.JLabel();
         jTinggiPrismaVolumeJajarGenjangField = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -119,6 +120,8 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
         jLabelHasilVolume.setText("Volume Jajar Genjang : ");
 
         jLabelTinggi2.setText("Tinggi Prisma (cm) : ");
+
+        jButton1.setText("Kembali");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -186,7 +189,9 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
                             .addComponent(jRadioButtonAlasDanTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(104, 104, 104))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(297, 297, 297))
         );
@@ -194,8 +199,10 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
-                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1))
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
@@ -2472,6 +2479,7 @@ System.out.println("Sisi Miring: [" + jTinggiVolumeJajarGenjangField.getText() +
     private javax.swing.ButtonGroup buttonGroupMethod;
     private javax.swing.JTextField jAlasJajarGenjangField;
     private javax.swing.JTextField jAlasVolumeJajarGenjangField;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonHitungLuasPermukaan;
     private javax.swing.JButton jButtonHitungVolume;
     private javax.swing.JLabel jLabel1;
