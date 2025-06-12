@@ -16,7 +16,6 @@ public class TemberengLingkaran extends Lingkaran {
         this.busur = busur;
     }
     
-    
     // Overloading Constructor
     public TemberengLingkaran(int jariJari, int taliBusur, int sudut, int busur) {
         super(jariJari);
