@@ -47,14 +47,14 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
         jLabelHasilLuasLingkaran = new javax.swing.JLabel();
         jRadioButtonAlasDanTinggi = new javax.swing.JRadioButton();
         jRadioButtonSisiDanSudut = new javax.swing.JRadioButton();
-        jLabelAlasKeliling = new javax.swing.JLabel();
+        jLabel = new javax.swing.JLabel();
         jLabelTinggi1 = new javax.swing.JLabel();
         jBusurKelilingField = new javax.swing.JTextField();
         jTaliBusurKelilingField = new javax.swing.JTextField();
         jButtonHitungLuas = new javax.swing.JButton();
         jLabelHasilKelilingLingkaran = new javax.swing.JLabel();
         jLabelHasilLuasTembereng = new javax.swing.JLabel();
-        jLabelHasilVolume = new javax.swing.JLabel();
+        jLabelHasilKeliling = new javax.swing.JLabel();
         jLabelAlas1 = new javax.swing.JLabel();
         jSudutLuasField = new javax.swing.JTextField();
         jLabelAlas2 = new javax.swing.JLabel();
@@ -99,7 +99,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
             }
         });
 
-        jLabelAlasKeliling.setText("Busur (cm) :");
+        jLabel.setText("Busur (cm) :");
 
         jLabelTinggi1.setText("Tali Busur (cm) : ");
 
@@ -114,7 +114,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
 
         jLabelHasilLuasTembereng.setText("Luas Tembereng : ");
 
-        jLabelHasilVolume.setText("Keliling Tembereng: ");
+        jLabelHasilKeliling.setText("Keliling Tembereng: ");
 
         jLabelAlas1.setText("Sudut (°) :");
 
@@ -157,7 +157,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButtonHitungKeliling)
-                                    .addComponent(jLabelHasilVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jLabelHasilKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -185,7 +185,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
                                     .addComponent(jBusurLuasField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelAlasKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelTinggi1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -221,7 +221,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBusurKelilingField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelAlasKeliling))
+                            .addComponent(jLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelTinggi1)
@@ -245,7 +245,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelHasilLuasTembereng)
-                            .addComponent(jLabelHasilVolume))
+                            .addComponent(jLabelHasilKeliling))
                         .addGap(18, 18, 18)
                         .addComponent(jLabelHasilLuasLingkaran)
                         .addGap(18, 18, 18)
@@ -278,15 +278,15 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
 //                double sudut = Double.parseDouble(jSudutJajarGenjangField.getText());
 
                 // Buat objek dan hitung luas
-                Lingkaran tabung = new Tabung(jariJari, tinggiTabung);
-                double volume = tabung.hitungVolume();
-                double keliling = tabung.hitungKeliling();
-                double luas = tabung.hitungLuas();
+                Lingkaran tembereng = new TemberengLingkaran(jariJari, tinggiTabung, 0, 0);
+//                double volume = tembereng.hitungVolume();
+                double keliling = tembereng.hitungKeliling();
+//                double luas = tembereng.hitungLuas();
 
                 // Tampilkan hasil
-                jLabelHasilVolume.setText("Volume Tabung : " + volume + " cm²");
-                jLabelHasilKelilingLingkaran.setText("Keliling Lingkaran: " + keliling + " cm");
-                jLabelHasilLuasLingkaran.setText("Luas Lingkaran: " + luas + " cm");
+                jLabelHasilKeliling.setText("Keliling Tembereng : " + keliling + " cm²");
+//                jLabelHasilKelilingLingkaran.setText("Keliling Lingkaran: " + keliling + " cm");
+//                jLabelHasilLuasLingkaran.setText("Luas Lingkaran: " + luas + " cm");
 //            } else {
 //                JOptionPane.showMessageDialog(this, 
 //                    "Silakan pilih metode perhitungan terlebih dahulu.", 
@@ -8636,17 +8636,17 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
     private javax.swing.JButton jButtonHitungLuas;
     private javax.swing.JButton jButtonKembali;
     private javax.swing.JTextField jJariJariLuasField;
+    private javax.swing.JLabel jLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelAlas;
     private javax.swing.JLabel jLabelAlas1;
     private javax.swing.JLabel jLabelAlas2;
-    private javax.swing.JLabel jLabelAlasKeliling;
+    private javax.swing.JLabel jLabelHasilKeliling;
     private javax.swing.JLabel jLabelHasilKelilingLingkaran;
     private javax.swing.JLabel jLabelHasilLuasLingkaran;
     private javax.swing.JLabel jLabelHasilLuasTembereng;
-    private javax.swing.JLabel jLabelHasilVolume;
     private javax.swing.JLabel jLabelTinggi;
     private javax.swing.JLabel jLabelTinggi1;
     private javax.swing.JRadioButton jRadioButtonAlasDanTinggi;
