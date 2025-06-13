@@ -56,7 +56,7 @@
                               <EmptySpace pref="149" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jButtonHitungKeliling" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelHasilVolume" min="-2" pref="290" max="-2" attributes="0"/>
+                                  <Component id="jLabelHasilKeliling" min="-2" pref="290" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -97,7 +97,7 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelAlasKeliling" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="jLabel" min="-2" pref="93" max="-2" attributes="0"/>
                           <Component id="jLabelTinggi1" min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -144,7 +144,7 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBusurKelilingField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelAlasKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -175,7 +175,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelHasilLuasTembereng" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelHasilVolume" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelHasilKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabelHasilLuasLingkaran" min="-2" max="-2" attributes="0"/>
@@ -254,7 +254,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonSisiDanSudutActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelAlasKeliling">
+    <Component class="javax.swing.JLabel" name="jLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Busur (cm) :"/>
       </Properties>
@@ -286,7 +286,7 @@
         <Property name="text" type="java.lang.String" value="Luas Tembereng : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelHasilVolume">
+    <Component class="javax.swing.JLabel" name="jLabelHasilKeliling">
       <Properties>
         <Property name="text" type="java.lang.String" value="Keliling Tembereng: "/>
       </Properties>
