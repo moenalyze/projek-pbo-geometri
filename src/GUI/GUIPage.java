@@ -190,6 +190,7 @@ public class GUIPage extends javax.swing.JFrame {
         GUI_JajarGenjang jajarGenjangPage = new GUI_JajarGenjang();
         jajarGenjangPage.setVisible(true);
         jajarGenjangPage.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButtonJajarGenjangActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -197,6 +198,7 @@ public class GUIPage extends javax.swing.JFrame {
         GUI_PrismaJajarGenjang prismJajarGenjangPage = new GUI_PrismaJajarGenjang();
         prismJajarGenjangPage.setVisible(true);
         prismJajarGenjangPage.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButtonTabungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTabungActionPerformed
@@ -204,6 +206,7 @@ public class GUIPage extends javax.swing.JFrame {
         GUI_Tabung tabungPage = new GUI_Tabung();
         tabungPage.setVisible(true);
         tabungPage.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButtonTabungActionPerformed
 
     private void jButtonBolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBolaActionPerformed
@@ -211,6 +214,7 @@ public class GUIPage extends javax.swing.JFrame {
         GUI_Bola bolaPage = new GUI_Bola();
         bolaPage.setVisible(true);
         bolaPage.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButtonBolaActionPerformed
 
     private void jButtonTemberengActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTemberengActionPerformed
@@ -218,6 +222,7 @@ public class GUIPage extends javax.swing.JFrame {
         GUI_TemberengLingkaran temberengPage = new GUI_TemberengLingkaran();
         temberengPage.setVisible(true);
         temberengPage.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButtonTemberengActionPerformed
 
     private void jButtonLayangLayang1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLayangLayang1ActionPerformed
@@ -226,10 +231,18 @@ public class GUIPage extends javax.swing.JFrame {
 
     private void jButtonPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersegiPanjangActionPerformed
         // TODO add your handling code here:
+        GUI_PersegiPanjang persegiPanjangPage = new GUI_PersegiPanjang();
+        persegiPanjangPage.setVisible(true);
+        persegiPanjangPage.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButtonPersegiPanjangActionPerformed
 
     private void jButtonLingkaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLingkaranActionPerformed
         // TODO add your handling code here:
+        GUI_Lingkaran lingkaranPage = new GUI_Lingkaran();
+        lingkaranPage.setVisible(true);
+        lingkaranPage.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButtonLingkaranActionPerformed
 
     private void jButtonLimasPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimasPersegiPanjangActionPerformed

@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="javax.swing.JButton" name="jButtonKembali">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Kembali"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonKembaliActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Hitung Luas"/>
-      </Properties>
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -38,12 +23,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -59,44 +47,39 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="126" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jButtonKembali1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="jButtonHitungLuasKeliling" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="257" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabelPanjang" min="-2" pref="93" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jPanjangField" min="-2" pref="75" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                          <Component id="jLabelLebar" min="-2" pref="105" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLebarField" min="-2" pref="75" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="290" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jButtonKembali1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="jButtonHitungLuasKeliling" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabelHasilKeliling" min="-2" pref="290" max="-2" attributes="0"/>
-                      <Component id="jLabelHasilLuas" min="-2" pref="220" max="-2" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="-2" pref="230" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabelHasilKeliling" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabelPanjang" min="-2" pref="93" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jJariJariField" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabelHasilLuas" min="-2" pref="220" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="141" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -109,16 +92,14 @@
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jPanjangField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jJariJariField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelPanjang" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelLebar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLebarField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="jLabelHasilLuas" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabelHasilKeliling" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="111" max="32767" attributes="0"/>
+                  <EmptySpace pref="58" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtonKembali1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButtonHitungLuasKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -140,7 +121,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="9d" green="80" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Persegi Panjang"/>
+            <Property name="text" type="java.lang.String" value="Lingkaran"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonKembali1">
@@ -153,7 +134,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelPanjang">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Panjang (cm) :"/>
+            <Property name="text" type="java.lang.String" value="Jari-Jari (cm) :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -161,14 +142,7 @@
             <Property name="text" type="java.lang.String" value="Hitung Luas dan Keliling"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jPanjangField">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabelLebar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Lebar (cm) : "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jLebarField">
+        <Component class="javax.swing.JTextField" name="jJariJariField">
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHitungLuasKeliling">
           <Properties>
@@ -180,12 +154,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelHasilLuas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Luas Persegi Panjang     : "/>
+            <Property name="text" type="java.lang.String" value="Luas Lingkaran     : "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelHasilKeliling">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Keliling Persegi Panjang : "/>
+            <Property name="text" type="java.lang.String" value="Keliling Lingkaran : "/>
           </Properties>
         </Component>
       </SubComponents>
