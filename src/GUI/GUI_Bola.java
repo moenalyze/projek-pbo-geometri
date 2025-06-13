@@ -51,7 +51,7 @@ public class GUI_Bola extends javax.swing.JFrame {
         jLabelHasilKeliling = new javax.swing.JLabel();
         jLabelHasilLuasPermukaan = new javax.swing.JLabel();
         jLabelHasilVolume = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButtonKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,7 +104,12 @@ public class GUI_Bola extends javax.swing.JFrame {
 
         jLabelHasilVolume.setText("Volume Bola : ");
 
-        jButton1.setText("Kembali");
+        jButtonKembali.setText("Kembali");
+        jButtonKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonKembaliActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,7 +117,7 @@ public class GUI_Bola extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jButton1)
+                .addComponent(jButtonKembali)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(277, 277, 277))
@@ -160,7 +165,7 @@ public class GUI_Bola extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(jButtonKembali))
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -312,6 +317,14 @@ public class GUI_Bola extends javax.swing.JFrame {
                 "Perhitungan Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonHitungLuasPermukaanActionPerformed
+
+    private void jButtonKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKembaliActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        GUIPage mainPage = new GUIPage();
+        mainPage.setVisible(true);
+        mainPage.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButtonKembaliActionPerformed
 
 //    private void updateFormBasedOnSelection() {
 //        boolean isAlasTinggi = jRadioButtonAlasDanTinggi.isSelected();
@@ -2417,9 +2430,9 @@ public class GUI_Bola extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupMethod;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonHitungLuasPermukaan;
     private javax.swing.JButton jButtonHitungVolume;
+    private javax.swing.JButton jButtonKembali;
     private javax.swing.JTextField jJariJariLuasPermukaanField;
     private javax.swing.JTextField jJariJariVolumeField;
     private javax.swing.JLabel jLabel1;

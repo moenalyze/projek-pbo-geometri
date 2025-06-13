@@ -58,7 +58,7 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
         jLabelHasilVolume = new javax.swing.JLabel();
         jLabelTinggi2 = new javax.swing.JLabel();
         jTinggiPrismaVolumeJajarGenjangField = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jButtonKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,7 +121,12 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
 
         jLabelTinggi2.setText("Tinggi Prisma (cm) : ");
 
-        jButton1.setText("Kembali");
+        jButtonKembali.setText("Kembali");
+        jButtonKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonKembaliActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,7 +195,7 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
                         .addGap(104, 104, 104))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(jButtonKembali)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(297, 297, 297))
@@ -201,7 +206,7 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(jButtonKembali))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -372,6 +377,14 @@ System.out.println("Sisi Miring: [" + jTinggiVolumeJajarGenjangField.getText() +
                 "Perhitungan Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonHitungLuasPermukaanActionPerformed
+
+    private void jButtonKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKembaliActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        GUIPage mainPage = new GUIPage();
+        mainPage.setVisible(true);
+        mainPage.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButtonKembaliActionPerformed
 
 //    private void updateFormBasedOnSelection() {
 //        boolean isAlasTinggi = jRadioButtonAlasDanTinggi.isSelected();
@@ -2479,9 +2492,9 @@ System.out.println("Sisi Miring: [" + jTinggiVolumeJajarGenjangField.getText() +
     private javax.swing.ButtonGroup buttonGroupMethod;
     private javax.swing.JTextField jAlasJajarGenjangField;
     private javax.swing.JTextField jAlasVolumeJajarGenjangField;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonHitungLuasPermukaan;
     private javax.swing.JButton jButtonHitungVolume;
+    private javax.swing.JButton jButtonKembali;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
