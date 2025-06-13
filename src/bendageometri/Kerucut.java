@@ -33,7 +33,7 @@ public class Kerucut extends Lingkaran {
             return volumeKerucut;
         } catch (IllegalArgumentException e) {
             System.err.println("Error saat menghitung volume: " + e.getMessage());
-            throw e; // Melempar ulang exception untuk ditangani oleh pemanggil
+            throw e; 
         }
     }
   
