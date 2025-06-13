@@ -1,42 +1,84 @@
 package bendageometri;
 
-import bendageometri.Bola;
-
 public class TemberengBola extends Bola {
   // Atribut khusus untuk TemberengBola
-  private double theta;
-  private double luasTembereng;
-  private double kelilingTembereng;
+  private double tinggi;
+  private double luasTemberengBola;
+  private double volumeTemberengBola;
 
   // Constructor untuk TemberengBola
-  public TemberengBola(double jariJari, double theta) {
+  public TemberengBola(double jariJari, double tinggi) {
     super(jariJari);
-    this.theta = Math.toRadians(theta);
-    luasTembereng = hitungLuas();
-    kelilingTembereng = hitungKeliling();
+    this.tinggi = tinggi;
+  }
+  
+  public TemberengBola(int jariJari, int tinggi) {
+    super(jariJari);
+    this.tinggi = tinggi;
   }
 
-  // Implementasi metode hitungLuas() untuk TemberengBola
+  // Override + try-catch
+  @Override
+  public double hitungVolume() {
+    try {
+      if (tinggi < 0 || tinggi > jariJari) {
+        throw new IllegalArgumentException("Tinggi tidak boleh negatif atau lebih besar dari jari-jari bola.");
+      }
+      volumeTemberengBola = (1.0 / 3.0) * super.pi * Math.pow(tinggi, 2) * (3 * jariJari - tinggi);
+    } catch (IllegalArgumentException e) {
+      System.out.println("Error menghitung volume: " + e.getMessage());
+      volumeTemberengBola = 0;
+    }
+    return volumeTemberengBola;
+  }
+
+  // Overloading hitungVolume
+  public double hitungVolume(double jariJariBaru, double tinggiBaru) {
+    try {
+      if (tinggiBaru < 0 || tinggiBaru > jariJariBaru) {
+        throw new IllegalArgumentException("Tinggi tidak valid.");
+      }
+      return (1.0 / 3.0) * super.pi * Math.pow(tinggiBaru, 2) * (3 * jariJariBaru - tinggiBaru);
+    } catch (IllegalArgumentException e) {
+      System.out.println("Error hitungVolume overload: " + e.getMessage());
+      return 0;
+    }
+  }
+
   @Override
   public double hitungLuas() {
-    luasTembereng = 0.5 * jariJari * jariJari * (theta - Math.sin(theta));
-    return luasTembereng;
+    try {
+      if (tinggi < 0 || tinggi > jariJari) {
+        throw new IllegalArgumentException("Tinggi tidak valid.");
+      }
+      luasTemberengBola = 2 * super.pi * jariJari * tinggi;
+    } catch (IllegalArgumentException e) {
+      System.out.println("Error menghitung luas: " + e.getMessage());
+      luasTemberengBola = 0;
+    }
+    return luasTemberengBola;
   }
 
-  // Getter untuk Luas TemberengBola
+  // Overloading hitungLuas
+  public double hitungLuas(double jariJariBaru, double tinggiBaru) {
+    try {
+      if (tinggiBaru < 0 || tinggiBaru > jariJariBaru) {
+        throw new IllegalArgumentException("Tinggi tidak valid.");
+      }
+      return 2 * super.pi * jariJariBaru * tinggiBaru;
+    } catch (IllegalArgumentException e) {
+      System.out.println("Error hitungLuas overload: " + e.getMessage());
+      return 0;
+    }
+  }
+
+  // Getter
+  public double getVolumeTemberengBola() {
+    return volumeTemberengBola;
+  }
+
   public double getLuasTembereng() {
-    return luasTembereng;
-  }
-
-  // Implementasi metode hitungKeliling() untuk TemberengBola
-  @Override
-  public double hitungKeliling() {
-    double kelilingTembereng = jariJari * (theta + 2);
-    return kelilingTembereng;
-  }
-
-  public double getKelilingTembereng() {
-    return kelilingTembereng;
+    return luasTemberengBola;
   }
 
 }
