@@ -41,7 +41,7 @@ public class PersegiPanjang extends Geometri2D {
         return luasPersegiPanjang;
     }
 
-    public double hitungLuas(int panjang, int lebar) throws IllegalArgumentException {
+    public double hitungLuas(double panjang, double lebar) throws IllegalArgumentException {
         if (panjang <= 0 || lebar <= 0) {
             throw new IllegalArgumentException("Panjang dan lebar harus lebih besar dari 0");
         }
@@ -70,7 +70,7 @@ public class PersegiPanjang extends Geometri2D {
     }
 
     // Overloading perhitungan
-    public double hitungKeliling(int panjang, int lebar) throws IllegalArgumentException {
+    public double hitungKeliling(double panjang, double lebar) throws IllegalArgumentException {
         if (panjang <= 0 || lebar <= 0) {
             throw new IllegalArgumentException("Panjang dan lebar harus lebih besar dari 0");
         }
