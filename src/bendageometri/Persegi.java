@@ -21,27 +21,51 @@ public class Persegi extends Geometri2D {
         kelilingPersegi = hitungKeliling();
     }
 
-    // Implementasi metode hitungLuas() untuk persegi
+    // Overriding metode hitungLuas
     @Override
-    public double hitungLuas() {
-        // Rumus luas persegi: sisi * sisi
+    public double hitungLuas() throws IllegalArgumentException {
+        if (sisi <= 0) {
+            throw new IllegalArgumentException("Sisi harus lebih besar dari 0");
+        }
         luasPersegi = sisi * sisi;
         return luasPersegi;
     }
 
-    // Getter untuk luas Persegi
+    // Overloaded method hitungLuas dengan parameter
+    public double hitungLuas(double sisi) throws IllegalArgumentException {
+        if (sisi <= 0) {
+            throw new IllegalArgumentException("Sisi harus lebih besar dari 0");
+        }
+        luasPersegi = sisi * sisi;
+        return luasPersegi;
+    }
+
+    // Getter untuk luas
     public double getLuasPersegi() {
         return luasPersegi;
     }
 
+    // Overriding metode hitungKeliling
     @Override
-    public double hitungKeliling() {
+    public double hitungKeliling() throws IllegalArgumentException {
+        if (sisi <= 0) {
+            throw new IllegalArgumentException("Sisi harus lebih besar dari 0");
+        }
         kelilingPersegi = 4 * sisi;
         return kelilingPersegi;
     }
 
-    public double getKelilingPersegi() {
+    // Overloaded method hitungKeliling dengan parameter
+    public double hitungKeliling(double sisi) throws IllegalArgumentException {
+        if (sisi <= 0) {
+            throw new IllegalArgumentException("Sisi harus lebih besar dari 0");
+        }
+        kelilingPersegi = 4 * sisi;
         return kelilingPersegi;
     }
 
+    // Getter untuk keliling
+    public double getKelilingPersegi() {
+        return kelilingPersegi;
+    }
 }

@@ -2,48 +2,69 @@ package bendageometri;
 
 import bendageometri.Persegi;
 
-
 public class PrismaPersegi extends Persegi {
     // Atribut khusus untuk PrismaPersegi
     private double volumeKubus;
     private double luasPermukaanKubus;
-    private double tinggiprismapersegi; //lupa ada tingginya cyok
+    private double tinggiprismapersegi;
 
     // Constructor untuk PrismaPersegi
     public PrismaPersegi(double sisi, double tinggiprismapersegi) {
         super(sisi);
-        volumeKubus = hitungVolume();
-        luasPermukaanKubus = hitungLuasPermukaan();
+        this.tinggiprismapersegi = tinggiprismapersegi;
+        this.volumeKubus = hitungVolume();
+        this.luasPermukaanKubus = hitungLuasPermukaan();
     }
-    
+
+    // Getter sisi (diperlukan jika sisi di superclass adalah protected)
     public double getSisi() {
-    return this.sisi; // diasumsikan 'sisi' dideklarasikan protected atau private pada Persegi
-}
+        return this.sisi;
+    }
 
+    // ================== VOLUME ==================
 
-    // Implementasi metode hitungVolume() untuk PrismaPersegi
     @Override
-    public double hitungVolume() {
-        // Volume PrismaPersegi = luas Persegi * tinggi PrismaPersegi
-        volumeKubus = Math.pow(sisi, 3);
+    public double hitungVolume() throws IllegalArgumentException {
+        if (sisi <= 0 || tinggiprismapersegi <= 0) {
+            throw new IllegalArgumentException("Sisi dan tinggi prisma harus lebih besar dari 0");
+        }
+        volumeKubus = sisi * sisi * tinggiprismapersegi;
         return volumeKubus;
     }
 
-    // Getter untuk Volume PrismaPersegi
+    // Overloading Volume
+    public double hitungVolume(double sisi, double tinggi) throws IllegalArgumentException {
+        if (sisi <= 0 || tinggi <= 0) {
+            throw new IllegalArgumentException("Sisi dan tinggi harus lebih besar dari 0");
+        }
+        return sisi * sisi * tinggi;
+    }
+
     public double getVolumeKubus() {
         return volumeKubus;
     }
-    
-    // Implementasi metode hitungLuasPermukaan() untuk PrismaPersegi
+
+    // ================== LUAS PERMUKAAN ==================
+
     @Override
-    public double hitungLuasPermukaan() {
-        // Luas Permukaan PrismaPersegi = 6 * (luas persegi)
-        luasPermukaanKubus =    2 * Math.pow(sisi, 2) + 4 * sisi * tinggiprismapersegi;
-        return luasPermukaanKubus;
-    }
-    
-    public double getLuasPermukaanKubus(){
+    public double hitungLuasPermukaan() throws IllegalArgumentException {
+        if (sisi <= 0 || tinggiprismapersegi <= 0) {
+            throw new IllegalArgumentException("Sisi dan tinggi prisma harus lebih besar dari 0");
+        }
+        // 2 alas + 4 sisi tegak
+        luasPermukaanKubus = 2 * (sisi * sisi) + 4 * sisi * tinggiprismapersegi;
         return luasPermukaanKubus;
     }
 
+    // Overloading Luas Permukaan
+    public double hitungLuasPermukaan(double sisi, double tinggi) throws IllegalArgumentException {
+        if (sisi <= 0 || tinggi <= 0) {
+            throw new IllegalArgumentException("Sisi dan tinggi harus lebih besar dari 0");
+        }
+        return 2 * (sisi * sisi) + 4 * sisi * tinggi;
+    }
+
+    public double getLuasPermukaanKubus() {
+        return luasPermukaanKubus;
+    }
 }

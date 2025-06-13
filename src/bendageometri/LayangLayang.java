@@ -12,46 +12,65 @@ import bendageometri.Geometri2D;
  * @author User
  */
 public class LayangLayang extends Geometri2D {
-    // Atribut khusus untuk layang-layang
-    protected  double diagonal1;
+    protected double diagonal1;
     protected double diagonal2;
     protected double sisi1;
     protected double sisi2;
     private double luasLayangLayang;
     private double kelilingLayangLayang;
 
-    // Constructor untuk LayangLayang
     public LayangLayang(double diagonal1, double diagonal2, double sisi1, double sisi2) {
         this.diagonal1 = diagonal1;
         this.diagonal2 = diagonal2;
         this.sisi1 = sisi1;
         this.sisi2 = sisi2;
-        luasLayangLayang = hitungLuas();
-        kelilingLayangLayang = hitungKeliling();
+        this.luasLayangLayang = hitungLuas();
+        this.kelilingLayangLayang = hitungKeliling();
     }
 
-    // Implementasi metode hitungLuas() untuk layang-layang
     @Override
-    public double hitungLuas() {
-        // Rumus luas layang-layang: 0.5 * diagonal1 * diagonal2
+    public double hitungLuas() throws IllegalArgumentException {
+        if (diagonal1 <= 0 || diagonal2 <= 0) {
+            throw new IllegalArgumentException("Diagonal harus lebih besar dari 0");
+        }
         luasLayangLayang = 0.5 * diagonal1 * diagonal2;
         return luasLayangLayang;
-    }
+}
 
-    // Getter untuk Luas Layang Layang
+// Overloaded method dengan parameter input
+    public double hitungLuas(double diagonal1, double diagonal2) throws IllegalArgumentException {
+        if (diagonal1 <= 0 || diagonal2 <= 0) {
+            throw new IllegalArgumentException("Diagonal harus lebih besar dari 0");
+        }
+        luasLayangLayang = 0.5 * diagonal1 * diagonal2;
+        return luasLayangLayang;
+}
+
     public double getLuasLayangLayang() {
         return luasLayangLayang;
     }
 
+    // Overriding dengan pengecekan validitas
     @Override
-    public double hitungKeliling() {
-        // rumus mencari keliling 2 * (sisi1 + sisi2)
+    public double hitungKeliling() throws IllegalArgumentException {
+        if (sisi1 <= 0 || sisi2 <= 0) {
+            throw new IllegalArgumentException("Sisi-sisi harus lebih besar dari 0");
+        }
         kelilingLayangLayang = 2 * (sisi1 + sisi2);
         return kelilingLayangLayang;
     }
 
-    // Getter untuk keliling Layang Layang
+    // Overloaded method dengan parameter
+    public double hitungKeliling(double sisi1, double sisi2) throws IllegalArgumentException {
+        if (sisi1 <= 0 || sisi2 <= 0) {
+            throw new IllegalArgumentException("Sisi-sisi harus lebih besar dari 0");
+        }
+        kelilingLayangLayang = 2 * (sisi1 + sisi2);
+        return kelilingLayangLayang;
+    }
+
     public double getKelilingLayangLayang() {
         return kelilingLayangLayang;
     }
 }
+
