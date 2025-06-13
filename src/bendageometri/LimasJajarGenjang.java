@@ -11,6 +11,7 @@ public class LimasJajarGenjang extends JajarGenjang {
         super(alas, tinggiJajarGenjang, sudutLancip);
         this.tinggiLimas = tinggiLimas;
     }
+    
 
     // Override hitungVolume dengan try-catch
     @Override
@@ -96,3 +97,12 @@ public class LimasJajarGenjang extends JajarGenjang {
         return luasPermukaanLimasJajarGenjang;
     }
 }
+
+
+/* Note Ruhul Buat jelasin codingannya
+1. Overloadingnya udah di terapkan ke semua method geometri, jadi 1 method yang sama memiliki parameter yang berbeda
+2. Klo ga pake parameter, angkanya diambil dari constructornya, klo pake parameter nanti angkanya input ulang beda dengan di constructor
+3. Try catch untuk mencegah input yang tidak di inginkan, nanti ada pesan error. Misal user input 0 atau huruf
+4. 
+
+*/

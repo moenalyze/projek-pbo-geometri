@@ -844,6 +844,197 @@ public class Main {
                     }
                     loop = false;
                     break;
+                case 15:
+    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread (0)? (1/0)");
+    multithread = inputUser.nextInt();
+    jumlahLooping = 0;
+
+    if (multithread == 0) {
+        System.out.println("*** Limas Jajar Genjang (Single-threaded) ***");
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine(); // untuk menghindari infinite loop
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 0; i < jumlahLooping; i++) {
+            double alas = 5 + Math.random() * 15;          // 5–20 cm
+            double tinggiAlas = 3 + Math.random() * 10;    // 3–13 cm
+            double sisiMiring = 5 + Math.random() * 10;    // 5–15 cm
+            double tinggiLimas = 5 + Math.random() * 15;   // 5–20 cm
+
+            JajarGenjang limas = new LimasJajarGenjang(alas, tinggiAlas, sisiMiring, tinggiLimas);
+
+            double luas = limas.hitungLuas();
+            double keliling = limas.hitungKeliling();
+
+            double luasAlas = alas * tinggiAlas;
+            
+                                    if(limas instanceof LimasJajarGenjang) {
+                                        double luasPermukaanOverload = ((LimasJajarGenjang) limas).hitungLuasPermukaan(
+                                        alas, tinggiAlas,
+                                        sisiMiring, tinggiAlas
+                                    );
+                                    double volumeOverload = ((LimasJajarGenjang) limas).hitungVolume(luasAlas, tinggiAlas, tinggiLimas);
+
+                                    System.out.printf("Luas Permukaan Limas Jajar Genjang (overload): %.2f cm²%n", luasPermukaanOverload);
+                                    System.out.printf("Volume Limas Jajar Genjang (overload): %.2f cm³%n", volumeOverload);
+                // double volumeOverload = limas.hitungVolume(luasAlas, tinggiAlas, tinggiLimas);
+                // double luasPermOverload = limas.hitungLuasPermukaan(
+                // alas, tinggiAlas,
+                // sisiMiring, tinggiAlas
+            // );
+            }
+
+            System.out.printf("Loop-%d%n", i + 1);
+            System.out.printf("Alas=%.2f, TinggiAlas=%.2f, SisiMiring=%.2f, TinggiLimas=%.2f%n",
+                              alas, tinggiAlas, sisiMiring, tinggiLimas);
+            System.out.printf("Luas Jajar Genjang: %.2f cm³%n", luas);
+            // System.out.printf("Volume overload: %.2f cm³%n", volumeOverload);
+            System.out.printf("Keliling Jajar Genjang: %.2f cm²%n", keliling);
+            // System.out.printf("Luas permukaan overload: %.2f cm²%n%n", luasPermOverload);
+        }
+
+    } else if (multithread == 1) {
+        System.out.println("*** Limas Jajar Genjang (Multi-threaded) ***");
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine(); // untuk menghindari infinite loop
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 1; i <= jumlahLooping; i++) {
+            Thread t = new Thread(new LimasJajarGenjangThread(i));
+            t.start();
+        }
+    }
+    loop = false;
+    break;
+
+    case 16:
+    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread (0)? (1/0)");
+    multithread = inputUser.nextInt();
+    jumlahLooping = 0;
+
+    if (multithread == 0) {
+        System.out.println("*** Limas Layang-Layang (Single-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 0; i < jumlahLooping; i++) {
+            // Generate nilai random
+            double diagonal1 = 5 + Math.random() * 10;
+            double diagonal2 = 5 + Math.random() * 10;
+            double sisi1 = 3 + Math.random() * 5;
+            double sisi2 = 4 + Math.random() * 6;
+            double tinggiLimas = 6 + Math.random() * 5;
+            double tinggiSisiTegak1 = 5 + Math.random() * 5;
+            double tinggiSisiTegak2 = 5 + Math.random() * 5;
+
+            // === POLYMORPHISM ===
+            LayangLayang limas = new LimasLayangLayang(
+                diagonal1, diagonal2, sisi1, sisi2,
+                tinggiLimas, tinggiSisiTegak1, tinggiSisiTegak2
+            );
+
+            double luasLayang = limas.hitungLuas();
+            double kelilingLayang = limas.hitungKeliling();
+
+            System.out.printf("Loop-%d%n", i + 1);
+            System.out.printf("Diagonal1: %.2f cm, Diagonal2: %.2f cm%n", diagonal1, diagonal2);
+            System.out.printf("Sisi1: %.2f cm, Sisi2: %.2f cm%n", sisi1, sisi2);
+            System.out.printf("Tinggi Limas: %.2f cm%n", tinggiLimas);
+            System.out.printf("Tinggi Sisi Tegak1: %.2f cm, Tegak2: %.2f cm%n", tinggiSisiTegak1, tinggiSisiTegak2);
+            System.out.printf("Luas Layang-Layang: %.2f cm²%n", luasLayang);
+            System.out.printf("Keliling Layang-Layang: %.2f cm%n", kelilingLayang);
+
+            if (limas instanceof LimasLayangLayang) {
+                double volumeOverload = ((LimasLayangLayang) limas).hitungVolume(
+                    diagonal1, diagonal2, sisi1, sisi2, tinggiLimas
+                );
+                double luasPermukaanOverload = ((LimasLayangLayang) limas).hitungLuasPermukaan(
+                    diagonal1, diagonal2, sisi1, sisi2, tinggiSisiTegak1, tinggiSisiTegak2
+                );
+
+                System.out.printf("Volume Limas Layang-Layang (overload): %.2f cm³%n", volumeOverload);
+                System.out.printf("Luas Permukaan Limas Layang-Layang (overload): %.2f cm²%n", luasPermukaanOverload);
+            }
+
+            System.out.println("----------------------------------------------------------");
+        }
+
+    } else if (multithread == 1) {
+        System.out.println("*** Limas Layang-Layang (Multi-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 1; i <= jumlahLooping; i++) {
+            Thread t = new Thread(new LimasLayangLayangThread(i));
+            t.start();
+        }
+    }
+
+    loop = false;
+    break;
+
+
+                    
                 case 17:
                     System.out.println("*** Limas Persegi  (Multi-threaded) ***");
                             while (true) {
@@ -891,6 +1082,101 @@ public class Main {
                                 Thread t = new Thread(new bendageometri.LimasPersegiPanjangThread(i));  // kirim nomor urut i
                                 t.start();
                             }
+                case 20:
+    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread (0)? (1/0)");
+    multithread = inputUser.nextInt();
+    jumlahLooping = 0;
+
+    if (multithread == 0) {
+        System.out.println("*** Limas Trapesium (Single-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 0; i < jumlahLooping; i++) {
+            // Generate nilai random
+            double sisi1 = 6 + Math.random() * 4;              // 6–10 cm
+            double sisi2 = 4 + Math.random() * 4;              // 4–8 cm
+            double tinggiTrapesium = 4 + Math.random() * 3;    // 4–7 cm
+            double tinggiLimas = 6 + Math.random() * 5;        // 6–11 cm
+            double tinggiSisiTegak1 = 5 + Math.random() * 5;   // 5–10 cm
+            double tinggiSisiTegak2 = 5 + Math.random() * 5;
+
+            // === POLYMORPHISM ===
+            Trapesium limas = new LimasTrapesium(sisi1, sisi2, tinggiTrapesium, tinggiLimas, tinggiSisiTegak1, tinggiSisiTegak2);
+
+            double luas = limas.hitungLuas();
+            double keliling = limas.hitungKeliling();
+
+            double luasAlas = 0.5 * (sisi1 + sisi2) * tinggiTrapesium;
+
+            if (limas instanceof LimasTrapesium) {
+                double volumeOverload = ((LimasTrapesium) limas).hitungVolume(luasAlas, tinggiLimas);
+                double luasPermukaanOverload = ((LimasTrapesium) limas).hitungLuasPermukaan(
+                    luasAlas,
+                    sisi1, tinggiSisiTegak1,
+                    sisi2, tinggiSisiTegak2,
+                    Math.abs(sisi1 - sisi2) / 2.0,
+                    tinggiSisiTegak2
+                );
+
+                System.out.printf("Luas Permukaan Limas Trapesium (overload): %.2f cm²%n", luasPermukaanOverload);
+                System.out.printf("Volume Limas Trapesium (overload): %.2f cm³%n", volumeOverload);
+            }
+
+            System.out.printf("Loop-%d%n", i + 1);
+            System.out.printf("sisi1=%.2f, sisi2=%.2f, tinggiTrapesium=%.2f, tinggiLimas=%.2f%n",
+                              sisi1, sisi2, tinggiTrapesium, tinggiLimas);
+            System.out.printf("Luas Trapesium: %.2f cm²%n", luas);
+            System.out.printf("Keliling Trapesium: %.2f cm%n", keliling);
+            System.out.println("----------------------------------------------------------");
+        }
+
+    } else if (multithread == 1) {
+        System.out.println("*** Limas Trapesium (Multi-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 1; i <= jumlahLooping; i++) {
+            Thread t = new Thread(new LimasTrapesiumThread(i));
+            t.start();
+        }
+    }
+
+    loop = false;
+    break;
+
                             
                 case 21:
                     System.out.println("Jalankan secara multi-thread (1) atau secara single-thread(0)? (1/0)");
@@ -1190,32 +1476,278 @@ public class Main {
                         }
                         loop = false;
                         break;
-                    
+                case 29:
+    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread (0)? (1/0)");
+    multithread = inputUser.nextInt();
+    jumlahLooping = 0;
+
+    if (multithread == 0) {
+        System.out.println("*** Cincin Bola (Single-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 0; i < jumlahLooping; i++) {
+            double jariJari = 2 + Math.random() * 8;
+            double jariJariMajor = 3 + Math.random() * 7;
+
+            // POLYMORPHISM
+            Bola cincin = new CincinBola(jariJari, jariJariMajor);
+
+            System.out.printf("Loop-%d%n", i + 1);
+            System.out.printf("Jari-jari Bola: %.2f cm%n", jariJari);
+            System.out.printf("Jari-jari Major (Cincin Bola): %.2f cm%n", jariJariMajor);
+
+            // Override
+            double volume = cincin.hitungVolume();
+            double luasPermukaan = cincin.hitungLuasPermukaan();
+
+            // Hitung volume dan luas bola saja
+            Bola bola = new Bola(jariJari);
+            double volumeBola = bola.hitungVolume();
+            double luasBola = bola.hitungLuasPermukaan();
+
+            System.out.printf("Volume Cincin Bola (override): %.2f cm³%n", volume);
+            System.out.printf("Luas Permukaan Cincin Bola (override): %.2f cm²%n", luasPermukaan);
+
+            if (cincin instanceof CincinBola) {
+                double volumeOL = ((CincinBola) cincin).hitungVolume(jariJari, jariJariMajor);
+                double luasOL = ((CincinBola) cincin).hitungLuasPermukaan(jariJari, jariJariMajor);
+
+                System.out.printf("Volume Cincin Bola (overload): %.2f cm³%n", volumeOL);
+                System.out.printf("Luas Permukaan Cincin Bola (overload): %.2f cm²%n", luasOL);
+            }
+
+            System.out.printf("Volume Bola: %.2f cm³%n", volumeBola);
+            System.out.printf("Luas Permukaan Bola: %.2f cm²%n", luasBola);
+            System.out.println("----------------------------------------------------------");
+        }
+
+    } else if (multithread == 1) {
+        System.out.println("*** Cincin Bola (Multi-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 1; i <= jumlahLooping; i++) {
+            Thread t = new Thread(new CincinBolaThread(i));
+            t.start();
+        }
+    }
+
+    loop = false;
+    break;
+
+                case 30:
+    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread (0)? (1/0)");
+    multithread = inputUser.nextInt();
+    jumlahLooping = 0;
+
+    if (multithread == 0) {
+        System.out.println("*** Juring Bola (Single-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 0; i < jumlahLooping; i++) {
+            double jariJari = 4 + Math.random() * 6;
+            double tinggi = Math.random() * (2 * jariJari);
+
+            Bola juring = new JuringBola(jariJari, tinggi);
+
+            System.out.printf("Loop-%d%n", i + 1);
+            System.out.printf("Jari-jari Bola: %.2f cm%n", jariJari);
+            System.out.printf("Tinggi Juring: %.2f cm%n", tinggi);
+
+            // Hitung Juring Bola
+            double volume = juring.hitungVolume();
+            double luasPermukaan = juring.hitungLuasPermukaan();
+
+            // Hitung Juring Bola (overload)
+            if (juring instanceof JuringBola) {
+                double volumeOL = ((JuringBola) juring).hitungVolume(jariJari, tinggi);
+                double luasOL = ((JuringBola) juring).hitungLuasPermukaan(jariJari, tinggi);
+
+                System.out.printf("Volume Juring Bola (overload): %.2f cm³%n", volumeOL);
+                System.out.printf("Luas Permukaan Juring Bola (overload): %.2f cm²%n", luasOL);
+            }
+
+            // Hitung Bola utuh
+            Bola bola = new Bola(jariJari);
+            double volumeBola = bola.hitungVolume();
+            double luasBola = bola.hitungLuasPermukaan();
+
+            System.out.printf("Volume Juring Bola (override): %.2f cm³%n", volume);
+            System.out.printf("Luas Permukaan Juring Bola (override): %.2f cm²%n", luasPermukaan);
+            System.out.printf("Volume Bola Penuh: %.2f cm³%n", volumeBola);
+            System.out.printf("Luas Permukaan Bola Penuh: %.2f cm²%n", luasBola);
+            System.out.println("----------------------------------------------------------");
+        }
+
+    } else if (multithread == 1) {
+        System.out.println("*** Juring Bola (Multi-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 1; i <= jumlahLooping; i++) {
+            Thread t = new Thread(new JuringBolaThread(i));
+            t.start();
+        }
+    }
+
+    loop = false;
+    break;
+  
                 case 31:
-//                    System.out.println("*** Tembereng Bola(Multi-threaded) ***");
-//                            while (true) {
-//                                try {
-//                                    System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
-//                                    jumlahLooping = inputUser.nextInt();
-//                                    if (jumlahLooping <= 0) {
-//                                        System.out.println("Jumlah looping harus lebih dari 0.");
-//                                        continue;
-//                                    }
-//                                    break;
-//                                } catch (NumberFormatException e) {
-//                                    System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
-//                                } catch (Exception e) {
-//                                    System.out.println("Terjadi kesalahan: " + e.getMessage());
-//                                }
-//                            }
-//
-//                            // Menjalankan thread sebanyak jumlahLooping
-//                            for (int i = 1; i <= jumlahLooping; i++) {
-//                                Thread t = new Thread(new bendageometri.TemberengLingkaranThread(i));  // kirim nomor urut i
-//                                t.start();
-//                            }
-//                            loop = false;
-//                            break;
+    System.out.println("Jalankan secara multi-thread (1) atau secara single-thread (0)? (1/0)");
+    multithread = inputUser.nextInt();
+    jumlahLooping = 0;
+
+    if (multithread == 0) {
+        System.out.println("*** Tembereng Bola (Single-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 0; i < jumlahLooping; i++) {
+            double jariJari = 5 + Math.random() * 5; // 5 - 10
+            double tinggi = Math.random() * jariJari;
+
+            Bola tembereng = new TemberengBola(jariJari, tinggi);
+
+            System.out.printf("Loop-%d%n", i + 1);
+            System.out.printf("Jari-jari Bola: %.2f cm%n", jariJari);
+            System.out.printf("Tinggi Tembereng: %.2f cm%n", tinggi);
+
+            // Hitung Tembereng Bola
+            double volume = tembereng.hitungVolume();
+            double luas = ((TemberengBola) tembereng).hitungLuas();
+
+            // Hitung Overload
+            double volumeOverload = ((TemberengBola) tembereng).hitungVolume(jariJari, tinggi);
+            double luasOverload = ((TemberengBola) tembereng).hitungLuas(jariJari, tinggi);
+
+            // Hitung Bola utuh
+            Bola bola = new Bola(jariJari);
+            double volumeBola = bola.hitungVolume();
+            double luasPermukaanBola = bola.hitungLuasPermukaan();
+
+            // Cetak
+            System.out.printf("Volume Tembereng Bola (override): %.2f cm³%n", volume);
+            System.out.printf("Volume Tembereng Bola (overload): %.2f cm³%n", volumeOverload);
+            System.out.printf("Luas Permukaan Tembereng Bola (override): %.2f cm²%n", luas);
+            System.out.printf("Luas Permukaan Tembereng Bola (overload): %.2f cm²%n", luasOverload);
+            System.out.printf("Volume Bola Penuh: %.2f cm³%n", volumeBola);
+            System.out.printf("Luas Permukaan Bola Penuh: %.2f cm²%n", luasPermukaanBola);
+            System.out.println("----------------------------------------------------------");
+        }
+
+    } else if (multithread == 1) {
+        System.out.println("*** Tembereng Bola (Multi-threaded) ***");
+
+        while (true) {
+            try {
+                System.out.print("Berapa kali perhitungan ingin dilakukan (looping)? ");
+                jumlahLooping = inputUser.nextInt();
+                if (jumlahLooping <= 0) {
+                    System.out.println("Jumlah looping harus lebih dari 0.");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka bulat. Silakan coba lagi.");
+                inputUser.nextLine();
+            } catch (Exception e) {
+                System.out.println("Terjadi kesalahan: " + e.getMessage());
+                inputUser.nextLine();
+            }
+        }
+
+        for (int i = 1; i <= jumlahLooping; i++) {
+            Thread t = new Thread(new TemberengBolaThread(i));
+            t.start();
+        }
+    }
+
+    loop = false;
+    break;
+
                 case 32:
                     System.out.println("*** Banyak Geometri (Multi-threaded dengan Thread Pool) ***");
 
