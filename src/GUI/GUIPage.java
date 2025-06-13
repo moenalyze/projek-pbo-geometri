@@ -247,9 +247,7 @@ public class GUIPage extends javax.swing.JFrame {
 
     private void jButtonLimasPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimasPersegiPanjangActionPerformed
         // TODO add your handling code here:
-        GUI_LimasPersegiPanjang lppPage = new GUI_LimasPersegiPanjang();
-        lppPage.setVisible(true);
-        this.dispose();
+        
     }//GEN-LAST:event_jButtonLimasPersegiPanjangActionPerformed
 
     private void jButtonPrismaPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrismaPersegiPanjangActionPerformed
