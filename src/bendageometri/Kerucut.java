@@ -19,6 +19,18 @@ public class Kerucut extends Lingkaran {
     super(jariJari);
     this.tinggiKerucut = tinggiKerucut;
   }
+  
+  // Constructor untuk Kerucut overloading
+  public Kerucut(double jariJari) {
+    super(jariJari);
+    this.tinggiKerucut = tinggiKerucut;
+  }
+  
+  // Constructor untuk Kerucut overloading
+  public Kerucut(int jariJari) {
+    super(jariJari);
+    this.tinggiKerucut = tinggiKerucut;
+  }
 
 
   // Implementasi metode hitungVolume() untuk Kerucut
