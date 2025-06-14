@@ -37,13 +37,23 @@ public class LimasBelahKetupatThread implements Runnable {
         LimasBelahKetupat lbk = new LimasBelahKetupat(
             diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak
         );
-        double volume = lbk.hitungVolume();
-        double luasPermukaan = lbk.hitungLuasPermukaan();
         
+        double volume1 = lbk.hitungVolume(); // default
+        double volume2 = lbk.hitungVolume(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak); // overloaded
+        double luasPermukaan1 = lbk.hitungLuasPermukaan(); // default
+        double luasPermukaan2 = lbk.hitungLuasPermukaan(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak); // overloaded
+
+        // Cetak hasil semua perhitungan
+        System.out.printf("Thread Limas Belah ketupat #%d (%s)%n", nomor, threadName);
         System.out.printf(
-            "Thread Limas Belah Ketupat #%d | Diagonal 1: %.2f cm | Diagonal 2: %.2f cm | Tinggi Limas: %.2f cm | Tinggi Sisi Tegak: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
-            nomor, diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak, volume, luasPermukaan
+            "Diagonal 1: %.2f cm | Diagonal 2: %.2f cm | Tinggi Limas: %.2f cm | Tinggi Sisi Tegak: %.2f cm%n",
+            diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak
         );
+        System.out.printf("Volume (default) : %.2f cm³%n", volume1);
+        System.out.printf("Volume (diagonal 1, diagonal 2, tinggi limas, & tinggi sisi tegak) : %.2f cm³%n", volume2);
+        System.out.printf("Luas Permukaan (default) : %.2f cm³%n", luasPermukaan1);
+        System.out.printf("Luas Permukaan (diagonal 1, diagonal 2, tinggi limas, & tinggi sisi tegak) : %.2f cm³%n", luasPermukaan2);
+        System.out.printf("================================================%n"); // pemisah antar thread
     }
     
 }
