@@ -33,16 +33,23 @@ public class PrismaBelahKetupatThread implements Runnable {
         double diagonal2 = 5 + Math.random() * 20; // 5 - 25
         double tinggiPrisma = 5 + Math.random() * 20; // 5 - 25
 
-        PrismaBelahKetupat pbk = new PrismaBelahKetupat(
+        PrismaBelahKetupat pbk = new PrismaBelahKetupat(diagonal1, diagonal2, tinggiPrisma);
+        double volume1 = pbk.hitungVolume(); // default
+        double volume2 = pbk.hitungVolume(diagonal1, diagonal2, tinggiPrisma); // overloaded
+        
+        double luasPermukaan1 = pbk.hitungLuasPermukaan(); // default
+        double luasPermukaan2 = pbk.hitungLuasPermukaan(diagonal1, diagonal2, tinggiPrisma); // overloaded
+        
+        System.out.printf("Thread Prisma Belah ketupat #%d (%s)%n", nomor, threadName);
+        System.out.printf(
+            "Diagonal 1: %.2f cm | Diagonal 2: %.2f cm | Tinggi Prisma: %.2f cm%n",
             diagonal1, diagonal2, tinggiPrisma
         );
-        double volume = pbk.hitungVolume();
-        double luasPermukaan = pbk.hitungLuasPermukaan();
-        
-        System.out.printf(
-            "Thread Prisma Belah Ketupat #%d | Diagonal 1: %.2f cm | Diagonal 2: %.2f cm | Tinggi Prisma: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
-            nomor, diagonal1, diagonal2, tinggiPrisma, volume, luasPermukaan
-        );
+        System.out.printf("Volume (default) : %.2f cm³%n", volume1);
+        System.out.printf("Volume (diagonal 1, diagonal 2, & tinggi) : %.2f cm³%n", volume2);
+        System.out.printf("Luas Permukaan (default) : %.2f cm³%n", luasPermukaan1);
+        System.out.printf("Luas Permukaan (diagonal 1, diagonal 2, & tinggi) : %.2f cm³%n", luasPermukaan2);
+        System.out.printf("================================================%n"); // pemisah antar thread
     }
     
 }
