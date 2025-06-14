@@ -25,6 +25,8 @@ public class KerucutTerpancungThread implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        
+        String threadName = Thread.currentThread().getName();
 
         // Generate nilai acak untuk diagonal, sisi, dan tinggi prisma
         double tinggi = 5 + Math.random() * 15;             // 5 - 20 cm
@@ -36,13 +38,21 @@ public class KerucutTerpancungThread implements Runnable {
             tinggi, jariJariAtas, jariJariBawah
         );
 
-        double volume = ktp.hitungVolume();
-        double luasPermukaan = ktp.hitungLuasPermukaan();
+        double volume1 = ktp.hitungVolume(); // default
+        double volume2 = ktp.hitungVolume(tinggi, jariJariAtas, jariJariBawah); // overloaded
+        double luasPermukaan1 = ktp.hitungLuasPermukaan(); // default
+        double luasPermukaan2 = ktp.hitungLuasPermukaan(); // overloaded
 
         // Cetak hasil dengan label sesuai console interaktif
+        System.out.printf("Thread Kerucut Terpancung #%d (%s)%n", nomor, threadName);
         System.out.printf(
-            "Thread Kerucut Terpancung #%d | Tinggi: %.2f cm | Jari-jari atas: %.2f cm | Jari-jari bawah: %.2f cm | Volume: %.2f cm³ | Luas Permukaan: %.2f cm²%n",
-            nomor, tinggi, jariJariAtas, jariJariBawah, volume, luasPermukaan
+            "Tinggi: %.2f cm | Jari-jari atas: %.2f cm | Jari-jari bawah: %.2f cm%n",
+            tinggi, jariJariAtas, jariJariBawah
         );
+        System.out.printf("Volume (default) : %.2f cm³%n", volume1);
+        System.out.printf("Volume (tinggi, jariJariAtas, jariJariBawah) : %.2f cm³%n", volume2);
+        System.out.printf("Luas Permukaan (default) : %.2f cm³%n", luasPermukaan1);
+        System.out.printf("Luas Permukaan (tinggi, jariJariAtas, jariJariBawah) : %.2f cm³%n", luasPermukaan2);
+        System.out.printf("================================================%n"); // pemisah antar thread
     }
 }
