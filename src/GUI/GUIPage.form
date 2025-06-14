@@ -33,6 +33,8 @@
                       <Component id="jButtonLayangLayang1" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonPersegiPanjang" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonLingkaran" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonBelahKetupat" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonJuringLingkaran" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="319" max="32767" attributes="0"/>
@@ -45,6 +47,9 @@
                       <Component id="jButtonLimasPersegiPanjang" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonPrismaPersegiPanjang" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonKerucut" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonPrismaBelahKetupat" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonLimasBelahKetupat" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonLimasBelahKetupat1" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
@@ -85,8 +90,20 @@
                   <Component id="jButtonPrismaPersegiPanjang" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jButtonKerucut" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="326" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButtonKerucut" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonBelahKetupat" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButtonJuringLingkaran" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonPrismaBelahKetupat" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtonLimasBelahKetupat" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtonLimasBelahKetupat1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="221" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -189,6 +206,48 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonKerucutActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonBelahKetupat">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Belah Ketupat"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBelahKetupatActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonJuringLingkaran">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Juring Lingkaran"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonJuringLingkaranActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonPrismaBelahKetupat">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Prisma Belah Ketupat"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPrismaBelahKetupatActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonLimasBelahKetupat">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limas Belah Ketupat"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimasBelahKetupatActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonLimasBelahKetupat1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kerucut Terpancung"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimasBelahKetupat1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

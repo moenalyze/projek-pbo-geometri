@@ -39,6 +39,11 @@ public class GUIPage extends javax.swing.JFrame {
         jButtonLimasPersegiPanjang = new javax.swing.JButton();
         jButtonPrismaPersegiPanjang = new javax.swing.JButton();
         jButtonKerucut = new javax.swing.JButton();
+        jButtonBelahKetupat = new javax.swing.JButton();
+        jButtonJuringLingkaran = new javax.swing.JButton();
+        jButtonPrismaBelahKetupat = new javax.swing.JButton();
+        jButtonLimasBelahKetupat = new javax.swing.JButton();
+        jButtonLimasBelahKetupat1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,6 +129,43 @@ public class GUIPage extends javax.swing.JFrame {
             }
         });
 
+        jButtonBelahKetupat.setText("Belah Ketupat");
+        jButtonBelahKetupat.setToolTipText("");
+        jButtonBelahKetupat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBelahKetupatActionPerformed(evt);
+            }
+        });
+
+        jButtonJuringLingkaran.setText("Juring Lingkaran");
+        jButtonJuringLingkaran.setToolTipText("");
+        jButtonJuringLingkaran.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJuringLingkaranActionPerformed(evt);
+            }
+        });
+
+        jButtonPrismaBelahKetupat.setText("Prisma Belah Ketupat");
+        jButtonPrismaBelahKetupat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPrismaBelahKetupatActionPerformed(evt);
+            }
+        });
+
+        jButtonLimasBelahKetupat.setText("Limas Belah Ketupat");
+        jButtonLimasBelahKetupat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimasBelahKetupatActionPerformed(evt);
+            }
+        });
+
+        jButtonLimasBelahKetupat1.setText("Kerucut Terpancung");
+        jButtonLimasBelahKetupat1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimasBelahKetupat1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -137,7 +179,9 @@ public class GUIPage extends javax.swing.JFrame {
                         .addComponent(jButtonTembereng, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonLayangLayang1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonPersegiPanjang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonLingkaran, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButtonLingkaran, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonBelahKetupat, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonJuringLingkaran, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,7 +191,10 @@ public class GUIPage extends javax.swing.JFrame {
                         .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonLimasPersegiPanjang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonPrismaPersegiPanjang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonKerucut, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButtonKerucut, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonPrismaBelahKetupat, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLimasBelahKetupat, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLimasBelahKetupat1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(187, 187, 187))
         );
         layout.setVerticalGroup(
@@ -178,8 +225,18 @@ public class GUIPage extends javax.swing.JFrame {
                     .addComponent(jButtonLingkaran)
                     .addComponent(jButtonPrismaPersegiPanjang))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonKerucut)
-                .addContainerGap(326, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonKerucut)
+                    .addComponent(jButtonBelahKetupat))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonJuringLingkaran)
+                    .addComponent(jButtonPrismaBelahKetupat))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonLimasBelahKetupat)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonLimasBelahKetupat1)
+                .addContainerGap(221, Short.MAX_VALUE))
         );
 
         pack();
@@ -259,6 +316,46 @@ public class GUIPage extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonKerucutActionPerformed
 
+    private void jButtonBelahKetupatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBelahKetupatActionPerformed
+        // TODO add your handling code here:
+        GUI_BelahKetupat belahKetupatPage = new GUI_BelahKetupat();
+        belahKetupatPage.setVisible(true);
+        belahKetupatPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonBelahKetupatActionPerformed
+
+    private void jButtonJuringLingkaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJuringLingkaranActionPerformed
+        // TODO add your handling code here:
+        GUI_JuringLingkaran juringLingkaranPage = new GUI_JuringLingkaran();
+        juringLingkaranPage.setVisible(true);
+        juringLingkaranPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonJuringLingkaranActionPerformed
+
+    private void jButtonPrismaBelahKetupatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrismaBelahKetupatActionPerformed
+        // TODO add your handling code here:
+        GUI_PrismaBelahKetupat prismaBelahKetupatPage = new GUI_PrismaBelahKetupat();
+        prismaBelahKetupatPage.setVisible(true);
+        prismaBelahKetupatPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonPrismaBelahKetupatActionPerformed
+
+    private void jButtonLimasBelahKetupatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimasBelahKetupatActionPerformed
+        // TODO add your handling code here:
+        GUI_LimasBelahKetupat limasBelahKetupatPage = new GUI_LimasBelahKetupat();
+        limasBelahKetupatPage.setVisible(true);
+        limasBelahKetupatPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonLimasBelahKetupatActionPerformed
+
+    private void jButtonLimasBelahKetupat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimasBelahKetupat1ActionPerformed
+        // TODO add your handling code here:
+        GUI_KerucutTerpancung ktpPage = new GUI_KerucutTerpancung();
+        ktpPage.setVisible(true);
+        ktpPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonLimasBelahKetupat1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -297,13 +394,18 @@ public class GUIPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonBelahKetupat;
     private javax.swing.JButton jButtonBola;
     private javax.swing.JButton jButtonJajarGenjang;
+    private javax.swing.JButton jButtonJuringLingkaran;
     private javax.swing.JButton jButtonKerucut;
     private javax.swing.JButton jButtonLayangLayang1;
+    private javax.swing.JButton jButtonLimasBelahKetupat;
+    private javax.swing.JButton jButtonLimasBelahKetupat1;
     private javax.swing.JButton jButtonLimasPersegiPanjang;
     private javax.swing.JButton jButtonLingkaran;
     private javax.swing.JButton jButtonPersegiPanjang;
+    private javax.swing.JButton jButtonPrismaBelahKetupat;
     private javax.swing.JButton jButtonPrismaPersegiPanjang;
     private javax.swing.JButton jButtonTabung;
     private javax.swing.JButton jButtonTembereng;
