@@ -415,6 +415,10 @@ public class GUIPage extends javax.swing.JFrame {
 
     private void jButtonLimasLayangLayangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimasLayangLayangActionPerformed
         // TODO add your handling code here:
+        GUI_LimasLayangLayang ktpPage = new GUI_LimasLayangLayang();
+        ktpPage.setVisible(true);
+        ktpPage.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButtonLimasLayangLayangActionPerformed
 
     private void jButtonJuringBolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJuringBolaActionPerformed
