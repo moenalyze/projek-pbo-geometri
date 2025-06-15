@@ -16,20 +16,13 @@ public class LimasSegitiga extends Segitiga {
         super(sisi);
     }
 
-    // Implementasi metode hitungVolume() untuk PrismaJajarGenjang
+    // Implementasi metode hitungVolume() untuk Limas Segitiga
     @Override
     public double hitungVolume() {
           volumeLimasSegitiga = (super.sisi * super.sisi * super.sisi) * (Math.sqrt(2) / 12);
           return volumeLimasSegitiga;
     }
     
-    // Implementasi metode hitungLuasPermukaan() untuk Prisma Jajar Genjang
-    @Override
-    public double hitungLuasPermukaan() {
-        luasPermukaanLimasSegitiga = super.hitungLuas() * 4;
-        return luasPermukaanLimasSegitiga;
-    }
-
     // Overload hitungVolume dengan alas, tinggi alas, dan tinggi prisma
     public double hitungVolume(double sisi) {
         try {
@@ -42,6 +35,14 @@ public class LimasSegitiga extends Segitiga {
             throw new IllegalArgumentException("Nilai sisi harus lebih dari 0.");
         }
     }
+    
+    // Implementasi metode hitungLuasPermukaan() untuk Limas Segitiga
+    @Override
+    public double hitungLuasPermukaan() {
+        luasPermukaanLimasSegitiga = super.hitungLuas() * 4;
+        return luasPermukaanLimasSegitiga;
+    }
+
 
     // Overload hitungLuasPermukaan dengan alas, tinggi alas, sisi miring, dan tinggi prisma
     public double hitungLuasPermukaan(double sisi) {
