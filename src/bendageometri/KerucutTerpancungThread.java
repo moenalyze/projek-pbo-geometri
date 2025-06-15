@@ -34,15 +34,20 @@ public class KerucutTerpancungThread implements Runnable {
         double jariJariBawah = 5 + Math.random() * 15;             // 5 - 20 cm
 
         // Buat objek PrismaLayangLayang dengan parameter acak di atas
-        KerucutTerpancung ktp = new KerucutTerpancung(
+        Kerucut ktp = new KerucutTerpancung(
             tinggi, jariJariAtas, jariJariBawah
         );
 
         double volume1 = ktp.hitungVolume(); // default
-        double volume2 = ktp.hitungVolume(tinggi, jariJariAtas, jariJariBawah); // overloaded
         double luasPermukaan1 = ktp.hitungLuasPermukaan(); // default
-        double luasPermukaan2 = ktp.hitungLuasPermukaan(); // overloaded
-
+        double volume2 = 0;
+        double luasPermukaan2 = 0;
+        
+        if(ktp instanceof KerucutTerpancung) {
+            volume2 = ((KerucutTerpancung)ktp).hitungVolume(tinggi, jariJariAtas, jariJariBawah); // overloaded
+            luasPermukaan2 = ((KerucutTerpancung)ktp).hitungLuasPermukaan(tinggi, jariJariAtas, jariJariBawah); // overloaded
+        }
+        
         // Cetak hasil dengan label sesuai console interaktif
         System.out.printf("Thread Kerucut Terpancung #%d (%s)%n", nomor, threadName);
         System.out.printf(
