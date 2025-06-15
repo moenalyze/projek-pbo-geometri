@@ -4,41 +4,79 @@ import bendageometri.Geometri2D;
 
 public class Segitiga extends Geometri2D {
     // Atribut khusus untuk segitiga
-    protected double alas;
-    protected double tinggi;
+    protected double sisi;
     private double luasSegitiga;
     private double kelilingSegitiga;
 
     // Constructor untuk Segitiga
-    public Segitiga(double alas, double tinggi) {
-        this.alas = alas;
-        this.tinggi = tinggi;
+    public Segitiga(double sisi) {
+        this.sisi = sisi;
 //        luasSegitiga = hitungLuas();
 //        kelilingSegitiga = hitungKeliling();
     }
 
     // Implementasi metode hitungLuas() untuk segitiga
     @Override
-    public double hitungLuas() {
-        // Rumus luas segitiga: 0.5 * alas * tinggi
-        luasSegitiga = 0.5 * alas * tinggi;
-        return luasSegitiga;
+    public double hitungLuas() throws IllegalArgumentException {
+        try{
+            if (sisi <= 0) {
+                throw new IllegalArgumentException("Sisi tidak boleh 0 atau negatif");
+            }
+            luasSegitiga = ((sisi * sisi) / 4) * Math.sqrt(3);
+            return luasSegitiga;
+        }catch (IllegalArgumentException e){
+            System.err.println("Error saat menghitung luas jajar genjang: " + e.getMessage());
+            throw e;
+        }
     }
 
-    // Getter untuk Luas Segitiga
-    public double getLuasSegitiga() {
-        return luasSegitiga;
+    public double hitungLuas(double sisi) throws IllegalArgumentException {
+        try{
+            if (sisi <= 0) {
+                throw new IllegalArgumentException("Sisi tidak boleh 0 atau negatif");
+            }
+            return ((sisi * sisi) / 4) * Math.sqrt(3);
+        }catch (IllegalArgumentException e){
+            System.err.println("Error saat menghitung luas jajar genjang: " + e.getMessage());
+            throw e;
+        }
     }
 
     @Override
-    public double hitungKeliling() {
-        // Rumus keliling segitiga: 3 * alas - segitiga sama alas
-        kelilingSegitiga = 3 * alas;
-        return kelilingSegitiga;
+    public double hitungKeliling() throws IllegalArgumentException {
+        try{
+            if (sisi <= 0) {
+                throw new IllegalArgumentException("Sisi tidak boleh 0 atau negatif");
+            }
+            // Rumus keliling segitiga: 3 * sisi - segitiga sama sisi
+            kelilingSegitiga = 3 * sisi;
+            return kelilingSegitiga;
+        }catch(IllegalArgumentException e){
+            System.err.println("Error saat menghitung keliling jajar genjang: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    public double hitungKeliling(double sisi) throws IllegalArgumentException {
+        try{
+            if (sisi <= 0) {
+                throw new IllegalArgumentException("Sisi tidak boleh 0 atau negatif");
+            }
+            // Rumus keliling segitiga: 3 * sisi - segitiga sama sisi
+            return 3 * sisi;
+        }catch(IllegalArgumentException e){
+            System.err.println("Error saat menghitung keliling jajar genjang: " + e.getMessage());
+            throw e;
+        }
     }
 
     // Getter untuk Keliling Segitiga
     public double getKelilingSegitiga() {
       return kelilingSegitiga;
+    }
+
+    // Getter untuk Luas Segitiga
+    public double getLuasSegitiga() {
+        return luasSegitiga;
     }
 }
