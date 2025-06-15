@@ -30,13 +30,14 @@
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                       <Component id="jButtonJajarGenjang" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonTembereng" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jButtonLayangLayang1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonSegitiga" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonPersegiPanjang" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonLingkaran" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonBelahKetupat" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonJuringLingkaran" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonPersegi" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonLayangLayang" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonTrapesium" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="275" max="32767" attributes="0"/>
@@ -59,6 +60,9 @@
                       <Component id="jButtonPrismaLayangLayang" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonPrismaPersegi" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonLimasPersegi" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonPrismaSegitiga" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonLimasSegitiga" alignment="1" max="32767" attributes="0"/>
+                      <Component id="jButtoPrismaTrapesium" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
@@ -68,7 +72,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace pref="27" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -86,7 +90,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonBola" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonLayangLayang1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSegitiga" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -119,7 +123,10 @@
                   <Component id="jButtonLayangLayang" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jButtonLimasJajarGenjang" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButtonLimasJajarGenjang" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonTrapesium" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jButtonLimasTrapesium" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -130,9 +137,14 @@
               <Component id="jButtonPrismaLayangLayang" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jButtonPrismaPersegi" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="8" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jButtonLimasPersegi" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtonPrismaSegitiga" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtonLimasSegitiga" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtoPrismaTrapesium" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -188,12 +200,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBolaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonLayangLayang1">
+    <Component class="javax.swing.JButton" name="jButtonSegitiga">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Layang-Layang"/>
+        <Property name="text" type="java.lang.String" value="Segitiga"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLayangLayang1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSegitigaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonPersegiPanjang">
@@ -351,6 +363,39 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimasPersegiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonTrapesium">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Trapesium"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonTrapesiumActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonPrismaSegitiga">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Prisma Segitiga"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPrismaSegitigaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonLimasSegitiga">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limas Segitiga"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimasSegitigaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtoPrismaTrapesium">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Prisma Trapesium"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtoPrismaTrapesiumActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
