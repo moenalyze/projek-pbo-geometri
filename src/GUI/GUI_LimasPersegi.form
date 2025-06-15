@@ -64,10 +64,7 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabelAlas1" min="-2" pref="93" max="-2" attributes="0"/>
-                                  <Component id="jLabelAlas" min="-2" pref="93" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jLabelAlas" min="-2" pref="93" max="-2" attributes="0"/>
                               <EmptySpace min="302" pref="302" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -88,19 +85,12 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabelAlasKeliling" min="-2" pref="93" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="jLebarField2" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jSisiField2" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabelAlas2" min="-2" pref="93" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jPanjangField2" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabelTinggi1" min="-2" pref="127" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTinggiVolumeField" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabelTinggi1" min="-2" pref="127" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jTinggiVolumeField" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -124,10 +114,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jRadioButtonTinggi" min="-2" pref="220" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                          <Component id="jLebarField" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jSisiField" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="jRadioButtonSudut" min="-2" pref="210" max="-2" attributes="0"/>
                           <Component id="jTinggiLuasPermukaanField" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jPanjangField" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -160,33 +149,23 @@
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLebarField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jSisiField" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelAlas" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelAlasKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLebarField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jSisiField2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelTinggi" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTinggiLuasPermukaanField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jPanjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabelAlas1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabelTinggi1" min="-2" max="-2" attributes="0"/>
                               <Component id="jTinggiVolumeField" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabelAlas2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanjangField2" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -261,7 +240,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonSudutActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jLebarField2">
+        <Component class="javax.swing.JTextField" name="jSisiField2">
         </Component>
         <Component class="javax.swing.JTextField" name="jTinggiVolumeField">
         </Component>
@@ -272,12 +251,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelAlasKeliling">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Lebar (cm) :"/>
+            <Property name="text" type="java.lang.String" value="Sisi (cm) :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTinggiLuasPermukaanField">
         </Component>
-        <Component class="javax.swing.JTextField" name="jLebarField">
+        <Component class="javax.swing.JTextField" name="jSisiField">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelTinggi">
           <Properties>
@@ -286,7 +265,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelAlas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Lebar (cm):"/>
+            <Property name="text" type="java.lang.String" value="Sisi (cm):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHitungLuasPermukaan">
@@ -307,37 +286,23 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelHasilVolume">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Volume Limas Persegi Panjang : "/>
+            <Property name="text" type="java.lang.String" value="Volume Limas Persegi  : "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelHasilLuasPermukaan">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Luas Permukaan Limas Persegi Panjang : "/>
+            <Property name="text" type="java.lang.String" value="Luas Permukaan Persegi : "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelHasilLuas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Luas Persegi Panjang : "/>
+            <Property name="text" type="java.lang.String" value="Luas Persegi  : "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelHasilKeliling">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Keliling Persegi Panjang : "/>
+            <Property name="text" type="java.lang.String" value="Keliling Persegi : "/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAlas1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Panjang (cm):"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jPanjangField">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAlas2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Panjang (cm):"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jPanjangField2">
         </Component>
       </SubComponents>
     </Container>

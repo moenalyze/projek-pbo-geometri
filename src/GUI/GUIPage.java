@@ -48,6 +48,11 @@ public class GUIPage extends javax.swing.JFrame {
         jButtonLimasTrapesium = new javax.swing.JButton();
         jButtonLimasLayangLayang = new javax.swing.JButton();
         jButtonJuringBola = new javax.swing.JButton();
+        jButtonPrismaLayangLayang = new javax.swing.JButton();
+        jButtonPrismaPersegi = new javax.swing.JButton();
+        jButtonPersegi = new javax.swing.JButton();
+        jButtonLayangLayang = new javax.swing.JButton();
+        jButtonLimasPersegi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,7 +60,7 @@ public class GUIPage extends javax.swing.JFrame {
 
         jLabel2.setText("*** BANGUN RUANG (3D) ***");
 
-        jButtonTembereng.setText("Tembereng Lingkaran");
+        jButtonTembereng.setText("Tembereng");
         jButtonTembereng.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonTemberengActionPerformed(evt);
@@ -198,6 +203,43 @@ public class GUIPage extends javax.swing.JFrame {
             }
         });
 
+        jButtonPrismaLayangLayang.setText("Prisma Layang-Layang");
+        jButtonPrismaLayangLayang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPrismaLayangLayangActionPerformed(evt);
+            }
+        });
+
+        jButtonPrismaPersegi.setText("Prisma Persegi");
+        jButtonPrismaPersegi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPrismaPersegiActionPerformed(evt);
+            }
+        });
+
+        jButtonPersegi.setText("Persegi");
+        jButtonPersegi.setToolTipText("");
+        jButtonPersegi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPersegiActionPerformed(evt);
+            }
+        });
+
+        jButtonLayangLayang.setText("Layang-Layang");
+        jButtonLayangLayang.setToolTipText("");
+        jButtonLayangLayang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLayangLayangActionPerformed(evt);
+            }
+        });
+
+        jButtonLimasPersegi.setText("Limas Persegi");
+        jButtonLimasPersegi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimasPersegiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -213,8 +255,10 @@ public class GUIPage extends javax.swing.JFrame {
                         .addComponent(jButtonPersegiPanjang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonLingkaran, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonBelahKetupat, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonJuringLingkaran, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
+                        .addComponent(jButtonJuringLingkaran, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonPersegi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLayangLayang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 275, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -230,7 +274,10 @@ public class GUIPage extends javax.swing.JFrame {
                         .addComponent(jButtonLimasJajarGenjang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonLimasTrapesium, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonLimasLayangLayang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonJuringBola, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButtonJuringBola, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonPrismaLayangLayang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonPrismaPersegi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLimasPersegi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(187, 187, 187))
         );
         layout.setVerticalGroup(
@@ -269,9 +316,13 @@ public class GUIPage extends javax.swing.JFrame {
                     .addComponent(jButtonJuringLingkaran)
                     .addComponent(jButtonPrismaBelahKetupat))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonLimasBelahKetupat)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonLimasBelahKetupat)
+                    .addComponent(jButtonPersegi))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonLimasBelahKetupat1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonLimasBelahKetupat1)
+                    .addComponent(jButtonLayangLayang))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonLimasJajarGenjang)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -280,7 +331,13 @@ public class GUIPage extends javax.swing.JFrame {
                 .addComponent(jButtonLimasLayangLayang)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonJuringBola)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonPrismaLayangLayang)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonPrismaPersegi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(jButtonLimasPersegi)
+                .addContainerGap())
         );
 
         pack();
@@ -435,6 +492,46 @@ public class GUIPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonJuringBolaActionPerformed
 
+    private void jButtonPrismaLayangLayangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrismaLayangLayangActionPerformed
+        // TODO add your handling code here:
+        GUI_PrismaLayangLayang ktpPage = new GUI_PrismaLayangLayang();
+        ktpPage.setVisible(true);
+        ktpPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonPrismaLayangLayangActionPerformed
+
+    private void jButtonPrismaPersegiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrismaPersegiActionPerformed
+        // TODO add your handling code here:
+        GUI_PrismaPersegi ktpPage = new GUI_PrismaPersegi();
+        ktpPage.setVisible(true);
+        ktpPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonPrismaPersegiActionPerformed
+
+    private void jButtonPersegiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersegiActionPerformed
+        // TODO add your handling code here:
+        GUI_Persegi ktpPage = new GUI_Persegi();
+        ktpPage.setVisible(true);
+        ktpPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonPersegiActionPerformed
+
+    private void jButtonLayangLayangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLayangLayangActionPerformed
+        // TODO add your handling code here:
+        GUI_LayangLayang ktpPage = new GUI_LayangLayang();
+        ktpPage.setVisible(true);
+        ktpPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonLayangLayangActionPerformed
+
+    private void jButtonLimasPersegiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimasPersegiActionPerformed
+        // TODO add your handling code here:
+        GUI_LimasPersegi ktpPage = new GUI_LimasPersegi();
+        ktpPage.setVisible(true);
+        ktpPage.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButtonLimasPersegiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -479,16 +576,21 @@ public class GUIPage extends javax.swing.JFrame {
     private javax.swing.JButton jButtonJuringBola;
     private javax.swing.JButton jButtonJuringLingkaran;
     private javax.swing.JButton jButtonKerucut;
+    private javax.swing.JButton jButtonLayangLayang;
     private javax.swing.JButton jButtonLayangLayang1;
     private javax.swing.JButton jButtonLimasBelahKetupat;
     private javax.swing.JButton jButtonLimasBelahKetupat1;
     private javax.swing.JButton jButtonLimasJajarGenjang;
     private javax.swing.JButton jButtonLimasLayangLayang;
+    private javax.swing.JButton jButtonLimasPersegi;
     private javax.swing.JButton jButtonLimasPersegiPanjang;
     private javax.swing.JButton jButtonLimasTrapesium;
     private javax.swing.JButton jButtonLingkaran;
+    private javax.swing.JButton jButtonPersegi;
     private javax.swing.JButton jButtonPersegiPanjang;
     private javax.swing.JButton jButtonPrismaBelahKetupat;
+    private javax.swing.JButton jButtonPrismaLayangLayang;
+    private javax.swing.JButton jButtonPrismaPersegi;
     private javax.swing.JButton jButtonPrismaPersegiPanjang;
     private javax.swing.JButton jButtonTabung;
     private javax.swing.JButton jButtonTembereng;

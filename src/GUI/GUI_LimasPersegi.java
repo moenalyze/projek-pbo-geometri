@@ -4,20 +4,20 @@
  */
 package GUI;
 
-import bendageometri.LimasPersegiPanjang;
-import bendageometri.PersegiPanjang;
+import bendageometri.LimasPersegi;
+import bendageometri.Persegi;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author hp
  */
-public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
+public class GUI_LimasPersegi extends javax.swing.JFrame {
 
     /**
      * Creates new form GUI_LimasPersegiPanjang
      */
-    public GUI_LimasPersegiPanjang() {
+    public GUI_LimasPersegi() {
         initComponents();
     }
 
@@ -38,12 +38,12 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jRadioButtonTinggi = new javax.swing.JRadioButton();
         jRadioButtonSudut = new javax.swing.JRadioButton();
-        jLebarField2 = new javax.swing.JTextField();
+        jSisiField2 = new javax.swing.JTextField();
         jTinggiVolumeField = new javax.swing.JTextField();
         jLabelTinggi1 = new javax.swing.JLabel();
         jLabelAlasKeliling = new javax.swing.JLabel();
         jTinggiLuasPermukaanField = new javax.swing.JTextField();
-        jLebarField = new javax.swing.JTextField();
+        jSisiField = new javax.swing.JTextField();
         jLabelTinggi = new javax.swing.JLabel();
         jLabelAlas = new javax.swing.JLabel();
         jButtonHitungLuasPermukaan = new javax.swing.JButton();
@@ -52,10 +52,6 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
         jLabelHasilLuasPermukaan = new javax.swing.JLabel();
         jLabelHasilLuas = new javax.swing.JLabel();
         jLabelHasilKeliling = new javax.swing.JLabel();
-        jLabelAlas1 = new javax.swing.JLabel();
-        jPanjangField = new javax.swing.JTextField();
-        jLabelAlas2 = new javax.swing.JLabel();
-        jPanjangField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,11 +90,11 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
 
         jLabelTinggi1.setText("Tinggi Limas (cm) : ");
 
-        jLabelAlasKeliling.setText("Lebar (cm) :");
+        jLabelAlasKeliling.setText("Sisi (cm) :");
 
         jLabelTinggi.setText("Tinggi Limas | Sudut (cm) : ");
 
-        jLabelAlas.setText("Lebar (cm):");
+        jLabelAlas.setText("Sisi (cm):");
 
         jButtonHitungLuasPermukaan.setText("Hitung");
         jButtonHitungLuasPermukaan.addActionListener(new java.awt.event.ActionListener() {
@@ -114,17 +110,13 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
             }
         });
 
-        jLabelHasilVolume.setText("Volume Limas Persegi Panjang : ");
+        jLabelHasilVolume.setText("Volume Limas Persegi  : ");
 
-        jLabelHasilLuasPermukaan.setText("Luas Permukaan Limas Persegi Panjang : ");
+        jLabelHasilLuasPermukaan.setText("Luas Permukaan Persegi : ");
 
-        jLabelHasilLuas.setText("Luas Persegi Panjang : ");
+        jLabelHasilLuas.setText("Luas Persegi  : ");
 
-        jLabelHasilKeliling.setText("Keliling Persegi Panjang : ");
-
-        jLabelAlas1.setText("Panjang (cm):");
-
-        jLabelAlas2.setText("Panjang (cm):");
+        jLabelHasilKeliling.setText("Keliling Persegi : ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -145,9 +137,7 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(35, 35, 35)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabelAlas1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabelAlas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelAlas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(302, 302, 302)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
@@ -162,16 +152,11 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabelAlasKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(52, 52, 52)
-                        .addComponent(jLebarField2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabelAlas2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanjangField2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabelTinggi1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTinggiVolumeField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jSisiField2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabelTinggi1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTinggiVolumeField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(12, 12, 12))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -190,10 +175,9 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLebarField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jSisiField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jRadioButtonSudut, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTinggiLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanjangField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTinggiLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -218,28 +202,20 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLebarField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSisiField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelAlas)
                             .addComponent(jLabelAlasKeliling)
-                            .addComponent(jLebarField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jSisiField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelTinggi)
                             .addComponent(jTinggiLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jPanjangField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelAlas1))
-                        .addGap(63, 63, 63))
+                        .addGap(97, 97, 97))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelTinggi1)
                             .addComponent(jTinggiVolumeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelAlas2)
-                            .addComponent(jPanjangField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonHitungLuasPermukaan)
@@ -269,96 +245,103 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKembaliActionPerformed
+    private void jButtonHitungVolumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungVolumeActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        GUIPage mainPage = new GUIPage();
-        mainPage.setVisible(true);
-        mainPage.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButtonKembaliActionPerformed
+        try {
+    double sisi;
+    double tinggi;
 
-    private void jRadioButtonTinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTinggiActionPerformed
-        // TODO add your handling code here:
-        //        updateFormBasedOnSelection();
-    }//GEN-LAST:event_jRadioButtonTinggiActionPerformed
+    // Ambil input sisi dan tinggi
+    sisi = Double.parseDouble(jSisiField.getText());
+    tinggi = Double.parseDouble(jTinggiVolumeField.getText());
 
-    private void jRadioButtonSudutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSudutActionPerformed
-        // TODO add your handling code here:
-        //        updateFormBasedOnSelection();
-    }//GEN-LAST:event_jRadioButtonSudutActionPerformed
+    // Validasi input harus positif
+    if (sisi <= 0 || tinggi <= 0) {
+        throw new IllegalArgumentException("Sisi dan tinggi harus lebih besar dari 0.");
+    }
+
+    // Buat objek LimasPersegi
+    LimasPersegi limas = new LimasPersegi(sisi, tinggi);
+
+    // Hitung volume
+    double volume = limas.getVolumeLimas();
+
+    // Tampilkan hasil
+    jLabelHasilVolume.setText("Volume Limas Persegi : " + String.format("%.2f", volume) + " cm³");
+
+} catch (NumberFormatException e) {
+    JOptionPane.showMessageDialog(this,
+        "Masukkan angka yang valid.",
+        "Input Error", JOptionPane.ERROR_MESSAGE);
+    System.out.println("Sisi: [" + jSisiField.getText() + "]");
+    System.out.println("Tinggi: [" + jTinggiVolumeField.getText() + "]");
+} catch (IllegalArgumentException e) {
+    JOptionPane.showMessageDialog(this,
+        e.getMessage(),
+        "Perhitungan Error", JOptionPane.ERROR_MESSAGE);
+}
+
+    }//GEN-LAST:event_jButtonHitungVolumeActionPerformed
 
     private void jButtonHitungLuasPermukaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungLuasPermukaanActionPerformed
         // TODO add your handling code here:
-         try {
-        double panjang;
-        double lebar;
+        try {
+        double sisi;
         double tinggi = 0;
         double sudut = 0;
 
-        // Ambil input panjang dan lebar (selalu dibutuhkan)
+        // Ambil input sisi
         if (jRadioButtonTinggi.isSelected()) {
-            panjang = (double) Integer.parseInt(jPanjangField.getText());
-            lebar = (double) Integer.parseInt(jLebarField.getText());
+            sisi = Double.parseDouble(jSisiField.getText());
         } else if (jRadioButtonSudut.isSelected()) {
-            panjang = Double.parseDouble(jPanjangField.getText());
-            lebar = Double.parseDouble(jLebarField.getText());
+            sisi = Double.parseDouble(jSisiField.getText());
         } else {
             JOptionPane.showMessageDialog(this,
-                "Silakan pilih tipe input (bulat/desimal).",
+                "Silakan pilih metode perhitungan (Tinggi/Sudut).",
                 "Pilih Metode", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
-        // Validasi input panjang dan lebar
-        if (panjang <= 0 || lebar <= 0) {
-            throw new IllegalArgumentException("Panjang dan lebar harus lebih besar dari 0.");
+        if (sisi <= 0) {
+            throw new IllegalArgumentException("Sisi harus lebih besar dari 0.");
         }
 
-        // Cek metode input luas permukaan: apakah pakai tinggi atau sudut
+        // ========== PERHITUNGAN BERDASARKAN TINGGI ========== //
         if (jRadioButtonTinggi.isSelected()) {
-            if (jRadioButtonTinggi.isSelected()) {
-                tinggi = (double) Integer.parseInt(jTinggiLuasPermukaanField.getText());
-            } else {
-                tinggi = Double.parseDouble(jTinggiLuasPermukaanField.getText());
-            }
+            tinggi = Double.parseDouble(jTinggiLuasPermukaanField.getText());
 
             if (tinggi <= 0) {
                 throw new IllegalArgumentException("Tinggi harus lebih besar dari 0.");
             }
 
-            PersegiPanjang lpp = new LimasPersegiPanjang(panjang, lebar, tinggi);
-            double luasPermukaan = lpp.hitungLuasPermukaan();
-            double luasAlas = lpp.hitungLuas();
-            double kelilingAlas = lpp.hitungKeliling();
+            LimasPersegi limas = new LimasPersegi(sisi, tinggi);
+            double luasPermukaan = limas.getLuasPermukaanLimasPersegi();
+            double luasAlas = limas.hitungLuas();
+            double kelilingAlas = limas.hitungKeliling();
 
-            jLabelHasilLuasPermukaan.setText("Luas Permukaan Limas PP : " + luasPermukaan + " cm²");
-            jLabelHasilLuas.setText("Luas Alas Persegi Panjang : " + luasAlas + " cm²");
-            jLabelHasilKeliling.setText("Keliling Alas Persegi Panjang : " + kelilingAlas + " cm");
+            jLabelHasilLuasPermukaan.setText("Luas Permukaan Limas Persegi : " + String.format("%.2f", luasPermukaan) + " cm²");
+            jLabelHasilLuas.setText("Luas Alas Persegi : " + String.format("%.2f", luasAlas) + " cm²");
+            jLabelHasilKeliling.setText("Keliling Alas Persegi : " + String.format("%.2f", kelilingAlas) + " cm");
 
-        } else if (jRadioButtonSudut.isSelected()) {
-            if (jRadioButtonTinggi.isSelected()) {
-                sudut = (double) Integer.parseInt(jTinggiLuasPermukaanField.getText());
-            } else {
-                sudut = Double.parseDouble(jTinggiLuasPermukaanField.getText());
-            }
+        }
+
+        // ========== PERHITUNGAN BERDASARKAN SUDUT ========== //
+        else if (jRadioButtonSudut.isSelected()) {
+            sudut = Double.parseDouble(jTinggiLuasPermukaanField.getText());
 
             if (sudut <= 0 || sudut >= 90) {
                 throw new IllegalArgumentException("Sudut harus di antara 0 dan 90 derajat.");
             }
 
-            LimasPersegiPanjang lppSudut = new LimasPersegiPanjang(panjang, lebar, sudut);
-            double luasPermukaan = lppSudut.hitungLuasPermukaan(sudut);
-            double luasAlas = lppSudut.hitungLuas();
-            double kelilingAlas = lppSudut.hitungKeliling();
+            // Buat objek dengan overload constructor berbasis sudut
+            LimasPersegi limasSudut = new LimasPersegi(sisi, sudut, true);
+            double luasPermukaan = limasSudut.getLuasPermukaanLimasPersegi();
+            double luasAlas = limasSudut.hitungLuas();
+            double kelilingAlas = limasSudut.hitungKeliling();
 
-            jLabelHasilLuasPermukaan.setText("Luas Permukaan (dari Sudut) : " + luasPermukaan + " cm²");
-            jLabelHasilLuas.setText("Luas Alas Persegi Panjang : " + luasAlas + " cm²");
-            jLabelHasilKeliling.setText("Keliling Alas Persegi Panjang : " + kelilingAlas + " cm");
-
-        } else {
-            JOptionPane.showMessageDialog(this,
-                "Silakan pilih metode perhitungan (Tinggi/Sudut).",
-                "Pilih Metode", JOptionPane.WARNING_MESSAGE);
+            jLabelHasilLuasPermukaan.setText("Luas Permukaan (Sudut) : " + String.format("%.2f", luasPermukaan) + " cm²");
+            jLabelHasilLuas.setText("Luas Alas Persegi : " + String.format("%.2f", luasAlas) + " cm²");
+            jLabelHasilKeliling.setText("Keliling Alas Persegi : " + String.format("%.2f", kelilingAlas) + " cm");
         }
 
     } catch (NumberFormatException e) {
@@ -372,48 +355,23 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_jButtonHitungLuasPermukaanActionPerformed
 
-    private void jButtonHitungVolumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungVolumeActionPerformed
+    private void jRadioButtonSudutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSudutActionPerformed
         // TODO add your handling code here:
-        try {
-            double panjang;
-            double lebar;
-            double tinggi;
+        //        updateFormBasedOnSelection();
+    }//GEN-LAST:event_jRadioButtonSudutActionPerformed
 
-           
-                panjang = Double.parseDouble(jPanjangField2.getText());
-                lebar = Double.parseDouble(jLebarField2.getText());
-                tinggi = Double.parseDouble(jTinggiVolumeField.getText());
-            
+    private void jRadioButtonTinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTinggiActionPerformed
+        // TODO add your handling code here:
+        //        updateFormBasedOnSelection();
+    }//GEN-LAST:event_jRadioButtonTinggiActionPerformed
 
-            // Validasi input positif
-            if (panjang <= 0 || lebar <= 0 || tinggi <= 0) {
-                throw new IllegalArgumentException("Panjang, lebar, dan tinggi harus lebih besar dari 0.");
-            }
-
-            // Buat objek LimasPersegiPanjang
-            LimasPersegiPanjang lppV = new LimasPersegiPanjang(panjang, lebar, tinggi);
-
-            // Hitung volume limas
-            double volume = lppV.hitungVolume();
-
-            // Tampilkan hasil
-            jLabelHasilVolume.setText("Volume Limas Persegi Panjang : " + volume + " cm³");
-//            jLabelHasilLuasAlasVol.setText("Luas Alas Persegi Panjang : " + String.format("%.2f", luasAlas) + " cm²");
-//            jLabelHasilKelilingAlasVol.setText("Keliling Alas Persegi Panjang : " + String.format("%.2f", kelilingAlas) + " cm");
-
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this,
-                "Masukkan angka yang valid",
-                "Input Error", JOptionPane.ERROR_MESSAGE);
-            System.out.println("Alas: [" + jLebarField2.getText() + "]");
-            //System.out.println("Sisi Miring: [" + jTinggiVolumeJajarGenjangField.getText() + "]");
-            //System.out.println("tinggiPrisma: [" + jTinggiPrismaJajarGenjangField.getText() + "]");
-        } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(this,
-                e.getMessage(),
-                "Perhitungan Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_jButtonHitungVolumeActionPerformed
+    private void jButtonKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKembaliActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        GUIPage mainPage = new GUIPage();
+        mainPage.setVisible(true);
+        mainPage.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButtonKembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -432,20 +390,21 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI_LimasPersegiPanjang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_LimasPersegi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI_LimasPersegiPanjang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_LimasPersegi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI_LimasPersegiPanjang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_LimasPersegi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI_LimasPersegiPanjang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_LimasPersegi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI_LimasPersegiPanjang().setVisible(true);
+                new GUI_LimasPersegi().setVisible(true);
             }
         });
     }
@@ -459,8 +418,6 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelAlas;
-    private javax.swing.JLabel jLabelAlas1;
-    private javax.swing.JLabel jLabelAlas2;
     private javax.swing.JLabel jLabelAlasKeliling;
     private javax.swing.JLabel jLabelHasilKeliling;
     private javax.swing.JLabel jLabelHasilLuas;
@@ -468,13 +425,11 @@ public class GUI_LimasPersegiPanjang extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelHasilVolume;
     private javax.swing.JLabel jLabelTinggi;
     private javax.swing.JLabel jLabelTinggi1;
-    private javax.swing.JTextField jLebarField;
-    private javax.swing.JTextField jLebarField2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jPanjangField;
-    private javax.swing.JTextField jPanjangField2;
     private javax.swing.JRadioButton jRadioButtonSudut;
     private javax.swing.JRadioButton jRadioButtonTinggi;
+    private javax.swing.JTextField jSisiField;
+    private javax.swing.JTextField jSisiField2;
     private javax.swing.JTextField jTinggiLuasPermukaanField;
     private javax.swing.JTextField jTinggiVolumeField;
     // End of variables declaration//GEN-END:variables

@@ -3,9 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
-import bendageometri.BelahKetupat;
-import bendageometri.PersegiPanjang;
-import bendageometri.PrismaBelahKetupat;
+import bendageometri.LayangLayang;
+import bendageometri.PrismaLayangLayang;
 import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 
@@ -13,12 +12,12 @@ import javax.swing.JOptionPane;
  *
  * @author hp
  */
-public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
+public class GUI_PrismaLayangLayang extends javax.swing.JFrame {
 
     /**
      * Creates new form GUI_PersegiPanjang
      */
-    public GUI_PrismaBelahKetupat() {
+    public GUI_PrismaLayangLayang() {
         initComponents();
 //        updateFormBasedOnSelection();
         setLocationRelativeTo(null);
@@ -51,6 +50,10 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
         jTinggiField = new javax.swing.JTextField();
         jRadioButtonDesimal = new javax.swing.JRadioButton();
         jRadioButtonBulat = new javax.swing.JRadioButton();
+        jLabelDiagonal4 = new javax.swing.JLabel();
+        jSisi1Field = new javax.swing.JTextField();
+        jLabelDiagonal5 = new javax.swing.JLabel();
+        jSisi2Field = new javax.swing.JTextField();
 
         jButtonKembali.setText("Kembali");
         jButtonKembali.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +71,7 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(0, 128, 157));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 128, 157));
-        jLabel1.setText("Prisma Belah Ketupat");
+        jLabel1.setText("Prisma Layang-Layang");
 
         jButtonKembali1.setText("Kembali");
         jButtonKembali1.addActionListener(new java.awt.event.ActionListener() {
@@ -90,9 +93,9 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
             }
         });
 
-        jLabelHasilVolume.setText("Volume Prisma Belah Ketupat      : ");
+        jLabelHasilVolume.setText("Volume Prisma Layang-Layang: ");
 
-        jLabelHasilLuasPermukaan.setText("Luas Permukaan Prisma Belah Ketupat : ");
+        jLabelHasilLuasPermukaan.setText("Luas Permukaan Prisma Layang-Layang : ");
 
         jLabelDiagonal3.setText("Tinggi Prisma (cm) : ");
 
@@ -106,6 +109,15 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
 
         radioButton.add(jRadioButtonBulat);
         jRadioButtonBulat.setText("Gunakan bilangan bulat");
+        jRadioButtonBulat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonBulatActionPerformed(evt);
+            }
+        });
+
+        jLabelDiagonal4.setText("Sisi 1 (cm) :");
+
+        jLabelDiagonal5.setText("Sisi 2 (cm) : ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -126,15 +138,25 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
                                 .addComponent(jLabelHasilVolume, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jRadioButtonDesimal)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabelDiagonal1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabelDiagonal4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jDiagonal1Field, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jSisi1Field, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(67, 67, 67)
-                                        .addComponent(jLabelDiagonal2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jDiagonal2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabelDiagonal5, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jSisi2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jRadioButtonDesimal)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jLabelDiagonal1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jDiagonal1Field, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(67, 67, 67)
+                                                .addComponent(jLabelDiagonal2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jDiagonal2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(45, 45, 45)
                                 .addComponent(jLabelDiagonal3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -172,11 +194,17 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
                     .addComponent(jDiagonal2Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelDiagonal3)
                     .addComponent(jTinggiField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSisi1Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDiagonal4)
+                    .addComponent(jLabelDiagonal5)
+                    .addComponent(jSisi2Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
                 .addComponent(jLabelHasilVolume)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelHasilLuasPermukaan, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
+                .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonKembali1)
                     .addComponent(jButtonHitungVolumeLuas))
@@ -222,56 +250,63 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
 
     private void jButtonHitungVolumeLuasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungVolumeLuasActionPerformed
         try {
-            if(jRadioButtonDesimal.isSelected()) {
-                double diagonal1 = Double.parseDouble(jDiagonal1Field.getText());
-                double diagonal2 = Double.parseDouble(jDiagonal2Field.getText());
-                double tinggi = Double.parseDouble(jTinggiField.getText());
+    if (jRadioButtonDesimal.isSelected()) {
+        // Ambil input dari field dan parsing ke double
+        double diagonal1 = Double.parseDouble(jDiagonal1Field.getText());
+        double diagonal2 = Double.parseDouble(jDiagonal2Field.getText());
+        double sisi1 = Double.parseDouble(jSisi1Field.getText());
+        double sisi2 = Double.parseDouble(jSisi2Field.getText());
+        double tinggi = Double.parseDouble(jTinggiField.getText());
 
-                // Buat objek dan hitung luas dan keliling
-                BelahKetupat prisma = new PrismaBelahKetupat(diagonal1, diagonal2, tinggi);
-                
-                double volume = 0;
-                double luasPermukaan = 0;
+        // Buat objek prisma dengan overloading
+        PrismaLayangLayang prisma = new PrismaLayangLayang(diagonal1, diagonal2, sisi1, sisi2, tinggi);
 
-                if(prisma instanceof PrismaBelahKetupat) {
-                    volume = ((PrismaBelahKetupat)prisma).hitungVolume(diagonal1, diagonal2, tinggi); // overloaded
-                    luasPermukaan = ((PrismaBelahKetupat)prisma).hitungLuasPermukaan(diagonal1, diagonal2, tinggi); // overloaded
-                }
+        double volume = prisma.hitungVolume(diagonal1, diagonal2, tinggi); // method overloading
+        double luasPermukaan = prisma.hitungLuasPermukaan(diagonal1, diagonal2, sisi1, sisi2, tinggi); // method overloading
 
-                // Tampilkan hasil
-                jLabelHasilVolume.setText("Volume Prisma Belah Ketupat : " + String.format("%.2f", volume) + " cm³"); // Format ke 2 desimal
-                jLabelHasilLuasPermukaan.setText("Luas Permukaan Prisma Belah Ketupat : " + String.format("%.2f", luasPermukaan) + " cm²"); // Format ke 2 desimal
-            } else if (jRadioButtonBulat.isSelected()) {
-                int diagonal1 = Integer.parseInt(jDiagonal1Field.getText());
-                int diagonal2 = Integer.parseInt(jDiagonal2Field.getText());
-                int tinggi = Integer.parseInt(jTinggiField.getText());
+        // Tampilkan hasil
+        jLabelHasilVolume.setText("Volume Prisma Layang-Layang       : " + String.format("%.2f", volume) + " cm³");
+        jLabelHasilLuasPermukaan.setText("Luas Permukaan Prisma Layang-Layang : " + String.format("%.2f", luasPermukaan) + " cm²");
 
-                // Buat objek dan hitung luas dan keliling
-                BelahKetupat prisma = new PrismaBelahKetupat(diagonal1, diagonal2, tinggi);
-                double volume = prisma.hitungVolume();
-                double luasPermukaan = prisma.hitungLuasPermukaan();
+    } else if (jRadioButtonBulat.isSelected()) {
+        // Ambil input dan parsing ke int, lalu ke double (karena parameter butuh double)
+        int diagonal1 = Integer.parseInt(jDiagonal1Field.getText());
+        int diagonal2 = Integer.parseInt(jDiagonal2Field.getText());
+        int sisi1 = Integer.parseInt(jSisi1Field.getText());
+        int sisi2 = Integer.parseInt(jSisi2Field.getText());
+        int tinggi = Integer.parseInt(jTinggiField.getText());
 
-                // Tampilkan hasil
-                jLabelHasilVolume.setText("Volume Prisma Belah Ketupat : " + String.format("%.2f", volume) + " cm³"); // Format ke 2 desimal
-                jLabelHasilLuasPermukaan.setText("Luas Permukaan Prisma Belah Ketupat : " + String.format("%.2f", luasPermukaan) + " cm²"); // Format ke 2 desimal
-            }
-            
-            
-           
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this,
-                "Masukkan angka yang valid untuk kedua diagonal dan tinggi", // Pesan error lebih spesifik
-                "Input Error", JOptionPane.ERROR_MESSAGE);
-        } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(this,
-                e.getMessage(), // Pesan error dari validasi negatif atau nol
-                "Perhitungan Error", JOptionPane.ERROR_MESSAGE);
-        }
+        // Buat objek prisma dan gunakan method override
+        PrismaLayangLayang prisma = new PrismaLayangLayang(diagonal1, diagonal2, sisi1, sisi2, tinggi);
+
+        double volume = prisma.hitungVolume(); // override tanpa parameter
+        double luasPermukaan = prisma.hitungLuasPermukaan(); // override tanpa parameter
+
+        // Tampilkan hasil
+        jLabelHasilVolume.setText("Volume Prisma Layang-Layang       : " + String.format("%.2f", volume) + " cm³");
+        jLabelHasilLuasPermukaan.setText("Luas Permukaan Prisma Layang-Layang : " + String.format("%.2f", luasPermukaan) + " cm²");
+    }
+
+} catch (NumberFormatException e) {
+    JOptionPane.showMessageDialog(this,
+        "Masukkan angka yang valid untuk diagonal, sisi, dan tinggi.",
+        "Input Error", JOptionPane.ERROR_MESSAGE);
+
+} catch (IllegalArgumentException e) {
+    JOptionPane.showMessageDialog(this,
+        e.getMessage(),
+        "Perhitungan Error", JOptionPane.ERROR_MESSAGE);
+}
+
     }//GEN-LAST:event_jButtonHitungVolumeLuasActionPerformed
 
     private void jRadioButtonDesimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDesimalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButtonDesimalActionPerformed
+
+    private void jRadioButtonBulatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonBulatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonBulatActionPerformed
 
     /**
      * @param args the command line arguments
@@ -290,14 +325,22 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI_PrismaBelahKetupat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_PrismaLayangLayang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI_PrismaBelahKetupat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_PrismaLayangLayang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI_PrismaBelahKetupat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_PrismaLayangLayang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI_PrismaBelahKetupat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_PrismaLayangLayang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -310,7 +353,7 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI_PrismaBelahKetupat().setVisible(true);
+                new GUI_PrismaLayangLayang().setVisible(true);
             }
         });
     }
@@ -327,11 +370,15 @@ public class GUI_PrismaBelahKetupat extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDiagonal1;
     private javax.swing.JLabel jLabelDiagonal2;
     private javax.swing.JLabel jLabelDiagonal3;
+    private javax.swing.JLabel jLabelDiagonal4;
+    private javax.swing.JLabel jLabelDiagonal5;
     private javax.swing.JLabel jLabelHasilLuasPermukaan;
     private javax.swing.JLabel jLabelHasilVolume;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButtonBulat;
     private javax.swing.JRadioButton jRadioButtonDesimal;
+    private javax.swing.JTextField jSisi1Field;
+    private javax.swing.JTextField jSisi2Field;
     private javax.swing.JTextField jTinggiField;
     private javax.swing.ButtonGroup radioButton;
     // End of variables declaration//GEN-END:variables
