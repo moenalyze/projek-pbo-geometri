@@ -45,8 +45,6 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
         jTaliBusurLuasField = new javax.swing.JTextField();
         jButtonHitungKeliling = new javax.swing.JButton();
         jLabelHasilLuasLingkaran = new javax.swing.JLabel();
-        jRadioButtonAlasDanTinggi = new javax.swing.JRadioButton();
-        jRadioButtonSisiDanSudut = new javax.swing.JRadioButton();
         jLabel = new javax.swing.JLabel();
         jLabelTinggi1 = new javax.swing.JLabel();
         jBusurKelilingField = new javax.swing.JTextField();
@@ -81,23 +79,6 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
         });
 
         jLabelHasilLuasLingkaran.setText("Luas Lingkaran : ");
-
-        buttonGroupMethod.add(jRadioButtonAlasDanTinggi);
-        jRadioButtonAlasDanTinggi.setSelected(true);
-        jRadioButtonAlasDanTinggi.setText("Gunakan alas dan tinggi");
-        jRadioButtonAlasDanTinggi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonAlasDanTinggiActionPerformed(evt);
-            }
-        });
-
-        buttonGroupMethod.add(jRadioButtonSisiDanSudut);
-        jRadioButtonSisiDanSudut.setText("Gunakan sisi dan sudut");
-        jRadioButtonSisiDanSudut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSisiDanSudutActionPerformed(evt);
-            }
-        });
 
         jLabel.setText("Busur (cm) :");
 
@@ -159,12 +140,6 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
                                     .addComponent(jButtonHitungKeliling)
                                     .addComponent(jLabelHasilKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButtonSisiDanSudut, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButtonAlasDanTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(104, 104, 104))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
@@ -204,11 +179,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButtonAlasDanTinggi)
-                .addGap(3, 3, 3)
-                .addComponent(jRadioButtonSisiDanSudut)
-                .addGap(18, 18, 18)
+                .addGap(81, 81, 81)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -272,15 +243,15 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
 //                jLabelHasilLuas.setText("Luas Jajar Genjang: " + luas + " cm²");
 //            } else if (jRadioButtonSisiDanSudut.isSelected()) {
                 // Ambil nilai alas dan tinggi
-                double jariJari = Double.parseDouble(jBusurKelilingField.getText());
-                double tinggiTabung = Double.parseDouble(jTaliBusurKelilingField.getText());
+                double busur = Double.parseDouble(jBusurKelilingField.getText());
+                double taliBusur = Double.parseDouble(jTaliBusurKelilingField.getText());
 //                double tinggiPrisma = Double.parseDouble(jTinggiPrismaVolumeJajarGenjangField.getText());
 //                double sudut = Double.parseDouble(jSudutJajarGenjangField.getText());
 
                 // Buat objek dan hitung luas
-                Lingkaran tembereng = new TemberengLingkaran(jariJari, tinggiTabung, 0, 0);
+                TemberengLingkaran tembereng = new TemberengLingkaran(busur, taliBusur, 0, 0);
 //                double volume = tembereng.hitungVolume();
-                double keliling = tembereng.hitungKeliling();
+                double keliling = tembereng.hitungKeliling(busur, taliBusur);
 //                double luas = tembereng.hitungLuas();
 
                 // Tampilkan hasil
@@ -306,16 +277,6 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonHitungKelilingActionPerformed
 
-    private void jRadioButtonAlasDanTinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonAlasDanTinggiActionPerformed
-        // TODO add your handling code here:
-//        updateFormBasedOnSelection();
-    }//GEN-LAST:event_jRadioButtonAlasDanTinggiActionPerformed
-
-    private void jRadioButtonSisiDanSudutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSisiDanSudutActionPerformed
-        // TODO add your handling code here:
-//        updateFormBasedOnSelection();
-    }//GEN-LAST:event_jRadioButtonSisiDanSudutActionPerformed
-
     private void jButtonHitungLuasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungLuasActionPerformed
         // TODO add your handling code here:
         try {
@@ -325,11 +286,11 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
             double busur = Double.parseDouble(jBusurLuasField.getText());
 
             // Buat objek dan hitung keliling. Validasi dilakukan di dalam class
-            Lingkaran temberengLingkaran = new TemberengLingkaran(jariJari, taliBusur, sudut, busur);
+            TemberengLingkaran temberengLingkaran = new TemberengLingkaran(jariJari, taliBusur, sudut, busur);
             double luas = temberengLingkaran.hitungLuas(jariJari);
             double keliling = temberengLingkaran.hitungKeliling(jariJari);
             
-            double luasTembereng = temberengLingkaran.hitungLuas();
+            double luasTembereng = temberengLingkaran.hitungLuas(sudut, jariJari, taliBusur);
 //            double kelilingTembereng = temberengLingkaran.hitungKeliling();
 
             jLabelHasilLuasTembereng.setText("Luas Tembereng : " + luasTembereng + " cm");
@@ -8649,8 +8610,6 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelHasilLuasTembereng;
     private javax.swing.JLabel jLabelTinggi;
     private javax.swing.JLabel jLabelTinggi1;
-    private javax.swing.JRadioButton jRadioButtonAlasDanTinggi;
-    private javax.swing.JRadioButton jRadioButtonSisiDanSudut;
     private javax.swing.JTextField jSudutLuasField;
     private javax.swing.JTextField jTaliBusurKelilingField;
     private javax.swing.JTextField jTaliBusurLuasField;
