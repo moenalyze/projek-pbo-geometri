@@ -4,6 +4,7 @@
  */
 package GUI;
 import bendageometri.BelahKetupat;
+import bendageometri.Kerucut;
 import bendageometri.KerucutTerpancung;
 import bendageometri.Lingkaran;
 import bendageometri.PersegiPanjang;
@@ -37,6 +38,7 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
 
         jButtonKembali = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        RadioButton = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButtonKembali1 = new javax.swing.JButton();
@@ -50,6 +52,8 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
         jLabelHasilLuasPermukaan = new javax.swing.JLabel();
         jLabelDiagonal3 = new javax.swing.JLabel();
         jJariJariAtasField = new javax.swing.JTextField();
+        jRadioButtonDesimal = new javax.swing.JRadioButton();
+        jRadioButtonBulat = new javax.swing.JRadioButton();
 
         jButtonKembali.setText("Kembali");
         jButtonKembali.addActionListener(new java.awt.event.ActionListener() {
@@ -101,47 +105,62 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
 
         jLabelDiagonal3.setText("Jari-Jari Atas (cm) : ");
 
+        RadioButton.add(jRadioButtonDesimal);
+        jRadioButtonDesimal.setText("Gunakan bilangan desimal");
+        jRadioButtonDesimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonDesimalActionPerformed(evt);
+            }
+        });
+
+        RadioButton.add(jRadioButtonBulat);
+        jRadioButtonBulat.setText("Gunakan bilangan bulat");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addGap(296, 296, 296)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addGap(77, 306, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(286, 286, 286)
+                .addComponent(jButtonKembali1)
+                .addGap(62, 62, 62)
+                .addComponent(jButtonHitungVolumeLuas)
+                .addGap(0, 302, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
                 .addComponent(jLabelDiagonal1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTinggiField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3))
-                        .addGap(31, 31, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelDiagonal2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jJariJariBawahField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelDiagonal2)
+                .addGap(18, 18, 18)
+                .addComponent(jJariJariBawahField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
                 .addComponent(jLabelDiagonal3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jJariJariAtasField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabelHasilLuasPermukaan, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(203, 203, 203)
+                .addGap(52, 52, 52))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelHasilLuasPermukaan, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelHasilVolume, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(166, 166, 166))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButtonDesimal)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addComponent(jButtonKembali1)
-                                .addGap(62, 62, 62)
-                                .addComponent(jButtonHitungVolumeLuas))
-                            .addComponent(jLabelHasilVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(194, 194, 194)
+                                .addComponent(jRadioButtonBulat)))
+                        .addGap(236, 236, 236))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +169,11 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addGap(46, 46, 46)
+                .addGap(44, 44, 44)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButtonDesimal)
+                    .addComponent(jRadioButtonBulat))
+                .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTinggiField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelDiagonal1)
@@ -158,11 +181,11 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
                     .addComponent(jJariJariBawahField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelDiagonal3)
                     .addComponent(jJariJariAtasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
+                .addGap(39, 39, 39)
                 .addComponent(jLabelHasilVolume)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelHasilLuasPermukaan, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonKembali1)
                     .addComponent(jButtonHitungVolumeLuas))
@@ -208,18 +231,40 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
 
     private void jButtonHitungVolumeLuasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungVolumeLuasActionPerformed
         try {
-            double tinggi = Double.parseDouble(jTinggiField.getText());
-            double jariJariBawah = Double.parseDouble(jJariJariBawahField.getText());
-            double jariJariAtas = Double.parseDouble(jJariJariAtasField.getText());
+            if(jRadioButtonDesimal.isSelected()) {
+                double tinggi = Double.parseDouble(jTinggiField.getText());
+                double jariJariBawah = Double.parseDouble(jJariJariBawahField.getText());
+                double jariJariAtas = Double.parseDouble(jJariJariAtasField.getText());
 
-            // Buat objek dan hitung luas dan keliling
-            Lingkaran ktp = new KerucutTerpancung(tinggi, jariJariAtas, jariJariBawah);
-            double volume = ktp.hitungVolume();
-            double luasPermukaan = ktp.hitungLuasPermukaan();
+                // Buat objek dan hitung luas dan keliling
+                Kerucut ktp = new KerucutTerpancung(tinggi, jariJariAtas, jariJariBawah);
+                
+                double volume = 0;
+                double luasPermukaan = 0;
 
-            // Tampilkan hasil
-            jLabelHasilVolume.setText("Volume Kerucut Terpancung : " + String.format("%.2f", volume) + " cm³"); // Format ke 2 desimal
-            jLabelHasilLuasPermukaan.setText("Luas Kerucut Terpancung : " + String.format("%.2f", luasPermukaan) + " cm²"); // Format ke 2 desimal
+                if(ktp instanceof KerucutTerpancung) {
+                    volume = ((KerucutTerpancung)ktp).hitungVolume(tinggi, jariJariAtas, jariJariBawah); // overloaded
+                    luasPermukaan = ((KerucutTerpancung)ktp).hitungLuasPermukaan(tinggi, jariJariAtas, jariJariBawah); // overloaded
+                }
+
+                // Tampilkan hasil
+                jLabelHasilVolume.setText("Volume Kerucut Terpancung : " + String.format("%.2f", volume) + " cm³"); // Format ke 2 desimal
+                jLabelHasilLuasPermukaan.setText("Luas Kerucut Terpancung : " + String.format("%.2f", luasPermukaan) + " cm²"); // Format ke 2 desimal
+            } else if(jRadioButtonBulat.isSelected()) {
+                int tinggi = Integer.parseInt(jTinggiField.getText());
+                int jariJariBawah = Integer.parseInt(jJariJariBawahField.getText());
+                int jariJariAtas = Integer.parseInt(jJariJariAtasField.getText());
+
+                // Buat objek dan hitung luas dan keliling
+                Kerucut ktp = new KerucutTerpancung(tinggi, jariJariAtas, jariJariBawah);
+                double volume = ktp.hitungVolume();
+                double luasPermukaan = ktp.hitungLuasPermukaan();
+
+                // Tampilkan hasil
+                jLabelHasilVolume.setText("Volume Kerucut Terpancung : " + String.format("%.2f", volume) + " cm³"); // Format ke 2 desimal
+                jLabelHasilLuasPermukaan.setText("Luas Kerucut Terpancung : " + String.format("%.2f", luasPermukaan) + " cm²"); // Format ke 2 desimal
+            }
+            
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this,
                 "Masukkan angka yang valid untuk tinggi, jari-jari bawah, dan jari-jari atas", // Pesan error lebih spesifik
@@ -234,6 +279,10 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
     private void jJariJariBawahFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jJariJariBawahFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jJariJariBawahFieldActionPerformed
+
+    private void jRadioButtonDesimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDesimalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonDesimalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -286,6 +335,7 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup RadioButton;
     private javax.swing.JButton jButtonHitungVolumeLuas;
     private javax.swing.JButton jButtonKembali;
     private javax.swing.JButton jButtonKembali1;
@@ -300,6 +350,8 @@ public class GUI_KerucutTerpancung extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelHasilLuasPermukaan;
     private javax.swing.JLabel jLabelHasilVolume;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButtonBulat;
+    private javax.swing.JRadioButton jRadioButtonDesimal;
     private javax.swing.JTextField jTinggiField;
     // End of variables declaration//GEN-END:variables
 }
