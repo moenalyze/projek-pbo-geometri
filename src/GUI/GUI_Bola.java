@@ -43,8 +43,6 @@ public class GUI_Bola extends javax.swing.JFrame {
         jLabelAlas = new javax.swing.JLabel();
         jButtonHitungVolume = new javax.swing.JButton();
         jLabelHasilLuas = new javax.swing.JLabel();
-        jRadioButtonAlasDanTinggi = new javax.swing.JRadioButton();
-        jRadioButtonSisiDanSudut = new javax.swing.JRadioButton();
         jLabelAlasKeliling = new javax.swing.JLabel();
         jJariJariVolumeField = new javax.swing.JTextField();
         jButtonHitungLuasPermukaan = new javax.swing.JButton();
@@ -71,23 +69,6 @@ public class GUI_Bola extends javax.swing.JFrame {
         });
 
         jLabelHasilLuas.setText("Luas Bola : ");
-
-        buttonGroupMethod.add(jRadioButtonAlasDanTinggi);
-        jRadioButtonAlasDanTinggi.setSelected(true);
-        jRadioButtonAlasDanTinggi.setText("Gunakan alas dan tinggi");
-        jRadioButtonAlasDanTinggi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonAlasDanTinggiActionPerformed(evt);
-            }
-        });
-
-        buttonGroupMethod.add(jRadioButtonSisiDanSudut);
-        jRadioButtonSisiDanSudut.setText("Gunakan sisi dan sudut");
-        jRadioButtonSisiDanSudut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSisiDanSudutActionPerformed(evt);
-            }
-        });
 
         jLabelAlasKeliling.setText("Jari-Jari (cm) :");
 
@@ -151,13 +132,7 @@ public class GUI_Bola extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButtonHitungVolume)
                                     .addComponent(jLabelHasilVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButtonSisiDanSudut, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButtonAlasDanTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(104, 104, 104))))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,11 +145,7 @@ public class GUI_Bola extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButtonAlasDanTinggi)
-                .addGap(3, 3, 3)
-                .addComponent(jRadioButtonSisiDanSudut)
-                .addGap(18, 18, 18)
+                .addGap(81, 81, 81)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jJariJariLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -254,16 +225,6 @@ public class GUI_Bola extends javax.swing.JFrame {
                 "Perhitungan Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonHitungVolumeActionPerformed
-
-    private void jRadioButtonAlasDanTinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonAlasDanTinggiActionPerformed
-        // TODO add your handling code here:
-//        updateFormBasedOnSelection();
-    }//GEN-LAST:event_jRadioButtonAlasDanTinggiActionPerformed
-
-    private void jRadioButtonSisiDanSudutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSisiDanSudutActionPerformed
-        // TODO add your handling code here:
-//        updateFormBasedOnSelection();
-    }//GEN-LAST:event_jRadioButtonSisiDanSudutActionPerformed
 
     private void jButtonHitungLuasPermukaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungLuasPermukaanActionPerformed
         // TODO add your handling code here:
@@ -2444,7 +2405,5 @@ public class GUI_Bola extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelHasilLuas;
     private javax.swing.JLabel jLabelHasilLuasPermukaan;
     private javax.swing.JLabel jLabelHasilVolume;
-    private javax.swing.JRadioButton jRadioButtonAlasDanTinggi;
-    private javax.swing.JRadioButton jRadioButtonSisiDanSudut;
     // End of variables declaration//GEN-END:variables
 }

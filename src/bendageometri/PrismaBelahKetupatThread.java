@@ -33,12 +33,17 @@ public class PrismaBelahKetupatThread implements Runnable {
         double diagonal2 = 5 + Math.random() * 20; // 5 - 25
         double tinggiPrisma = 5 + Math.random() * 20; // 5 - 25
 
-        PrismaBelahKetupat pbk = new PrismaBelahKetupat(diagonal1, diagonal2, tinggiPrisma);
-        double volume1 = pbk.hitungVolume(); // default
-        double volume2 = pbk.hitungVolume(diagonal1, diagonal2, tinggiPrisma); // overloaded
+        BelahKetupat pbk = new PrismaBelahKetupat(diagonal1, diagonal2, tinggiPrisma);
         
+        double volume1 = pbk.hitungVolume(); // default
         double luasPermukaan1 = pbk.hitungLuasPermukaan(); // default
-        double luasPermukaan2 = pbk.hitungLuasPermukaan(diagonal1, diagonal2, tinggiPrisma); // overloaded
+        double volume2 = 0;
+        double luasPermukaan2 = 0;
+        
+        if(pbk instanceof PrismaBelahKetupat) {
+            volume2 = ((PrismaBelahKetupat)pbk).hitungVolume(diagonal1, diagonal2, tinggiPrisma); // overloaded
+            luasPermukaan2 = ((PrismaBelahKetupat)pbk).hitungLuasPermukaan(diagonal1, diagonal2, tinggiPrisma); // overloaded
+        }
         
         System.out.printf("Thread Prisma Belah ketupat #%d (%s)%n", nomor, threadName);
         System.out.printf(
