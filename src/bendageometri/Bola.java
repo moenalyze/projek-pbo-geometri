@@ -49,6 +49,19 @@ public double hitungVolume(double jariJari) {
     }
 }
 
+public double hitungVolume(int diameter) {
+    try {
+        if (diameter <= 0) {
+            throw new IllegalArgumentException("Diameter harus lebih dari 0.");
+        }
+         double r = diameter / 2.0;
+        return (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
+    } catch (IllegalArgumentException e) {
+        System.err.println("Error menghitung volume bola: " + e.getMessage());
+        return 0;
+    }
+}
+
 // Overload hitungLuasPermukaan dengan parameter jari-jari
 public double hitungLuasPermukaan(double jariJari) {
     try {
@@ -62,5 +75,20 @@ public double hitungLuasPermukaan(double jariJari) {
         return 0;
     }
 }
+
+public double hitungLuasPermukaan(int diameter) {
+    try {
+        if (diameter <= 0) {
+            throw new IllegalArgumentException("Diameter harus lebih dari 0.");
+        }
+        double jariJari = diameter / 2.0;
+        double luasPermukaanBola = 4 * Math.PI * Math.pow(jariJari, 2);
+        return luasPermukaanBola;
+    } catch (IllegalArgumentException e) {
+        System.err.println("Error menghitung luas permukaan bola: " + e.getMessage());
+        return 0;
+    }
+}
+
 
 }
