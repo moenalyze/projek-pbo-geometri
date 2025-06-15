@@ -6,6 +6,7 @@ package GUI;
 
 import bendageometri.JajarGenjang;
 import bendageometri.PrismaJajarGenjang;
+import bendageometri.Tabung;
 import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 
@@ -260,11 +261,18 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
 //                double sudut = Double.parseDouble(jSudutJajarGenjangField.getText());
 
                 // Buat objek dan hitung luas
-                PrismaJajarGenjang prismaJajarGenjang = new PrismaJajarGenjang(alas, tinggiAlas, tinggiPrisma);
-                double volume = prismaJajarGenjang.hitungVolume(alas, tinggiAlas, tinggiPrisma);
+                JajarGenjang prismaJajarGenjang = new PrismaJajarGenjang(alas, tinggiAlas, tinggiPrisma);
+                
+                 if (prismaJajarGenjang instanceof PrismaJajarGenjang) {
+//                    double luasPermukaanOverload = ((PrismaJajarGenjang) prismaJajarGenjang).hitungLuasPermukaan(alas, tinggi);
+                    double volume = ((PrismaJajarGenjang) prismaJajarGenjang).hitungVolume(alas, tinggiAlas, tinggiPrisma);
 
+//                    System.out.printf("Luas Permukaan Tabung (overload): %.2f cm²%n", luasPermukaanOverload);
+//                    System.out.printf("Volume Tabung (overload): %.2f cm³%n", volumeOverload);
+                    jLabelHasilVolume.setText("Volume Prisma Jajar Genjang: " + volume + " cm²");
+                }
                 // Tampilkan hasil
-                jLabelHasilVolume.setText("Volume Prisma Jajar Genjang: " + volume + " cm²");
+                
 //            } else {
 //                JOptionPane.showMessageDialog(this, 
 //                    "Silakan pilih metode perhitungan terlebih dahulu.", 
@@ -293,12 +301,17 @@ System.out.println("tinggiPrisma: [" + jTinggiPrismaJajarGenjangField.getText() 
             double tinggiPrisma = Double.parseDouble(jTinggiPrismaJajarGenjangField.getText());
 
             // Buat objek dan hitung keliling. Validasi dilakukan di dalam class
-            PrismaJajarGenjang prismaJajarGenjang = new PrismaJajarGenjang(alas, tinggiAlas, sisiMiring, tinggiPrisma);
-            double luasPermukaan = prismaJajarGenjang.hitungLuasPermukaan(alas, tinggiAlas, sisiMiring, tinggiPrisma);
+            JajarGenjang prismaJajarGenjang = new PrismaJajarGenjang(alas, tinggiAlas, sisiMiring, tinggiPrisma);
+            if (prismaJajarGenjang instanceof PrismaJajarGenjang) {
+//                    double luasPermukaanOverload = ((PrismaJajarGenjang) prismaJajarGenjang).hitungLuasPermukaan(alas, tinggi);
+                    double luasPermukaan = ((PrismaJajarGenjang) prismaJajarGenjang).hitungLuasPermukaan(alas, tinggiAlas, sisiMiring, tinggiPrisma);
+                    
+//                    System.out.printf("Luas Permukaan Tabung (overload): %.2f cm²%n", luasPermukaanOverload);
+//                    System.out.printf("Volume Tabung (overload): %.2f cm³%n", volumeOverload);
+                    jLabelHasilLuasPermukaan.setText("Luas Permukaan Jajar Genjang: " + luasPermukaan + " cm");
+                }
             double keliling = prismaJajarGenjang.hitungKeliling(alas, sisiMiring);
             double luas = prismaJajarGenjang.hitungLuas(alas, sisiMiring);
-
-            jLabelHasilLuasPermukaan.setText("Luas Permukaan Jajar Genjang: " + luasPermukaan + " cm");
             jLabelHasilKeliling.setText("Keliling Jajar Genjang: " + keliling + " cm");
             jLabelHasilLuas.setText("Luas Jajar Genjang: " + luas + " cm");
 //            if (jRadioButtonAlasDanTinggi.isSelected()) {
