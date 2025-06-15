@@ -42,8 +42,6 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
         jTinggiJajarGenjangField = new javax.swing.JTextField();
         jButtonHitungVolume = new javax.swing.JButton();
         jLabelHasilLuas = new javax.swing.JLabel();
-        jRadioButtonAlasDanTinggi = new javax.swing.JRadioButton();
-        jRadioButtonSisiDanSudut = new javax.swing.JRadioButton();
         jLabelSisiA = new javax.swing.JLabel();
         jSisiMiringLuasPermukaanJajarGenjangField = new javax.swing.JTextField();
         jLabelSisiB = new javax.swing.JLabel();
@@ -81,23 +79,6 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
 
         jLabelHasilLuas.setText("Luas Jajar Genjang : ");
 
-        buttonGroupMethod.add(jRadioButtonAlasDanTinggi);
-        jRadioButtonAlasDanTinggi.setSelected(true);
-        jRadioButtonAlasDanTinggi.setText("Gunakan alas dan tinggi");
-        jRadioButtonAlasDanTinggi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonAlasDanTinggiActionPerformed(evt);
-            }
-        });
-
-        buttonGroupMethod.add(jRadioButtonSisiDanSudut);
-        jRadioButtonSisiDanSudut.setText("Gunakan sisi dan sudut");
-        jRadioButtonSisiDanSudut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSisiDanSudutActionPerformed(evt);
-            }
-        });
-
         jLabelSisiA.setText("Sisi Miring (cm) :");
 
         jLabelSisiB.setText("Tinggi Prisma (cm) :");
@@ -115,9 +96,9 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
 
         jLabelHasilKeliling.setText("Keliling Jajar Genjang : ");
 
-        jLabelHasilLuasPermukaan.setText("Luas Permukaan Jajar Genjang : ");
+        jLabelHasilLuasPermukaan.setText("Luas Prisma Permukaan Jajar Genjang : ");
 
-        jLabelHasilVolume.setText("Volume Jajar Genjang : ");
+        jLabelHasilVolume.setText("Volume Prisma Jajar Genjang : ");
 
         jLabelTinggi2.setText("Tinggi Prisma (cm) : ");
 
@@ -186,13 +167,7 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jTinggiPrismaVolumeJajarGenjangField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE)))))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButtonSisiDanSudut, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButtonAlasDanTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(104, 104, 104))))
+                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButtonKembali)
@@ -211,11 +186,7 @@ public class GUI_PrismaJajarGenjang extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButtonAlasDanTinggi)
-                .addGap(3, 3, 3)
-                .addComponent(jRadioButtonSisiDanSudut)
-                .addGap(18, 18, 18)
+                .addGap(81, 81, 81)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -312,16 +283,6 @@ System.out.println("tinggiPrisma: [" + jTinggiPrismaJajarGenjangField.getText() 
                 "Perhitungan Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonHitungVolumeActionPerformed
-
-    private void jRadioButtonAlasDanTinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonAlasDanTinggiActionPerformed
-        // TODO add your handling code here:
-//        updateFormBasedOnSelection();
-    }//GEN-LAST:event_jRadioButtonAlasDanTinggiActionPerformed
-
-    private void jRadioButtonSisiDanSudutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSisiDanSudutActionPerformed
-        // TODO add your handling code here:
-//        updateFormBasedOnSelection();
-    }//GEN-LAST:event_jRadioButtonSisiDanSudutActionPerformed
 
     private void jButtonHitungLuasPermukaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungLuasPermukaanActionPerformed
         // TODO add your handling code here:
@@ -2509,8 +2470,6 @@ System.out.println("Sisi Miring: [" + jTinggiVolumeJajarGenjangField.getText() +
     private javax.swing.JLabel jLabelTinggi;
     private javax.swing.JLabel jLabelTinggi1;
     private javax.swing.JLabel jLabelTinggi2;
-    private javax.swing.JRadioButton jRadioButtonAlasDanTinggi;
-    private javax.swing.JRadioButton jRadioButtonSisiDanSudut;
     private javax.swing.JTextField jSisiMiringLuasPermukaanJajarGenjangField;
     private javax.swing.JTextField jTinggiJajarGenjangField;
     private javax.swing.JTextField jTinggiPrismaJajarGenjangField;
