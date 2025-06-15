@@ -116,7 +116,7 @@ public class GUI_PrismaTrapesium extends javax.swing.JFrame {
                 .addGap(147, 147, 147)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3)
                 .addGap(122, 122, 122))
             .addGroup(layout.createSequentialGroup()
                 .addGap(68, 68, 68)
