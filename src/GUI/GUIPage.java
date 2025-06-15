@@ -51,7 +51,7 @@ public class GUIPage extends javax.swing.JFrame {
 
         jLabel2.setText("*** BANGUN RUANG (3D) ***");
 
-        jButtonTembereng.setText("Tembereng");
+        jButtonTembereng.setText("Tembereng Lingkaran");
         jButtonTembereng.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonTemberengActionPerformed(evt);
@@ -304,16 +304,14 @@ public class GUIPage extends javax.swing.JFrame {
 
     private void jButtonLimasPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimasPersegiPanjangActionPerformed
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_jButtonLimasPersegiPanjangActionPerformed
 
     private void jButtonPrismaPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrismaPersegiPanjangActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:    
     }//GEN-LAST:event_jButtonPrismaPersegiPanjangActionPerformed
 
     private void jButtonKerucutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKerucutActionPerformed
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_jButtonKerucutActionPerformed
 
     private void jButtonBelahKetupatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBelahKetupatActionPerformed

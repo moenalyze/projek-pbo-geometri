@@ -255,7 +255,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelSudut">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sudut () : "/>
+        <Property name="text" type="java.lang.String" value="Sudut (&#x2218;) : "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jSudutJajarGenjangField">
