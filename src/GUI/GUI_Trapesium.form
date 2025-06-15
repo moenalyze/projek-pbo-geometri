@@ -36,108 +36,63 @@
               <Component id="jLabel1" min="-2" pref="172" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="277" max="-2" attributes="0"/>
           </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="103" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel3" min="-2" pref="108" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+          </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelTinggi" min="-2" pref="105" max="-2" attributes="0"/>
-                          <Component id="jLabelAlas" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="jLabelBawahLuas" min="-2" pref="105" max="-2" attributes="0"/>
+                          <Component id="jLabelAtasLuas" min="-2" pref="93" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jAlasJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jTinggiJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jSisiAtasLuasField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jSisiBawahLuasField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelTinggi1" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                          <Component id="jLabelAlasKeliling" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jAlasKelilingJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jSisiMiringJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jButtonHitungLuas" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelHasilLuas" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonHitungLuas" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelHasilLuas" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                      <Component id="jLabelTinggiLuas" min="-2" pref="93" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jTinggiLuasField" min="-2" pref="75" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="139" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabelTinggiKeliling" min="-2" pref="93" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jTinggiKelilingField" min="-2" pref="75" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabelBawahKeliling" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                              <Component id="jLabelAtasKeliling" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jAtasKelilingField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="jBawahKelilingField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jButtonHitungKeliling" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelHasilKeliling" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jRadioButtonAlasDanTinggi" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" pref="103" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="jRadioButtonSisiDanSudut" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel3" min="-2" pref="108" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jRadioButton4SisiKeliling" pref="290" max="32767" attributes="0"/>
-                                  <Component id="jRadioButtonAlasDanTinggiKeliling" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelSudut" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                          <Component id="jLabelSisiA" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                          <Component id="jLabelSisiB" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jSisiBJajarGenjangField" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jSisiAJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="jSudutJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelSisiAtas" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                                  <Component id="jLabelAlasKelilingKeliling" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSisiAlasKelilingJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="jSisiAtasJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelKanan" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                                  <Component id="jLabelSisiKiri" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSisiKiriJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="jSisiKananJajarGenjangField" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -156,98 +111,55 @@
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jRadioButtonAlasDanTinggi" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                      <Component id="jRadioButtonSisiDanSudut" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jRadioButtonAlasDanTinggiKeliling" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jRadioButton4SisiKeliling" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jAlasJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelAlas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jSisiAtasLuasField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAtasLuas" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelTinggi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTinggiJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelBawahLuas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jSisiBawahLuasField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTinggiLuasField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTinggiLuas" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jAlasKelilingJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelAlasKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jAtasKelilingField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAtasKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelTinggi1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSisiMiringJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelBawahKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBawahKelilingField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTinggiKelilingField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTinggiKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jSisiAJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelSisiA" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jSisiBJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelSisiB" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelSudut" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSudutJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jSisiAlasKelilingJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelAlasKelilingKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelSisiAtas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSisiAtasJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jSisiKiriJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelSisiKiri" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelKanan" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSisiKananJajarGenjangField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jButtonHitungKeliling" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabelHasilKeliling" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <Component id="jButtonHitungLuas" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabelHasilLuas" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jButtonHitungKeliling" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabelHasilKeliling" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="85" max="32767" attributes="0"/>
+              <EmptySpace pref="225" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -255,7 +167,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Jajar Genjang"/>
+        <Property name="text" type="java.lang.String" value="Trapesium"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -268,19 +180,19 @@
         <Property name="text" type="java.lang.String" value="Hitung Keliling"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jAlasJajarGenjangField">
+    <Component class="javax.swing.JTextField" name="jSisiAtasLuasField">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelAlas">
+    <Component class="javax.swing.JLabel" name="jLabelAtasLuas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Alas (cm) :"/>
+        <Property name="text" type="java.lang.String" value="Sisi Atas (cm) :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelTinggi">
+    <Component class="javax.swing.JLabel" name="jLabelBawahLuas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tinggi (cm) : "/>
+        <Property name="text" type="java.lang.String" value="Sisi Bawah (cm) : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTinggiJajarGenjangField">
+    <Component class="javax.swing.JTextField" name="jSisiBawahLuasField">
     </Component>
     <Component class="javax.swing.JButton" name="jButtonHitungLuas">
       <Properties>
@@ -292,66 +204,29 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelHasilLuas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Luas Jajar Genjang : "/>
+        <Property name="text" type="java.lang.String" value="Luas Trapesium : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButtonAlasDanTinggi">
+    <Component class="javax.swing.JLabel" name="jLabelTinggiLuas">
       <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroupMethod"/>
-        </Property>
-        <Property name="selected" type="boolean" value="true"/>
-        <Property name="text" type="java.lang.String" value="Gunakan alas dan tinggi"/>
+        <Property name="text" type="java.lang.String" value="Tinggi (cm) :"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonAlasDanTinggiActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButtonSisiDanSudut">
+    <Component class="javax.swing.JTextField" name="jTinggiLuasField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelAtasKeliling">
       <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroupMethod"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Gunakan sisi dan sudut"/>
+        <Property name="text" type="java.lang.String" value="Sisi Atas (cm) :"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonSisiDanSudutActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelSisiA">
+    <Component class="javax.swing.JLabel" name="jLabelBawahKeliling">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sisi A (cm) :"/>
+        <Property name="text" type="java.lang.String" value="Sisi Bawah (cm) : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jSisiAJajarGenjangField">
+    <Component class="javax.swing.JTextField" name="jAtasKelilingField">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelSudut">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sudut (&#x2218;) : "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jSudutJajarGenjangField">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelSisiB">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sisi B (cm) :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jSisiBJajarGenjangField">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelAlasKeliling">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alas (cm) :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelTinggi1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sisi Miring (cm) : "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jAlasKelilingJajarGenjangField">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jSisiMiringJajarGenjangField">
+    <Component class="javax.swing.JTextField" name="jBawahKelilingField">
     </Component>
     <Component class="javax.swing.JButton" name="jButtonHitungKeliling">
       <Properties>
@@ -363,7 +238,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelHasilKeliling">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Keliling Jajar Genjang : "/>
+        <Property name="text" type="java.lang.String" value="Keliling Trapesium: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonKembali">
@@ -374,56 +249,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonKembaliActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButtonAlasDanTinggiKeliling">
+    <Component class="javax.swing.JLabel" name="jLabelTinggiKeliling">
       <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="selected" type="boolean" value="true"/>
-        <Property name="text" type="java.lang.String" value="Gunakan alas dan tinggi"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonAlasDanTinggiKelilingActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton4SisiKeliling">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Gunakan  alas, sisi atas, sisi kiri, dan sisi kanan"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton4SisiKelilingActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelAlasKelilingKeliling">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alas (cm) :"/>
+        <Property name="text" type="java.lang.String" value="Tinggi (cm) :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jSisiAlasKelilingJajarGenjangField">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelSisiAtas">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sisi atas (cm) : "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jSisiAtasJajarGenjangField">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelKanan">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sisi Kanan (cm) : "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelSisiKiri">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sisi kiri (cm) :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jSisiKiriJajarGenjangField">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jSisiKananJajarGenjangField">
+    <Component class="javax.swing.JTextField" name="jTinggiKelilingField">
     </Component>
   </SubComponents>
 </Form>
