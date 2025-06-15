@@ -97,7 +97,7 @@ public class GUI_JajarGenjang extends javax.swing.JFrame {
 
         jLabelSisiA.setText("Sisi A (cm) :");
 
-        jLabelSudut.setText("Sudut () : ");
+        jLabelSudut.setText("Sudut (∘) : ");
 
         jLabelSisiB.setText("Sisi B (cm) :");
 
