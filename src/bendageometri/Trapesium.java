@@ -16,30 +16,76 @@ public class Trapesium extends Geometri2D {
         this.sisiSejajar1 = sisiSejajar1;
         this.sisiSejajar2 = sisiSejajar2;
         this.tinggi = tinggi;
-        luasTrapesium = hitungLuas();
-        kelilingTrapesium = hitungKeliling();
+    }
+
+    public Trapesium(int sisiSejajar1, int sisiSejajar2, int tinggi) {
+        this.sisiSejajar1 = sisiSejajar1;
+        this.sisiSejajar2 = sisiSejajar2;
+        this.tinggi = tinggi;
     }
 
     // Implementasi metode hitungLuas() untuk trapesium
     @Override
-    public double hitungLuas() {
-        // Rumus luas trapesium: 0.5 * (alasAtas + alasBawah) * tinggi
-        luasTrapesium = 0.5 * (sisiSejajar1 + sisiSejajar2) * tinggi;
-        return luasTrapesium;
+    public double hitungLuas() throws IllegalArgumentException{
+        try{
+            if (sisiSejajar1 <= 0 || sisiSejajar2 <= 0 || tinggi <= 0) {
+                throw new IllegalArgumentException("Panjang sisi dan tinggi tidak boleh 0 atau negatif");
+            }
+            // Rumus luas trapesium: 0.5 * (alasAtas + alasBawah) * tinggi
+            luasTrapesium = 0.5 * (sisiSejajar1 + sisiSejajar2) * tinggi;
+            return luasTrapesium;
+        }catch (IllegalArgumentException e){
+            System.err.println("Error saat menghitung luas trapesium: " + e.getMessage());
+            throw e;
+        }
     }
 
-    // Getter untuk Luas Trapesium
-    public double getLuasTrapesium() {
-        return luasTrapesium;
+    public double hitungLuas(double sisiSejajar1, double sisiSejajar2, double tinggi) throws IllegalArgumentException{
+        try{
+            if (sisiSejajar1 <= 0 || sisiSejajar2 <= 0 || tinggi <= 0) {
+                throw new IllegalArgumentException("Panjang sisi dan tinggi tidak boleh 0 atau negatif");
+            }
+            return 0.5 * (sisiSejajar1 + sisiSejajar2) * tinggi;
+        }catch (IllegalArgumentException e){
+            System.err.println("Error saat menghitung luas trapesium: " + e.getMessage());
+            throw e;
+        }
     }
 
     // Implementasi metode hitungKeliling() untuk trapesium
     @Override
     public double hitungKeliling() {
-        double selisihSisiSejajar = Math.abs(sisiSejajar1 - sisiSejajar2) / 2;
-        sisiMiring = Math.sqrt(Math.pow(selisihSisiSejajar, 2) + Math.pow(tinggi, 2));
-        kelilingTrapesium = (sisiSejajar1 + sisiSejajar2) + 2 * sisiMiring;
-        return kelilingTrapesium;
+        try{
+            if (sisiSejajar1 <= 0 || sisiSejajar2 <= 0 || tinggi <= 0) {
+                throw new IllegalArgumentException("Panjang sisi dan tinggi tidak boleh 0 atau negatif");
+            }
+            double selisihSisiSejajar = Math.abs(sisiSejajar1 - sisiSejajar2) / 2;
+            sisiMiring = Math.sqrt(Math.pow(selisihSisiSejajar, 2) + Math.pow(tinggi, 2));
+            kelilingTrapesium = (sisiSejajar1 + sisiSejajar2) + (2 * sisiMiring);
+            return kelilingTrapesium;
+        }catch (IllegalArgumentException e){
+            System.err.println("Error saat menghitung keliling trapesium: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    public double hitungKeliling(double sisiSejajar1, double sisiSejajar2, double tinggi) {
+        try{
+            if (sisiSejajar1 <= 0 || sisiSejajar2 <= 0 || tinggi <= 0) {
+                throw new IllegalArgumentException("Panjang sisi dan tinggi tidak boleh 0 atau negatif");
+            }
+            double selisihSisiSejajar = Math.abs(sisiSejajar1 - sisiSejajar2) / 2;
+            sisiMiring = Math.sqrt(Math.pow(selisihSisiSejajar, 2) + Math.pow(tinggi, 2));
+            return (sisiSejajar1 + sisiSejajar2) + (2 * sisiMiring);
+        }catch (IllegalArgumentException e){
+            System.err.println("Error saat menghitung keliling trapesium: " + e.getMessage());
+            throw e;
+        }
+    }
+    
+    // Getter untuk Luas Trapesium
+    public double getLuasTrapesium() {
+        return luasTrapesium;
     }
 
     // Getter untuk Keliling Trapesium

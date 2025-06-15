@@ -27,7 +27,21 @@ public class PrismaSegitiga extends Segitiga {
     return volumePrismaSegitiga;
   }
   
-  // Implementasi metode hitungLuasPermukaan() untuk Prisma Segitiga
+  // Overload hitungVolume dengan sisi dan tinggi prisma
+  public double hitungVolume(double sisi, double tinggiPrisma) {
+      try {
+          if (sisi <=0 || tinggiPrisma <= 0) {
+              throw new IllegalArgumentException("Nilai sisi dan tinggi prisma harus lebih dari 0.");
+          }
+          double luasAlas = ((sisi * sisi) / 4) * Math.sqrt(3);
+          return luasAlas * tinggiPrisma;
+      } catch (IllegalArgumentException e) {
+          System.err.println("Error hitungVolume(sisi, tinggiPrisma): " + e.getMessage());
+          throw new IllegalArgumentException("Nilai sisi dan tinggi prisma harus lebih dari 0.");
+      }
+  }
+
+    // Implementasi metode hitungLuasPermukaan() untuk Prisma Segitiga
     @Override
     public double hitungLuasPermukaan() {
         // Luas Permukaan Prisma Segitiga = (2 * luas sisi) + (kelilingSegitiga * tinggi)
@@ -35,21 +49,7 @@ public class PrismaSegitiga extends Segitiga {
         return luasPermukaanPrismaSegitiga;
     }
 
-    // Overload hitungVolume dengan sisi dan tinggi prisma
-    public double hitungVolume(double sisi, double tinggiPrisma) {
-        try {
-            if (sisi <=0 || tinggiPrisma <= 0) {
-                throw new IllegalArgumentException("Nilai sisi dan tinggi prisma harus lebih dari 0.");
-            }
-            double luasAlas = ((sisi * sisi) / 4) * Math.sqrt(3);
-            return luasAlas * tinggiPrisma;
-        } catch (IllegalArgumentException e) {
-            System.err.println("Error hitungVolume(sisi, tinggiPrisma): " + e.getMessage());
-            throw new IllegalArgumentException("Nilai sisi dan tinggi prisma harus lebih dari 0.");
-        }
-    }
-
-    // Overload hitungLuasPermukaan dengan sisi sisi miring, dan tinggi prisma
+    // Overload hitungLuasPermukaan dengan sisi dan tinggi prisma
     public double hitungLuasPermukaan(double sisi, double tinggiPrisma) {
         try {
             if (sisi <= 0 || tinggiPrisma <= 0) {

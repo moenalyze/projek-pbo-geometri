@@ -29,7 +29,7 @@ public class Segitiga extends Geometri2D {
             luasSegitiga = ((sisi * sisi) / 4) * Math.sqrt(3);
             return luasSegitiga;
         }catch (IllegalArgumentException e){
-            System.err.println("Error saat menghitung luas jajar genjang: " + e.getMessage());
+            System.err.println("Error saat menghitung luas segitiga: " + e.getMessage());
             throw e;
         }
     }
@@ -41,7 +41,7 @@ public class Segitiga extends Geometri2D {
             }
             return ((sisi * sisi) / 4) * Math.sqrt(3);
         }catch (IllegalArgumentException e){
-            System.err.println("Error saat menghitung luas jajar genjang: " + e.getMessage());
+            System.err.println("Error saat menghitung luas segitiga: " + e.getMessage());
             throw e;
         }
     }
@@ -56,7 +56,7 @@ public class Segitiga extends Geometri2D {
             kelilingSegitiga = 3 * sisi;
             return kelilingSegitiga;
         }catch(IllegalArgumentException e){
-            System.err.println("Error saat menghitung keliling jajar genjang: " + e.getMessage());
+            System.err.println("Error saat menghitung keliling segitiga: " + e.getMessage());
             throw e;
         }
     }
@@ -69,7 +69,7 @@ public class Segitiga extends Geometri2D {
             // Rumus keliling segitiga: 3 * sisi - segitiga sama sisi
             return 3 * sisi;
         }catch(IllegalArgumentException e){
-            System.err.println("Error saat menghitung keliling jajar genjang: " + e.getMessage());
+            System.err.println("Error saat menghitung keliling segitiga: " + e.getMessage());
             throw e;
         }
     }
