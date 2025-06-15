@@ -27,6 +27,12 @@ public class JajarGenjang extends Geometri2D {
         this.sisiMiringJajarGenjang = sisiMiringJajarGenjang;
     }
     
+    public JajarGenjang(double alas, double sisiAtas, double sisiKiri, double sisiKanan) {
+        this.alas = alas;
+        this.tinggi = tinggi;
+//        this.sisiMiringJajarGenjang = 0;
+    }
+    
     public JajarGenjang(double alas, double tinggi) {
         this.alas = alas;
         this.tinggi = tinggi;
@@ -118,7 +124,13 @@ public class JajarGenjang extends Geometri2D {
             throw e;
         }
     }
-
+    
+    public double hitungKeliling(double alas, double sisiAtas, double sisiMiringKiri, double sisiMiringKanan) throws IllegalArgumentException {
+        if (alas <= 0 || sisiAtas <= 0 || sisiMiringKiri <= 0 || sisiMiringKanan <= 0) {
+            throw new IllegalArgumentException("Semua sisi harus lebih besar dari 0");
+        }
+        return alas + sisiAtas + sisiMiringKiri + sisiMiringKanan;
+    }
     
     // Getter untuk keliling Jajar Genjang
     public double getKelilingJajarGenjang() {

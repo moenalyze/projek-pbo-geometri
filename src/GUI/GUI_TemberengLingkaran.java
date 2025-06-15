@@ -69,7 +69,7 @@ public class GUI_TemberengLingkaran extends javax.swing.JFrame {
 
         jLabelAlas.setText("Jari-Jari (cm) :");
 
-        jLabelTinggi.setText("Talir Busur (cm) : ");
+        jLabelTinggi.setText("Tali Busur (cm) : ");
 
         jButtonHitungKeliling.setText("Hitung");
         jButtonHitungKeliling.addActionListener(new java.awt.event.ActionListener() {
