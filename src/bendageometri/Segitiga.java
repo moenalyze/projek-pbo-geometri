@@ -15,6 +15,10 @@ public class Segitiga extends Geometri2D {
 //        kelilingSegitiga = hitungKeliling();
     }
 
+    public Segitiga(int sisi){
+        this.sisi = sisi;
+    }
+
     // Implementasi metode hitungLuas() untuk segitiga
     @Override
     public double hitungLuas() throws IllegalArgumentException {
