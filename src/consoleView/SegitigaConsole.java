@@ -6,14 +6,13 @@ import bendageometri.Segitiga;
 public class SegitigaConsole {
     public static void show() {
         Scanner input = new Scanner(System.in);
-        double alas = 0;
-        double tinggi = 0;
+        double sisi = 0;
 
         System.out.println("*** Segitiga ***");
         while (true) {
             try {
-                System.out.print("Masukkan panjang alas (cm): ");
-                alas = Double.parseDouble(input.nextLine());
+                System.out.print("Masukkan panjang sisi (cm): ");
+                sisi = Double.parseDouble(input.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("⚠  Input harus berupa angka. Silakan coba lagi.");
@@ -22,20 +21,7 @@ public class SegitigaConsole {
             }
         }
 
-        // Input sudut dengan validasi
-        while (true) {
-            try {
-                System.out.print("Masukkan tinggi (cm): ");
-                tinggi= Double.parseDouble(input.nextLine());
-                break;
-            } catch (NumberFormatException e) {
-                System.out.println("!! Input harus berupa angka. Silakan coba lagi.");
-            } catch (Exception e) {
-                System.out.println("!! Terjadi kesalahan: " + e.getMessage());
-            }
-        }
-
-        Segitiga segitiga = new Segitiga(alas, tinggi);
+        Segitiga segitiga = new Segitiga(sisi);
         double luas = segitiga.hitungLuas();
         double keliling = segitiga.hitungKeliling();
 

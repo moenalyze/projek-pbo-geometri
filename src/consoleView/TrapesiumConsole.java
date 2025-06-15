@@ -6,15 +6,15 @@ import bendageometri.Trapesium;
 public class TrapesiumConsole {
     public static void show() {
         Scanner input = new Scanner(System.in);
-        double alasAtas = 0;
-        double alasBawah = 0;
+        double sisiSejajar1 = 0;
+        double sisiSejajar2 = 0;
         double tinggi = 0;
 
         System.out.println("*** Trapesium ***");
         while (true) {
             try {
-                System.out.print("Masukkan panjang alas atas (cm): ");
-                alasAtas = Double.parseDouble(input.nextLine());
+                System.out.print("Masukkan panjang sisi atas (cm): ");
+                sisiSejajar1 = Double.parseDouble(input.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("⚠  Input harus berupa angka. Silakan coba lagi.");
@@ -25,8 +25,8 @@ public class TrapesiumConsole {
         
         while (true) {
             try {
-                System.out.print("Masukkan panjang alas bawah (cm): ");
-                alasBawah = Double.parseDouble(input.nextLine());
+                System.out.print("Masukkan panjang sisi bawah (cm): ");
+                sisiSejajar2 = Double.parseDouble(input.nextLine());
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("⚠  Input harus berupa angka. Silakan coba lagi.");
@@ -48,7 +48,7 @@ public class TrapesiumConsole {
             }
         }
 
-        Trapesium trapesium = new Trapesium(alasAtas, alasBawah, tinggi);
+        Trapesium trapesium = new Trapesium(sisiSejajar1, sisiSejajar2, tinggi);
         double luas = trapesium.hitungLuas();
         double keliling = trapesium.hitungKeliling();
 
