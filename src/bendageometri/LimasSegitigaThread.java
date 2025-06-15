@@ -30,7 +30,7 @@ public class LimasSegitigaThread implements Runnable{
         double luasPermukaan2 = limas.hitungLuasPermukaan(sisi);
 
         System.out.printf("Thread Limas Segitiga #%d (%s)%n", nomor, threadName);
-        System.out.printf("Sisi: %.2f°", sisi);
+        System.out.printf("Sisi: %.2f cm%n", sisi);
         System.out.printf("Volume (default): %.2f cm³%n", volume1);
         System.out.printf("Volume (sisi): %.2f cm³%n", volume2);
         System.out.printf("Luas Permukaan (default): %.2f cm²%n", luasPermukaan1);

@@ -31,7 +31,7 @@ public class PrismaSegitigaThread implements Runnable {
         double luasPermukaan2 = prisma.hitungLuasPermukaan(sisi, tinggiPrisma);
 
         System.out.printf("Thread Prisma Segitiga #%d (%s)%n", nomor, threadName);
-        System.out.printf("Sisi: %.2f° | Tinggi Prisma: %.2f cm%n", sisi, tinggiPrisma);
+        System.out.printf("Sisi: %.2f cm | Tinggi Prisma: %.2f cm%n", sisi, tinggiPrisma);
         System.out.printf("Volume (default): %.2f cm³%n", volume1);
         System.out.printf("Volume (sisi, tinggiPrisma): %.2f cm³%n", volume2);
         System.out.printf("Luas Permukaan (default): %.2f cm²%n", luasPermukaan1);

@@ -28,8 +28,8 @@ public class SegitigaThread implements Runnable {
         double keliling1 = sg.hitungKeliling();
         double keliling2 = sg.hitungKeliling(sisi);
 
-        System.out.printf("Thread Segitga #%d (%s)%n", nomor, threadName);
-        System.out.printf("Sisi: %.2f%n", sisi);
+        System.out.printf("Thread Segitiga #%d (%s)%n", nomor, threadName);
+        System.out.printf("Sisi: %.2f cm%n", sisi);
         System.out.printf("Luas (default): %.2f cm²%n", luas1);
         System.out.printf("Luas (sisi): %.2f cm²%n", luas2);
         System.out.printf("Keliling (default): %.2f cm%n", keliling1);
