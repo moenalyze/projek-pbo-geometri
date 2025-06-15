@@ -36,20 +36,23 @@ public class GUI_Bola extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroupMethod = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jJariJariLuasPermukaanField = new javax.swing.JTextField();
-        jLabelAlas = new javax.swing.JLabel();
+        jLabelLuasPermukaan = new javax.swing.JLabel();
         jButtonHitungVolume = new javax.swing.JButton();
         jLabelHasilLuas = new javax.swing.JLabel();
-        jLabelAlasKeliling = new javax.swing.JLabel();
+        jLabelVolume = new javax.swing.JLabel();
         jJariJariVolumeField = new javax.swing.JTextField();
         jButtonHitungLuasPermukaan = new javax.swing.JButton();
         jLabelHasilKeliling = new javax.swing.JLabel();
         jLabelHasilLuasPermukaan = new javax.swing.JLabel();
         jLabelHasilVolume = new javax.swing.JLabel();
         jButtonKembali = new javax.swing.JButton();
+        jRadioButtonJariJari = new javax.swing.JRadioButton();
+        jRadioButtonDiameter = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,7 +62,7 @@ public class GUI_Bola extends javax.swing.JFrame {
 
         jLabel3.setText("Hitung Volume");
 
-        jLabelAlas.setText("Jari-Jari (cm) :");
+        jLabelLuasPermukaan.setText("Jari-Jari (cm) :");
 
         jButtonHitungVolume.setText("Hitung");
         jButtonHitungVolume.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +73,7 @@ public class GUI_Bola extends javax.swing.JFrame {
 
         jLabelHasilLuas.setText("Luas Bola : ");
 
-        jLabelAlasKeliling.setText("Jari-Jari (cm) :");
+        jLabelVolume.setText("Jari-Jari (cm) :");
 
         jButtonHitungLuasPermukaan.setText("Hitung");
         jButtonHitungLuasPermukaan.addActionListener(new java.awt.event.ActionListener() {
@@ -89,6 +92,23 @@ public class GUI_Bola extends javax.swing.JFrame {
         jButtonKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonKembaliActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonJariJari);
+        jRadioButtonJariJari.setSelected(true);
+        jRadioButtonJariJari.setText("Gunakan jari-jari");
+        jRadioButtonJariJari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonJariJariActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonDiameter);
+        jRadioButtonDiameter.setText("Gunakan diameter");
+        jRadioButtonDiameter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonDiameterActionPerformed(evt);
             }
         });
 
@@ -112,11 +132,11 @@ public class GUI_Bola extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(122, 122, 122))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelAlas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelLuasPermukaan, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(56, 56, 56)
                         .addComponent(jJariJariLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelAlasKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(52, 52, 52)
                         .addComponent(jJariJariVolumeField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(76, 76, 76))
@@ -133,6 +153,12 @@ public class GUI_Bola extends javax.swing.JFrame {
                                     .addComponent(jButtonHitungVolume)
                                     .addComponent(jLabelHasilVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap())))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jRadioButtonDiameter, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRadioButtonJariJari, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,14 +171,18 @@ public class GUI_Bola extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addGap(81, 81, 81)
+                .addGap(18, 18, 18)
+                .addComponent(jRadioButtonJariJari)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonDiameter)
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jJariJariLuasPermukaanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelAlas))
+                        .addComponent(jLabelLuasPermukaan))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jJariJariVolumeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelAlasKeliling)))
+                        .addComponent(jLabelVolume)))
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -179,18 +209,26 @@ public class GUI_Bola extends javax.swing.JFrame {
     private void jButtonHitungVolumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungVolumeActionPerformed
         // TODO add your handling code here:
         try {
-//            if (jRadioButtonAlasDanTinggi.isSelected()) {
-//                // Ambil nilai alas dan tinggi
-//                double alas = Double.parseDouble(jAlasJajarGenjangField.getText());
-//                double tinggi = Double.parseDouble(jTinggiJajarGenjangField.getText());
-//
-//                // Buat objek dan hitung luas
-//                JajarGenjang jajarGenjang = new JajarGenjang(alas, tinggi);
-//                double luas = jajarGenjang.hitungLuas();
-//
-//                // Tampilkan hasil
-//                jLabelHasilLuas.setText("Luas Jajar Genjang: " + luas + " cm²");
-//            } else if (jRadioButtonSisiDanSudut.isSelected()) {
+            if (jRadioButtonDiameter.isSelected()) {
+                 int diameter = Integer.parseInt(jJariJariVolumeField.getText());
+//                double tinggiTabung = Double.parseDouble(jTinggiVolumeJajarGenjangField.getText());
+//                double tinggiPrisma = Double.parseDouble(jTinggiPrismaVolumeJajarGenjangField.getText());
+//                double sudut = Double.parseDouble(jSudutJajarGenjangField.getText());
+
+                // Buat objek dan hitung luas
+                Lingkaran bola = new Bola(diameter);
+                if(bola instanceof Bola) {
+                    double volume = ((Bola) bola).hitungVolume(diameter);
+                    jLabelHasilVolume.setText("Volume Bola : " + volume + " cm²");
+                }
+                
+                double keliling = bola.hitungKeliling(diameter / 2.0);
+                double luas = bola.hitungLuas(diameter / 2.0);
+
+                // Tampilkan hasil
+                jLabelHasilKeliling.setText("Keliling Lingkaran: " + keliling + " cm");
+                jLabelHasilLuas.setText("Luas Lingkaran: " + luas + " cm");
+            } else if (jRadioButtonJariJari.isSelected()) {
                 // Ambil nilai alas dan tinggi
                 double jariJari = Double.parseDouble(jJariJariVolumeField.getText());
 //                double tinggiTabung = Double.parseDouble(jTinggiVolumeJajarGenjangField.getText());
@@ -199,19 +237,23 @@ public class GUI_Bola extends javax.swing.JFrame {
 
                 // Buat objek dan hitung luas
                 Lingkaran bola = new Bola(jariJari);
-                double volume = bola.hitungVolume();
+                if(bola instanceof Bola) {
+                    double volume = ((Bola) bola).hitungVolume(jariJari);
+                    jLabelHasilVolume.setText("Volume Bola : " + volume + " cm²");
+                }
+                
                 double keliling = bola.hitungKeliling();
                 double luas = bola.hitungLuas();
 
                 // Tampilkan hasil
-                jLabelHasilVolume.setText("Volume Bola : " + volume + " cm²");
+//                jLabelHasilVolume.setText("Volume Bola : " + volume + " cm²");
                 jLabelHasilKeliling.setText("Keliling Lingkaran: " + keliling + " cm");
                 jLabelHasilLuas.setText("Luas Lingkaran: " + luas + " cm");
-//            } else {
-//                JOptionPane.showMessageDialog(this, 
-//                    "Silakan pilih metode perhitungan terlebih dahulu.", 
-//                    "Pilih Metode", JOptionPane.WARNING_MESSAGE);
-//            }
+            } else {
+                JOptionPane.showMessageDialog(this, 
+                    "Silakan pilih metode perhitungan terlebih dahulu.", 
+                    "Pilih Metode", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, 
                 "Masukkan angka yang valid", 
@@ -229,18 +271,59 @@ public class GUI_Bola extends javax.swing.JFrame {
     private void jButtonHitungLuasPermukaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungLuasPermukaanActionPerformed
         // TODO add your handling code here:
         try {
-            double jariJari = Double.parseDouble(jJariJariLuasPermukaanField.getText());
+            if (jRadioButtonDiameter.isSelected()) {
+                 int diameter = Integer.parseInt(jJariJariVolumeField.getText());
+//                double tinggiTabung = Double.parseDouble(jTinggiVolumeJajarGenjangField.getText());
+//                double tinggiPrisma = Double.parseDouble(jTinggiPrismaVolumeJajarGenjangField.getText());
+//                double sudut = Double.parseDouble(jSudutJajarGenjangField.getText());
+
+                // Buat objek dan hitung luas
+                Lingkaran bola = new Bola(diameter);
+                if(bola instanceof Bola) {
+                    double luasPermukaan = ((Bola) bola).hitungLuasPermukaan(diameter);
+                    jLabelHasilLuasPermukaan.setText("Luas Permukaan Bola : " + luasPermukaan + " cm²");
+                }
+                
+                double keliling = bola.hitungKeliling(diameter / 2.0);
+                double luas = bola.hitungLuas(diameter / 2.0);
+
+                // Tampilkan hasil
+                jLabelHasilKeliling.setText("Keliling Lingkaran: " + keliling + " cm");
+                jLabelHasilLuas.setText("Luas Lingkaran: " + luas + " cm");
+            } else if (jRadioButtonJariJari.isSelected()) {
+                double jariJari = Double.parseDouble(jJariJariLuasPermukaanField.getText());
 //            double tinggiTabung = Double.parseDouble(jTinggiiLuasPermukaanField.getText());
 
-            // Buat objek dan hitung keliling. Validasi dilakukan di dalam class
-            Lingkaran bola = new Bola(jariJari);
-            double luasPermukaan = bola.hitungLuasPermukaan();
-            double keliling = bola.hitungKeliling();
-            double luas = bola.hitungLuas();
+                // Buat objek dan hitung keliling. Validasi dilakukan di dalam class
+                Lingkaran bola = new Bola(jariJari);
+                
+                double keliling = bola.hitungKeliling();
+                double luas = bola.hitungLuas();
 
-            jLabelHasilLuasPermukaan.setText("Luas Permukaan Tabung : " + luasPermukaan + " cm");
-            jLabelHasilKeliling.setText("Keliling Lingkaran : " + keliling + " cm");
-            jLabelHasilLuas.setText("Luas Lingkaran : " + luas + " cm");
+                                jLabelHasilKeliling.setText("Keliling Lingkaran : " + keliling + " cm");
+                jLabelHasilLuas.setText("Luas Lingkaran : " + luas + " cm");
+
+                // Buat objek dan hitung luas
+//                Lingkaran bola = new Bola(jariJari);
+                if(bola instanceof Bola) {
+                    double luasPermukaan = ((Bola) bola).hitungLuasPermukaan(jariJari);
+                    jLabelHasilLuasPermukaan.setText("Luas Permukaan Bola : " + luasPermukaan + " cm");
+
+                }
+                
+//                double keliling = bola.hitungKeliling();
+//                double luas = bola.hitungLuas();
+
+                // Tampilkan hasil
+//                jLabelHasilVolume.setText("Volume Bola : " + volume + " cm²");
+                jLabelHasilKeliling.setText("Keliling Lingkaran: " + keliling + " cm");
+                jLabelHasilLuas.setText("Luas Lingkaran: " + luas + " cm");
+            } else {
+                JOptionPane.showMessageDialog(this, 
+                    "Silakan pilih metode perhitungan terlebih dahulu.", 
+                    "Pilih Metode", JOptionPane.WARNING_MESSAGE);
+            }
+            
 //            if (jRadioButtonAlasDanTinggi.isSelected()) {
 //                double alas = Double.parseDouble(jAlasJajarGenjangField.getText());
 //                double sisiMiring = Double.parseDouble(jSisiJajarGenjangField.getText());
@@ -286,6 +369,18 @@ public class GUI_Bola extends javax.swing.JFrame {
         mainPage.setVisible(true);
         mainPage.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonKembaliActionPerformed
+
+    private void jRadioButtonJariJariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonJariJariActionPerformed
+        // TODO add your handling code here:
+        jLabelVolume.setText("Jari-jari (cm) :");
+                jLabelLuasPermukaan.setText("Jari-jari (cm) :");
+    }//GEN-LAST:event_jRadioButtonJariJariActionPerformed
+
+    private void jRadioButtonDiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDiameterActionPerformed
+        // TODO add your handling code here:
+                jLabelVolume.setText("Diameter (cm) :");
+                jLabelLuasPermukaan.setText("Diameter (cm) :");
+    }//GEN-LAST:event_jRadioButtonDiameterActionPerformed
 
 //    private void updateFormBasedOnSelection() {
 //        boolean isAlasTinggi = jRadioButtonAlasDanTinggi.isSelected();
@@ -2390,6 +2485,7 @@ public class GUI_Bola extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroupMethod;
     private javax.swing.JButton jButtonHitungLuasPermukaan;
     private javax.swing.JButton jButtonHitungVolume;
@@ -2399,11 +2495,13 @@ public class GUI_Bola extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabelAlas;
-    private javax.swing.JLabel jLabelAlasKeliling;
     private javax.swing.JLabel jLabelHasilKeliling;
     private javax.swing.JLabel jLabelHasilLuas;
     private javax.swing.JLabel jLabelHasilLuasPermukaan;
     private javax.swing.JLabel jLabelHasilVolume;
+    private javax.swing.JLabel jLabelLuasPermukaan;
+    private javax.swing.JLabel jLabelVolume;
+    private javax.swing.JRadioButton jRadioButtonDiameter;
+    private javax.swing.JRadioButton jRadioButtonJariJari;
     // End of variables declaration//GEN-END:variables
 }
