@@ -46,28 +46,47 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabelSisiLuas" min="-2" pref="93" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jSisiLuasField" min="-2" pref="75" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabelTinggiVolume" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jTinggiVolumeField" min="-2" pref="75" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="jButtonHitungLuas" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelHasilLuas" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="139" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabelSisiKeliling" min="-2" pref="93" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jSisiKelilingField" min="-2" pref="75" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonHitungKeliling" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelHasilKeliling" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabelSisiVolume" min="-2" pref="93" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jSisiVolumeField" min="-2" pref="75" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jButtonHitungVolume" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelHasilVolume" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="139" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jButtonHitungLuas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHasilLuas" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabelTinggiLuas" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="jTinggiLuasField" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabelSisiLuas" min="-2" pref="93" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="jSisiLuasField" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
           </Group>
@@ -89,28 +108,39 @@
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jSisiVolumeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSisiVolume" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jSisiLuasField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelSisiLuas" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jSisiKelilingField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelSisiKeliling" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTinggiVolumeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTinggiVolume" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jButtonHitungVolume" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabelHasilVolume" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTinggiLuasField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTinggiLuas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jButtonHitungLuas" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabelHasilLuas" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jButtonHitungKeliling" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabelHasilKeliling" min="-2" max="-2" attributes="0"/>
-                  </Group>
               </Group>
-              <EmptySpace pref="291" max="32767" attributes="0"/>
+              <EmptySpace pref="270" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -118,25 +148,45 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Segitiga"/>
+        <Property name="text" type="java.lang.String" value="Prisma Segitiga"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Hitung Luas"/>
+        <Property name="text" type="java.lang.String" value="Hitung Volume"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Hitung Keliling"/>
+        <Property name="text" type="java.lang.String" value="Hitung Luas Permukaan"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jSisiLuasField">
+    <Component class="javax.swing.JTextField" name="jSisiVolumeField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelSisiVolume">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sisi (cm) :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonHitungVolume">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hitung"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHitungVolumeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelHasilVolume">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Volume Prisma : "/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelSisiLuas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sisi (cm) :"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jSisiLuasField">
     </Component>
     <Component class="javax.swing.JButton" name="jButtonHitungLuas">
       <Properties>
@@ -148,27 +198,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelHasilLuas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Luas Segitiga : "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelSisiKeliling">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sisi (cm) :"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jSisiKelilingField">
-    </Component>
-    <Component class="javax.swing.JButton" name="jButtonHitungKeliling">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Hitung"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHitungKelilingActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelHasilKeliling">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Keliling Segitiga: "/>
+        <Property name="text" type="java.lang.String" value="Luas Permukaan Prisma: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonKembali">
@@ -178,6 +208,20 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonKembaliActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTinggiVolumeField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelTinggiVolume">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tinggi Prisma (cm) :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTinggiLuasField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelTinggiLuas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tinggi Prisma (cm) :"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
