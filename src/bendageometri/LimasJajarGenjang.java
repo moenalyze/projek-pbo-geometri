@@ -11,6 +11,11 @@ public class LimasJajarGenjang extends JajarGenjang {
         super(alas, tinggiJajarGenjang, sudutLancip);
         this.tinggiLimas = tinggiLimas;
     }
+
+    public LimasJajarGenjang(double alas, double tinggiJajarGenjang, double tinggiLimas) {
+        super(alas, tinggiJajarGenjang);
+        this.tinggiLimas = tinggiLimas;
+    }
     
 
     // Override hitungVolume dengan try-catch

@@ -50,6 +50,10 @@
                       <Component id="jButtonPrismaBelahKetupat" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonLimasBelahKetupat" alignment="0" max="32767" attributes="0"/>
                       <Component id="jButtonLimasBelahKetupat1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonLimasJajarGenjang" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonLimasTrapesium" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonLimasLayangLayang" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonJuringBola" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
@@ -103,7 +107,15 @@
               <Component id="jButtonLimasBelahKetupat" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jButtonLimasBelahKetupat1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="221" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtonLimasJajarGenjang" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtonLimasTrapesium" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtonLimasLayangLayang" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButtonJuringBola" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="81" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -248,6 +260,38 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimasBelahKetupat1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonLimasJajarGenjang">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limas Jajar Genjang"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimasJajarGenjangActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonLimasTrapesium">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limas Trapesium"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimasTrapesiumActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonLimasLayangLayang">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limas Layang-Layang"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimasLayangLayangActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonJuringBola">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Juring Bola"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonJuringBolaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

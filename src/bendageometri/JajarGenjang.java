@@ -33,6 +33,12 @@ public class JajarGenjang extends Geometri2D {
 //        this.sisiMiringJajarGenjang = 0;
     }
     
+    public JajarGenjang(int alas, int tinggi) {
+        this.alas = alas;
+        this.tinggi = tinggi;
+//        this.sisiMiringJajarGenjang = 0;
+    }
+    
     // Constructor Overloading
     // Constructor untuk JajarGenjang
     public JajarGenjang(int alas, int tinggi, int sisiMiringJajarGenjang) {

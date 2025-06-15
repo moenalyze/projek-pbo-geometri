@@ -18,6 +18,13 @@ public class LimasLayangLayang extends LayangLayang {
         this.tinggiSisiTegak2 = tinggiSisiTegak2;
     }
 
+    public LimasLayangLayang(double diagonal1, double diagonal2,
+                             double sisi1, double sisi2,
+                             double tinggiLimas) {
+        super(diagonal1, diagonal2, sisi1, sisi2);
+        this.tinggiLimas = tinggiLimas;
+    }
+
     // volume override dengan try-catch
     public double hitungVolume() {
         try {

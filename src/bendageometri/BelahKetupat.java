@@ -27,7 +27,7 @@ public class BelahKetupat extends Geometri2D {
         this.sisi = sisi;
     }
     
-    // overloaded method
+    // overloaded constructor
     public BelahKetupat(int sisi) {
         this.sisi = sisi;
     }
