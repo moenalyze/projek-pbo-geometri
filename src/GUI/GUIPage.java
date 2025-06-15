@@ -51,7 +51,7 @@ public class GUIPage extends javax.swing.JFrame {
 
         jLabel2.setText("*** BANGUN RUANG (3D) ***");
 
-        jButtonTembereng.setText("Tembereng");
+        jButtonTembereng.setText("Tembereng Lingkaran");
         jButtonTembereng.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonTemberengActionPerformed(evt);
