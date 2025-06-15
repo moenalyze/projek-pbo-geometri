@@ -34,14 +34,20 @@ public class LimasBelahKetupatThread implements Runnable {
         double tinggiLimas = 5 + Math.random() * 20; // 5 - 25
         double tinggiSisiTegak = 5 + Math.random() * 20; // 5 - 25
 
-        LimasBelahKetupat lbk = new LimasBelahKetupat(
+        BelahKetupat lbk = new LimasBelahKetupat(
             diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak
         );
         
         double volume1 = lbk.hitungVolume(); // default
-        double volume2 = lbk.hitungVolume(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak); // overloaded
         double luasPermukaan1 = lbk.hitungLuasPermukaan(); // default
-        double luasPermukaan2 = lbk.hitungLuasPermukaan(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak); // overloaded
+        double volume2 = 0;
+        double luasPermukaan2 = 0;
+        
+        if(lbk instanceof LimasBelahKetupat) {
+            volume2 = ((LimasBelahKetupat)lbk).hitungVolume(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak); // overloaded
+            luasPermukaan2 = ((LimasBelahKetupat)lbk).hitungLuasPermukaan(diagonal1, diagonal2, tinggiLimas, tinggiSisiTegak); // overloaded
+        }
+        
 
         // Cetak hasil semua perhitungan
         System.out.printf("Thread Limas Belah ketupat #%d (%s)%n", nomor, threadName);
